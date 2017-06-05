@@ -1,0 +1,270 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title[Dig-In:]{Horizontal asymptotes}
+
+\outcome{Find horizontal asymptotes using limits.}
+\outcome{Recognize that a curve can cross a horizontal asymptote.}
+\outcome{Calculate the limit as $x$ approaches $\pm \infty$ of common functions algebraically.}
+\outcome{Find the limit as $x$ approaches $\pm \infty$ from a graph.}
+\outcome{Define a horizontal asymptote.}
+\outcome{Compute limits at infinity of famous functions.}
+\outcome{Identify horizontal asymptotes by looking at a graph.}
+
+\begin{document}
+\begin{abstract}
+We explore functions that behave like horizontal lines as the input
+grows without bound.
+\end{abstract}
+\maketitle
+
+
+
+Consider the function:
+\[
+f(x) = \frac{6x-9}{x-1}
+\]
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=1:4,
+            ymax=20,
+            ymin=-10,
+            samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+	  \addplot [very thick, penColor, smooth, domain=(0:.9)] {(6*x-9)/(x-1)};
+          \addplot [very thick, penColor, smooth, domain=(1.1:3)] {(6*x-9)/(x-1)};
+          \addplot [textColor, dashed] plot coordinates {(1,-10) (1,20)};
+        \end{axis}
+\end{tikzpicture}
+%% \caption{A plot of $f(x)=\protect\frac{6x-9}{x-1}$.}
+%% \label{plot:(6x-9)/(x-1)}
+\end{image}
+As $x$ approaches infinity, it seems like $f(x)$ approaches a specific
+value. Such a limit is called a \textit{limit at infinity}.
+
+
+%%DEFINITIONS
+\begin{definition}\label{def:limitAtInfty}\index{limit!at infinity}
+If $f(x)$ becomes arbitrarily close to a specific value $L$ by making
+$x$ sufficiently large, we write
+\[
+\lim_{x\to \infty} f(x) = L
+\]
+and we say, the \dfn{limit at infinity} of $f(x)$ is $L$.  
+
+If $f(x)$ becomes arbitrarily close to a specific value $L$ by making
+$x$ sufficiently large and negative, we write
+\[
+\lim_{x\to -\infty} f(x) = L
+\]
+and we say, the \dfn{limit at negative infinity} of $f(x)$ is $L$.  
+\end{definition}
+
+%%Example 1
+\begin{example} Compute
+\[
+\lim_{x\to\infty} \frac{6x-9}{x-1}.
+\]
+\begin{explanation}
+Write
+\begin{align*}
+\lim_{x\to\infty}\frac{6x-9}{x-1} &= \lim_{x\to\infty}\frac{6x-9}{x-1}\cdot \frac{1/x}{1/x}\\
+&=\lim_{x\to\infty}\frac{\frac{6x}{x} - \frac{9}{x}}{\frac{x}{x} - \frac{1}{x}}\\
+&= \lim_{x\to\infty} \frac{6}{1}\\
+&= 6.
+\end{align*}
+\end{explanation}
+\end{example}
+
+%%Example 2
+\begin{example} Compute
+\[
+\lim_{x\to\infty} \frac{6x-9}{x^2-1}.
+\]
+\begin{explanation}
+Write
+\begin{align*}
+\lim_{x\to\infty}\frac{6x-9}{x^2-1} &= \lim_{x\to\infty}\frac{6x-9}{x^2-1}\cdot \frac{1/x^2}{1/x^2}\\
+&=\lim_{x\to\infty}\frac{\frac{6x}{x^2} - \frac{9}{x^2}}{\frac{x}{x^2} - \frac{1}{x^2}}\\
+&= \lim_{x\to\infty} \frac{\frac{6}{x}-\frac{9}{x^2}}{1-\frac{1}{x^2}}\\
+&= \frac{0}{1}=0.
+\end{align*}
+\end{explanation}
+\end{example}
+
+%%CONSIDER 1/X
+Notice that in both examples, the numerator and denominator are multiplied by $\displaystyle\frac{1}{\phantom{xx}x^{\text{highest power in denominator}}\phantom{xx}}$.
+
+Why is this the case? Let's consider the basic rational function
+
+\[
+f(x) = \frac{1}{x}
+\]
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-4:4,
+            ymax=20,
+            ymin=-10,
+            samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+	  \addplot [very thick, penColor, smooth, domain=(-3:-0.01)] {(1)/(x)};
+      \addplot [very thick, penColor, smooth, domain=(0.01:3)] {(1)/(x)};
+      \addplot [textColor, dashed] plot coordinates {(0,-20) (0,20)};
+ 
+          
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+As $x$ approaches infinity, $f(x)$ approaches $0$. If we can get individual terms in our rational function to ``look like'' the known basic rational function $f(x)=\frac{1}{x}$, then we can more easily evaluate the limit as $x$ approaches infinity. Therefore, the technique applied to $\displaystyle\lim_{x\to \infty}\frac{numerator}{denominator}$ is to multiply the numerator and denominator by $\displaystyle\frac{1}{\phantom{xx}x^{\text{highest power in denominator}}\phantom{xx}}$.
+
+
+%%Example 3
+\begin{example} Compute
+\[
+\lim_{x\to\infty} \frac{3x^4-5x^2+1}{x^2-x+2x^4}.
+\]
+\begin{explanation}
+Write
+\begin{align*}
+\lim_{x\to\infty}\frac{3x^4-5x^2+1}{x^2-x+2x^4} &= \lim_{x\to\infty}\frac{3x^4-5x^2+1}{x^2-x+2x^4}\cdot \frac{1/x^4}{1/x^4}\\
+&=\lim_{x\to\infty}\frac{\frac{3x^4}{x^4} - \frac{5x^2}{x^4}+\frac{1}{x^4}}{\frac{x^2}{x^4}-\frac{x}{x^4} + \frac{2x^4}{x^4}}\\
+&= \lim_{x\to\infty} \frac{3-\frac{5}{x^2}+\frac{1}{x^4}}{\frac{1}{x^2}-\frac{1}{x^3}+2}\\
+&= \frac{3}{2}.
+\end{align*}
+\end{explanation}
+\end{example}
+
+Sometimes one must be careful, consider this example.
+
+\begin{example}
+Compute
+\[
+\lim_{x\to -\infty} \frac{x^3+1}{\sqrt{x^6+5}}
+\]
+\begin{explanation}
+In this case we multiply the numerator and denominator by $-1/x^3$,
+which is a positive number as since $x\to -\infty$, $x^3$ is a negative
+number.
+\begin{align*}
+\lim_{x\to -\infty} \frac{x^3+1}{\sqrt{x^6+5}} &= \lim_{x\to -\infty} \frac{x^3+1}{\sqrt{x^6+5}} \cdot \frac{-1/x^3}{-1/x^3}\\
+&= \lim_{x\to -\infty} \frac{-1-1/x^3}{\sqrt{x^6/x^6+5/x^6}}\\
+&= -1.
+\end{align*}
+\end{explanation}
+\end{example}
+
+Note, since
+\[
+\lim_{x\to \infty} f(x) = \lim_{x\to 0^+} f\left(\frac{1}{x}\right)
+\]
+and
+\[
+\lim_{x\to -\infty} f(x) = \lim_{x\to 0^-} f\left(\frac{1}{x}\right)
+\]
+we can also apply the Squeeze Theorem when taking limits at infinity.
+Here is an example of a limit at infinity that uses the Squeeze
+Theorem, and shows that functions can, in fact, cross their horizontal
+asymptotes.
+
+
+\begin{example}
+Compute:
+\[
+\lim_{x\to \infty} \frac{\sin(7x)+4x}{x}
+\]
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=2:20,
+            ymax=5,
+            ymin=3,
+            samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+	  \addplot [very thick, penColor, smooth] {(1/x) * sin(deg(7*x))+4};
+        \end{axis}
+\end{tikzpicture}
+%% \caption{A plot of $f(x)=\frac{\sin(7x)}{x}+4$.}
+%% \label{plot:sin7x/x+4}
+\end{image}
+
+\begin{explanation}
+We can bound our function
+\[
+\frac{-1+4x}{x} \le \frac{\sin(7x)+4x}{x} \le \frac{1+4x}{x}.
+\]
+Now write with me
+\begin{align*}
+\displaystyle\lim_{x\to\infty}\frac{-1+4x}{x} \cdot \frac{1/x}{1/x} &= \lim_{x\to\infty}\frac{-1/x+4}{1}\\
+&=4.
+\end{align*}
+And we also have
+\begin{align*}
+\displaystyle\lim_{x\to\infty}\frac{1+4x}{x} \cdot \frac{1/x}{1/x} &= \lim_{x\to\infty}\frac{1/x+4}{1}\\
+&=4.
+\end{align*}
+Since 
+\[
+\lim_{x\to \infty} \frac{-1+4x}{x}  = 4 = \lim_{x\to \infty}\frac{1+4x}{x} 
+\] 
+we conclude by the Squeeze Theorem,
+$\displaystyle\lim_{x\to\infty}\frac{\sin(7x)}{x}+4 = 4$.
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+\begin{definition}\label{def:horiz asymptote}\index{asymptote!horizontal}\index{horizontal asymptote}
+If  
+\[
+\lim_{x\to \infty} f(x) = L \qquad\text{or}\qquad \lim_{x\to -\infty} f(x) = L,
+\]
+then the line $y=L$ is a \dfn{horizontal asymptote} of $f(x)$.
+\end{definition}
+
+\begin{example} 
+Give the horizontal asymptotes of
+\[
+f(x) = \frac{6x-9}{x-1}
+\]
+\begin{explanation}
+From our previous work, we see that $\displaystyle\lim_{x\to \infty} f(x) = 6$, and
+upon further inspection, we see that $\displaystyle\lim_{x\to -\infty} f(x) =
+6$. Hence the horizontal asymptote of $f(x)$ is the line $y=6$.
+\end{explanation}
+\end{example}
+
+
+It is a common misconception that a function cannot cross an
+asymptote. As the next example shows, a function can cross a horizontal
+asymptote, and in the example this occurs an infinite number of times!
+
+\begin{example}
+Give a horizontal asymptote of
+\[
+f(x) = \frac{\sin(7x)+4x}{x}.
+\]
+\begin{explanation}
+Again from previous work, we see that $\displaystyle\lim_{x\to \infty} f(x) =
+\answer[given]{4}$. Hence $y=\answer[given]{4}$ is a horizontal asymptote of $f(x)$.
+\end{explanation}
+\end{example}
+
+
+
+
+\end{document}

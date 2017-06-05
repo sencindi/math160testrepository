@@ -1,0 +1,122 @@
+\documentclass[handout]{ximera}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xercises}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xourse}
+
+%\author{Steven Gubkin}
+%\license{Creative Commons 3.0 By-NC}
+\input{../preamble.tex}
+
+\outcome{Practice limits with piecewise functions.}
+   
+
+\title[Exercises:]{Limits of Piecewise Functions Exercises}
+
+\begin{document}
+\begin{abstract}
+  Here we'll practice finding limits with piecewise functions.
+\end{abstract}
+\maketitle
+
+%%Problem 1
+\begin{exercise}
+Let
+\[
+f(x) =
+\begin{cases} x^2+55 &\text{if $x<3$,}\\
+  0 &\text{if $x=3$,} \\
+  b^x &\text{if $x>3$.}
+\end{cases}
+\]  
+What must the be the value of $b$ to make $\displaystyle\lim_{x \to 3} f(x)$ exist?
+
+\[
+b = \answer{4}
+\]
+
+\begin{hint}
+  The left and righthand limits at $x=3$ must be equal.  Use this to
+  set up an equation in terms of $b$, and solve for $b$.
+\end{hint}
+\end{exercise}
+
+%%Problem 2
+\begin{exercise}
+Let
+\[
+g(x) = \begin{cases}
+  \frac{x^3 - 8}{x-2}  &\text{if $x<1$,} \\
+  x^3+1 &\text{if  $x>1$.}
+\end{cases}
+\]
+Does $\displaystyle\lim_{x \to 2} g(x)$ exist?  If it does, give its value.
+Otherwise write DNE.
+
+\[
+\lim_{x \to 2} g(x) = \answer{9}
+\]
+
+\begin{hint}
+	Note that, close to $x=2$, the rule for $g(x)$ is $x^3+1$.
+\end{hint}
+
+\end{exercise}
+
+
+%%Problem 3
+\begin{exercise}
+Let
+\[
+f(x) = \begin{cases}
+  |x| &\text{if $x<1$,} \\
+  \frac{x^2-a^2}{x-a} &\text{if $x>1$.}
+\end{cases}
+\]
+If $\displaystyle\lim_{x \to 1} f(x)$ exists, what must be the value of $a$?
+
+  \[
+a = \answer{0}
+\]
+
+\begin{hint}
+  Equate the two one sided limits of $f$ at $x=1$ to obtain an equation involving $a$.
+\end{hint}
+
+\end{exercise}
+
+%%Problem 4
+\begin{exercise}
+Let $S(x) = \frac{|x|}{x}$.  Does $\displaystyle\lim_{x \to -4} S(x)$ exist?  If it
+does, give its value.  Otherwise write DNE.
+
+\[
+\lim_{x \to -4} S(x) = \answer{-1}
+\] 
+
+\begin{hint}
+  Close to $x=-4$, $S$ has the rule $\frac{-x}{x}$.
+\end{hint}
+
+
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

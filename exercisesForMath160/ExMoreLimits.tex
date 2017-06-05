@@ -1,0 +1,169 @@
+\documentclass[handout]{ximera}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xercises}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xourse}
+
+%\author{Steven Gubkin}
+%\license{Creative Commons 3.0 By-NC}
+\input{../preamble.tex}
+
+\outcome{Exercises: More Practice with Limits}
+   
+
+\title{More Limits}
+
+\begin{document}
+\begin{abstract}
+  Here we'll practice finding limits.
+\end{abstract}
+\maketitle
+
+%%PROBLEM 1
+\begin{exercise}
+Find
+\[
+\lim_{\theta\to\infty}\left(\cos(\theta)\right)
+= \answer{DNE}
+\]
+
+\end{exercise}
+
+
+%%PROBLEM 2
+\begin{exercise}
+Find
+\[
+\lim_{x\to6}\left(\frac{\left|6-x\right|}{6-x}\right)
+= \answer{DNE}
+\]
+
+\end{exercise}
+
+%%PROBLEM 3
+\begin{exercise}
+Find
+\[
+\lim_{x\to0}\left(\frac{\cos^{2}(x)-1}{\cos(x)-1}\right)
+= \answer{2}
+\]
+
+\begin{hint}
+Recall that for any two numbers, $a$ and $b$,  $a^2-b^2=(a-b)(a+b)$. Factor the numerator of the expression in this manner.
+\end{hint}
+\begin{hint}
+$\cos^{2}(x)-1=(\cos(x)-1)(\cos(x)+1)$ so $\frac{(\cos(x)-1)(\cos(x)+1)}{\cos(x)-1}=\cos(x)+1$ for $x\ne2\pi{n}$ for any integer $n$ (notice that if $x=2\pi n$, then $\cos(2\pi n)-1=0$ in the denominator) and $\lim_{x\to0}\left(\frac{\cos^{2}(x)-1}{\cos(x)-1}\right)=\lim_{x\to0}\left(\cos(x)+1\right)$ and this is $\lim_{x\to0}\left(\cos(x)\right)+\lim_{x\to0}\left(1\right)=2$.
+
+\end{hint}
+\end{exercise}
+
+%%PROBLEM 4
+\begin{exercise}
+Find
+\[
+\lim_{x\to-\infty}\left(\frac{2x^3-3x^2+4}{x^3+3x^2-1}\right)
+= \answer{2}
+\]
+
+\end{exercise}
+
+
+%%PROBLEM 5
+\begin{exercise}
+Suppose that $\lim_{z\to5}G(z)=3$, $\lim_{z\to5}C(z)=-4$, and $\lim_{z\to5}c(z)=1$. Compute the limit
+
+\[
+\lim_{z\to 5 } \frac{G(z)}{C(z)-c(z)} = \answer{-\frac{3}{5}}
+\]
+\end{exercise}
+
+%%PROBLEM 6
+\begin{exercise}
+\[
+\lim_{n\to -5 } \frac{\sqrt{4-n}-3}{n+5}= \answer{-\frac{1}{6}}
+\]
+\begin{hint}
+Multiply by $\frac{\sqrt{4-n}+3}{\sqrt{4-n}+3}$.
+\end{hint}
+\end{exercise}
+
+%%PROBLEM 7
+\begin{exercise}
+\[
+\lim_{n\to 5 } \frac{\sqrt{n+5}-\sqrt{10}}{n-5} = \answer{\frac{1}{2 \sqrt{10}}}
+\]
+\begin{hint}
+Multiply by $\frac{\sqrt{n+5}+\sqrt{10}}{\sqrt{n+5}+\sqrt{10}}$.
+\end{hint}
+\end{exercise}
+
+
+%%PROBLEM 8
+\begin{exercise}
+\[
+\lim_{t\to 3 } \frac{t-3}{\sqrt{t-2}-1} = \answer{2}
+\]
+\begin{hint}
+Multiply by $\frac{\sqrt{t-2}+1}{\sqrt{t-2}+1}$.
+\end{hint}
+\end{exercise}
+
+%%PROBLEM 9
+\begin{exercise}
+\[\lim_{x \to 0} \frac{\sin(2x)}{3x} = \answer{2/3}\]
+
+\begin{hint}
+	\[\frac{\sin(2x)}{3x} = \frac{\sin(2x)}{2x} \frac{2}{3}\]
+\end{hint}
+
+\end{exercise}
+
+%%PROBLEM 10
+\begin{exercise}
+\[
+\lim_{v\to -5 } \frac{v^2+6 v+5}{v+5} = \answer{-4}
+\]
+\begin{hint}
+Try to factor either the numerator or the denominator.
+\end{hint}
+\end{exercise}
+
+%%PROBLEM 11
+\begin{exercise}
+\[
+\lim_{z\to -4 } \frac{z^2+6 z+8}{z+4} = \answer{-2}
+\]
+\begin{hint}
+Try to factor either the numerator or the denominator.
+\end{hint}
+\end{exercise}
+
+%%PROBLEM 12
+\begin{exercise}
+\[
+\lim_{z\to -2 } \frac{z+2}{-2 z^2-2 z+4} = \answer{\frac{1}{6}}
+\]
+\begin{hint}
+Try to factor either the numerator or the denominator.
+\end{hint}
+\end{exercise}
+
+
+%%PROBLEM 13
+\begin{exercise}
+\[
+\lim_{\theta\to -1 } \frac{\theta +1}{-2 \theta ^2-6 \theta -4} = \answer{-\frac{1}{2}}
+\]
+\begin{hint}
+Try to factor either the numerator or the denominator.
+\end{hint}
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+\end{document}

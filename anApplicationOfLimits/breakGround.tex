@@ -1,0 +1,159 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\outcome{Consider limits as behavior nearer and nearer to a point.}
+
+
+\title[Break-Ground:]{Limits and velocity}
+
+\begin{document}
+\begin{abstract}
+Two young mathematicians discuss limits and instantaneous velocity.
+\end{abstract}
+\maketitle
+
+Check out this dialogue between two calculus students (based on a true
+story):
+
+\begin{dialogue}
+\item[Devyn] Hey Riley, I've been thinking about limits.
+\item[Riley] That is awesome.
+\item[Devyn] I know! You know limits remind me of something\dots
+  How a GPS or a phone computes velocity!
+\item[Riley] Huh.  A GPS can calculate our location.   Then, to compute velocity 
+from position, it must look at
+  \[
+  \frac{\text{change in position}}{\text{change in time}}
+  \]
+\item[Devyn] And then we study this as the change in time gets closer
+  and closer to zero.
+\item[Riley] Just like with limits at zero, we can study something by
+  looking \textbf{near} a point, but \textbf{not exactly at} a point.
+\item[Devyn] O.M.G.\ Life's a rich tapestry.
+\item[Riley] Poet, you know it.
+\end{dialogue}
+
+
+
+Suppose you take a road trip from Columbus Ohio to Urbana-Champaign
+Illinois. Moreover, suppose your position is modeled by
+\[
+s(t) = 36t^2 -4.8t^3 \qquad\text{(miles West of Columbus)} %% note the model is wrong
+\]
+where $t$ is measured in hours and runs from $0$ to $5$ hours. 
+
+%%AVERAGE VELOCITY%%
+\begin{problem}
+  What is the average velocity for the entire trip?
+  \begin{hint}
+    Remember, 
+    \[
+    \text{change in position} = \text{rate}\cdot\text{change in time}.
+    \]
+  \end{hint}
+  \begin{hint}
+    So, 
+    \[
+    \frac{\Delta\text{position}}{\Delta\text{time}} = \text{rate}.
+    \]
+  \end{hint}
+  \begin{hint}
+    So, 
+    \[
+    \frac{\Delta\text{position}}{\Delta\text{time}} = \frac{\answer[given]{300}}{\answer[given]{5}}.
+    \]
+  \end{hint}
+  \begin{prompt}
+    The average velocity is $\answer[given]{60}$ miles per hour.
+  \end{prompt}
+\end{problem}
+
+%%USING TABLE TO ESTIMATE INST VELOCITY%%
+\begin{problem}
+  Use a calculator to estimate the instantaneous velocity at $t=2$ by filling in the table below. Remember to keep using $s(t)=36t^2-4.8t^3$.
+  
+  \[
+\begin{tabular}{c|c|c|c|c}
+ $t$ & $s(2)$ & $\Delta t$ & $s(2+\Delta t)$ & $\frac{s(2+\Delta t)-s(2)}{\Delta t}$\\ \hline
+$2$ & $105.6$ & $1$ & $\answer[given]{194.4}$ & $\answer[given]{88.8}$\\
+$2$ & $105.6$ & $0.5$ & $\answer[given]{150}$ & $\answer[given]{88.8}$\\
+$2$ & $105.6$ & $0.25$ & $\answer[given]{127.575}$ & $\answer[given]{87.9}$\\
+$2$ & $105.6$ & $0.1$ & $\answer[given]{114.3072}$ & $\answer[given]{87.072}$\\
+$2$ & $105.6$ & $0.01$ & $\answer[given, tolerance=0.001]{106.4647152}$ & $\answer[given, tolerance=0.001]{86.47152}$\\
+$2$ & $105.6$ & $0.001$ & $\answer[given, tolerance=0.001]{105.6864071952}$ & $\answer[given, tolerance=0.001]{86.4071952}$\\
+\end{tabular}
+\]
+
+\end{problem}
+
+%%LIMIT COMPUTING INST VELOCITY%%
+\begin{problem}
+  Calculate the instantaneous velocity at $t=2$. Keep using $s(t)=36t^2-4.8t^3$.
+  \begin{hint}
+    Remember, 
+    \[
+    \text{change in position} = \text{rate}\cdot\text{change in time}.
+    \]
+  \end{hint}
+  \begin{hint}
+    So, 
+    \[
+    \frac{\Delta\text{position}}{\Delta\text{time}} = \text{rate}.
+    \]
+  \end{hint}
+  \begin{hint}
+    Simplify
+    \[
+    \frac{36(2+\Delta t)^2 -4.8(2+\Delta t)^3 -\left(36\cdot 2^2 -4.8\cdot 2^3\right) }{\Delta t}:
+    \]
+    
+    \[
+    =\frac{\answer[given]{-4.8}\Delta t^3+\answer[given]{7.2}\Delta t^2+\answer[given]{86.4}\Delta t}{\Delta t}
+    \]
+    
+    \[
+    =\answer[given]{-4.8}\Delta t^2+\answer[given]{7.2}\Delta t+\answer[given]{86.4}
+    \]
+    
+    What is the instantaneous velocity at $t=2$? i.e. What happens as $\Delta t\rightarrow 0$?
+    
+  \end{hint}
+  \begin{prompt}
+    The instantaneous velocity, (rounded to the nearest tenth) is \answer{86.4} miles per hour.
+  \end{prompt}
+\end{problem}
+
+
+\begin{problem}
+  Considering the work above, when we want to compute instantaneous
+  velocity, we need to compute
+  \[
+  \frac{\text{change in position}}{\text{change in time}}
+  \]
+  when (choose all that apply):
+ \begin{selectAll}
+    \choice{The ``change in time'' is zero.}
+    \choice[correct]{The ``change in time'' is arbitrarily close zero.}
+    %%\choice[correct]{The ``change in time'' approaches zero.}
+    \choice{The ``change in time'' is nearby zero.}
+    \choice[correct]{The ``change in time'' goes to zero.}
+ \end{selectAll}
+\end{problem}
+
+
+Computing average velocities for arbitrarily small values of
+$\Delta t$ as we did above is tedious. Nevertheless, this is exactly
+how a GPS determines velocity from position! To avoid these tedious
+calculations, we would really like to have a formula.
+
+%On the other hand, we are
+%human beings and have better things to do than just compute all day
+%long. What would really help us out with problems like these is a formula.
+
+
+
+%\input{../leveledQuestions.tex}
+
+
+\end{document}

@@ -1,0 +1,276 @@
+\documentclass[handout]{ximera}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xercises}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xourse}
+
+%\author{Steven Gubkin}
+%\license{Creative Commons 3.0 By-NC}
+\input{../preamble.tex}
+
+\outcome{Practice Limits.}
+   
+
+\title{Limit Exercises}
+
+\begin{document}
+\begin{abstract}
+  Here we'll practice limits.
+\end{abstract}
+\maketitle
+
+%%MADE UP BY MARY%%
+\begin{exercise}
+\[\lim_{x \to 5} \frac{x^2-25}{x-5} = \answer{10}\]
+\begin{hint}
+	\[x^2-25 = (x+5)(x-5)\]
+\end{hint}
+\end{exercise}
+
+
+%%MADE UP BY MARY%%
+\begin{exercise}
+\[\lim_{x \to -4} \frac{x^2+3x-4}{x^2-4x-32} = \answer{5/12}\]
+\begin{hint}
+	\[x^2+3x-4 = (x+4)(x-1)\]
+\end{hint}
+\begin{hint}
+	\[x^2-4x-32 = (x+4)(x-8)\]
+\end{hint}
+\end{exercise}
+
+%%MADE UP BY MARY%%
+\begin{exercise}
+\[\lim_{x \to 0} \frac{x^2}{x^2-x} = \answer{0}\]
+\begin{hint}
+	\[x^2-x = x(x-1)\]
+\end{hint}
+
+\end{exercise}
+
+%%MADE UP BY MARY%%
+\begin{exercise}
+\[\lim_{x \to 2} \frac{\frac{1}{2}-\frac{1}{x}}{2-x} = \answer{-1/4}\]
+\begin{hint}
+	\[\frac{1}{2}-\frac{1}{x} = \frac{x-2}{2x} \]
+\end{hint}
+\end{exercise}
+
+%%MADE UP BY MARY%%
+\begin{exercise}
+\[\lim_{x \to 0} \frac{\tan(x)}{\sin(x)} = \answer{1}\]
+\begin{hint}
+	\[\tan(x) = \frac{\sin(x)}{\cos(x)}\]
+\end{hint}
+\end{exercise}
+
+%%MADE UP BY MARY%%
+\begin{exercise}
+\[\lim_{x \to 0} \frac{\sqrt{9+x}-3}{x} = \answer{1/6}\]
+\begin{hint}
+	Multiply the numberator and denominator by $\sqrt{9+x}+3$.
+\end{hint}
+\end{exercise}
+
+%% Question 1/2 from exercises
+\begin{exercise}
+\[\lim_{x \to 0} \frac{\sin(2x)}{3x} = \answer{2/3}\]
+\begin{hint}
+	\[\frac{\sin(2x)}{3x} = \frac{\sin(2x)}{2x} \frac{2}{3}\]
+\end{hint}
+\end{exercise}
+
+%% Question 3 from exercises
+\begin{exercise}
+\[\lim_{x \to 0} \frac{\sin(5x)}{\sin(2x)} = \answer{5/2}\]
+\begin{hint}
+	\[ \frac{\sin(5x)}{\sin(2x)} = \frac{\sin(5x)}{5x} \frac{2x}{\sin(2x)} \frac{5}{2}\]
+\end{hint}
+\end{exercise}
+
+%% Question 4 from exercises
+\begin{exercise}
+\[\lim_{x \to 0} \frac{\cos(x)-1}{x} = \answer{0}\]
+\begin{hint}
+	\[\frac{\cos(x)-1}{x} = \frac{(\cos(x)-1)(\cos(x)+1)}{x(\cos(x)+1)}\]
+\end{hint}
+\begin{hint}
+	Expanding the numerator, and using the pythagorean identity should get you to the solution.
+\end{hint}
+\end{exercise}
+
+%% Question 5 from exercises
+\begin{exercise}
+\[\lim_{x \to 0} \frac{\cos(2x)-1}{x\sin(3x)} = \answer{-2/3}\]
+\begin{hint}
+	Multiple numerator and denominator by $\cos(2x)+1$, expand the numerator, use pythagorean identity, and should be almost home free.
+\end{hint}
+\end{exercise}
+
+%% Question 6 from exercises
+\begin{exercise}
+	\[\lim_{h \to 0} \frac{\sqrt{2+h} - \sqrt{2}}{h} = \answer{1/(2\sqrt{2})}\]
+	\begin{hint}
+		Multiply numerator and denominator by $\sqrt{2+h}+\sqrt{2}$.
+	\end{hint}
+\end{exercise}
+
+%% Question 8 from exercises
+\begin{exercise}
+If I want 
+\[
+\displaystyle\lim_{x \to 0} \frac{1-\cos(ax)}{x\sin(2x)} = 4
+\]
+
+what should I pick for $a$ if $a>0$?
+	\[a = \answer{4}\]
+	\begin{hint}
+		Multiply numerator and denominator by $1+\cos(ax)$, expand the numerator, and use the pythagorean identity.  This will let you find the limit in terms of $a$.  Then solve the equation to find the value of $a$.
+	\end{hint}
+\end{exercise}
+
+%% Question 9 from exercises
+%\begin{exercise}
+%	\begin{warning}
+%		This problem is pretty hard.
+%	\end{warning}
+%	\[\lim_{h \to 0} \frac{\sin(1+h) - 2\sin(1)+\sin(1-h)}{h} = \answer{-\sin(1)}\]
+%	\begin{hint}
+%		Use the angle sum formula for sine on both $\sin(1+h)$ and $\sin(1-h)$
+%	\end{hint}
+%\end{exercise}
+
+\begin{exercise}
+\[
+\lim_{\psi\to 4 } \frac{\sqrt{\psi +5}-3}{\psi -4}\begin{prompt} = \answer{\frac{1}{6}}\end{prompt}
+\]
+\begin{hint}
+Multiply by $\frac{\sqrt{\psi +5}+3}{\sqrt{\psi +5}+3}$.
+\end{hint}
+\end{exercise}
+
+%%piecewise limits 2%%
+\begin{exercise}
+\[
+g(x) = \begin{cases}
+  \frac{x^3 - 8}{x-2}  &\text{if $x<1$,} \\
+  x^3+1 &\text{if  $x>1$.}
+\end{cases}
+\]
+Does $\lim_{x \to 2} g(x)$ exist?  If it does, give its value.
+Otherwise write DNE.
+
+\[
+\lim_{x \to 2} g(x) = \answer{9}
+\]
+
+\begin{hint}
+	Note that, close to $x=2$, the rule for $g(x)$ is $x^3+1$.
+\end{hint}
+
+\end{exercise}
+
+%%limit law 3%%
+\begin{exercise}
+Suppose that $\displaystyle\lim_{u\to2}c(u)=-5$, $\displaystyle\lim_{u\to2}B(u)=-1$, and $\displaystyle\lim_{u\to2}Y(u)=-4$. Compute the limit
+
+\[
+\lim_{u\to 2 } \frac{c(u)}{B(u)-Y(u)}\begin{prompt} = \answer{-\frac{5}{3}}\end{prompt}
+\]
+\end{exercise}
+
+
+%%Inf Lim 5%%
+\begin{exercise}
+Consider 
+\[
+f(\psi) = \frac{-5}{\psi -4}.
+\]
+Compute
+\begin{enumerate}
+\item $\displaystyle\lim_{\psi\to 4^- } f(\psi) \begin{prompt} = \answer{\infty}\end{prompt}$
+\item $\displaystyle\lim_{\psi\to 4^+ } f(\psi) \begin{prompt} = \answer{-\infty}\end{prompt}$
+\item $\displaystyle\lim_{\psi\to 4 } f(\psi) \begin{prompt} = \answer{DNE}\end{prompt}$
+\end{enumerate}
+\end{exercise}
+
+
+%%Inf Lim sqrt 4%%
+\begin{exercise}
+Let 
+\[
+r(k) = \frac{\sqrt{k^6+5}-2 k^2}{k-k^3}.
+\]
+Compute
+\begin{enumerate}
+\item $\displaystyle\lim_{k\to \infty} r(k) \begin{prompt} = \answer{-1}\end{prompt}$
+\item $\displaystyle\lim_{k\to -\infty}r(k) \begin{prompt} = \answer{1}\end{prompt}$
+\end{enumerate}
+\begin{hint}
+Multiply by
+\[
+\frac{\frac{1}{k^3}}{\frac{1}{k^3}}
+\]
+\end{hint}
+\end{exercise}
+
+
+%%Limits to infinity 2
+\begin{exercise}
+Let 
+\[
+F(z) = \frac{-5 z^3-3}{z^3-5 z^2-2 z}.
+\]
+Compute
+\begin{enumerate}
+\item $\displaystyle\lim_{z\to \infty} F(z) \begin{prompt} = \answer{-5}\end{prompt}$
+\item $\displaystyle\lim_{z\to -\infty}F(z) \begin{prompt} = \answer{-5}\end{prompt}$
+\end{enumerate}
+\begin{hint}
+Multiply by
+\[
+\frac{\frac{1}{z^3}}{\frac{1}{z^3}}
+\]
+\end{hint}
+\end{exercise}
+
+%%Limits to infinity 
+\begin{exercise}
+Let 
+\[
+y(z) = \frac{5 z^2+z^2+z+5}{2 z^3-5 z^2-3 z+3}.
+\]
+Compute
+\begin{enumerate}
+\item $\displaystyle\lim_{z\to \infty} y(z) \begin{prompt} = \answer{0}\end{prompt}$
+\item $\displaystyle\lim_{z\to -\infty}y(z) \begin{prompt} = \answer{0}\end{prompt}$
+\end{enumerate}
+\begin{hint}
+Multiply by
+\[
+\frac{\frac{1}{z^3}}{\frac{1}{z^3}}
+\]
+\end{hint}
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,232 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\outcome{Explain the relationship between differentiability and continuity.}
+\outcome{Determine whether a piecewise function is differentiable.}
+\title[Dig-In:]{Differentiability implies continuity}
+
+\begin{document}
+\begin{abstract}
+We see that if a function is differentiable at a point, then it must
+be continuous at that point.
+\end{abstract}
+\maketitle
+
+There are connections between continuity and differentiability.
+
+\begin{theorem}[Differentiability Implies Continuity]\index{differentiability implies continuity}
+If $f$ is a differentiable function at $x = a$, then $f$ is continuous
+at $x=a$.
+\begin{explanation}
+To explain why this is true, we are going to use the following
+definition of the derivative
+\[
+f'(a) = \lim_{x\to a} \frac{f(x)-f(a)}{x-a}.
+\]
+
+  Assuming that $f'(a)$ exists, we want to show that $f(x)$ is
+continuous at $x=a$, hence we must show that
+\[
+\lim_{x\to a} f(x) = f(a).
+\]
+Starting with
+\[
+\lim_{x\to a} \left(f(x) - f(a)\right)
+\]
+we multiply and divide by $(x-a)$ to get
+\begin{align*}
+  &= \lim_{x\to a} \left((x-a)\frac{f(x) - f(a)}{x-a}\right) \\
+  &= \left(\lim_{x\to a} (x-a) \right) \left(\lim_{x\to a}\frac{f(x) - f(a)}{x-a}\right) &\text{Limit Law.} \\
+  &= \answer[given]{0}\cdot f'(a) = \answer[given]{0}.
+\end{align*}
+Since 
+\[
+\lim_{x\to a}\left(f(x) - f(a)\right) = 0 
+\]
+we see that $\lim_{x\to a} f(x) = f(a)$, and so $f$ is continuous at
+$x=a$.
+\end{explanation}
+\end{theorem}
+
+This theorem is often written as its contrapositive:
+\begin{quote}
+If $f(x)$ is not continuous at $x=a$, then $f(x)$ is not
+differentiable at $x=a$.
+\end{quote}
+
+
+Thus from the theorem above, we see that all differentiable functions
+on $\RR$ are continuous on $\RR$. Nevertheless there are continuous
+functions on $\RR$ that are not differentiable on $\RR$.
+
+\begin{problem}
+  Which of the following functions are continuous but not
+  differentiable on $\RR$? (Select all correct answers)
+  \begin{selectAll}
+    \choice{$x^2$}
+    \choice{$\lfloor x \rfloor$}
+    \choice[correct]{$|x|$}
+    \choice{$\frac{\sin(x)}{x}$}
+  \end{selectAll}
+\end{problem}
+
+From our informal definition of derivative of a function,
+we can see that the piece-wise function
+
+\[
+f(x) = \begin{cases}
+        1 &\text{if $x\leq 3$,}\\
+        0.5(x-3)+1 &\text{if $x>3$}
+       \end{cases}
+\]
+is not differentible at $x=3$:
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:6, range=0:7,
+            ymin=-.2,ymax=7,
+            width=6in,
+            height=2.5in, %% Hard coded height! Moreover this effects the aspect ratio of the zoom--sort of BAD
+            axis lines=none,
+          ]   
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(.8,1.6) (2.834,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(2.834,5) (4.166,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(1.2,1.6) (4.166,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(.8,1.6) (1.2,1.6)} \closedcycle; %% zoom fill
+
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(3.3,3.6) (5.334,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(5.334,5) (6.666,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(3.7,3.6) (6.666,5)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(3.3,3.6) (3.7,3.6)} \closedcycle; %% zoom fill
+          
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(3.7,2.4) (6.666,1)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(3.3,2.4) (3.7,2.4)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(3.3,2.4) (5.334,1)} \closedcycle; %% zoom fill          
+          \addplot [draw=none, fill=background] plot coordinates {(5.334,1) (6.666,1)} \closedcycle; %% zoom fill
+          
+
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(.8,.4) (2.834,1)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=textColor!10!background] plot coordinates {(2.834,1) (4.166,1)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(1.2,.4) (4.166,1)} \closedcycle; %% zoom fill
+          \addplot [draw=none, fill=background] plot coordinates {(.8,.4) (1.2,.4)} \closedcycle; %% zoom fill
+
+          \addplot[very thick,penColor, smooth,domain=(0:0.98)] {1}; %% Inital Point
+          \addplot[very thick,penColor, smooth,domain=(1:1.833)] {x};  %% Initial Point
+          \addplot[very thick,penColor, smooth,domain=(2.834:3.5)] {3}; %% 2.5 to 4.333
+          \addplot[very thick,penColor, smooth,domain=(3.5:4.166)] {x-0.5}; %% 2.5 to 4.333
+          %\addplot[very thick,penColor, smooth,domain=(5.334:6.666)] {11.11/(1.540-.09*x)-8.109}; %% 5 to 6.833
+          \addplot[very thick,penColor, smooth,domain=(5.334:6.00)] {3}; %% 5 to 6.833 (Last zoom in box)
+          \addplot[very thick,penColor, smooth,domain=(6:6.666)] {x-3}; %% 5 to 6.833  (Last zoom in box)
+          
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,1)};  %% point to be zoomed
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3.5,3)};  %% zoomed pt 1
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,3)};  %% zoomed pt 2
+
+          \addplot [->,textColor] plot coordinates {(0,0) (0,6)}; %% axis
+          \addplot [->,textColor] plot coordinates {(0,0) (2,0)}; %% axis
+          
+          \addplot [textColor!50!background] plot coordinates {(.8,.4) (.8,1.6)}; %% box around pt
+          \addplot [textColor!50!background] plot coordinates {(1.2,.4) (1.2,1.6)}; %% box around pt
+          \addplot [textColor!50!background] plot coordinates {(.8,1.6) (1.2,1.6)}; %% box around pt
+          \addplot [textColor!50!background] plot coordinates {(.8,.4) (1.2,.4)}; %% box around pt
+          
+          \addplot [textColor!50!background] plot coordinates {(2.834,1) (2.834,5)}; %% zoomed box 1
+          \addplot [textColor!50!background] plot coordinates {(4.166,1) (4.166,5)}; %% zoomed box 1
+          \addplot [textColor!50!background] plot coordinates {(2.834,1) (4.166,1)}; %% zoomed box 1
+          \addplot [textColor!50!background] plot coordinates {(2.834,5) (4.166,5)}; %% zoomed box 1
+
+          \addplot [textColor] plot coordinates {(3.3,2.4) (3.3,3.6)}; %% box around zoomed pt
+          \addplot [textColor] plot coordinates {(3.7,2.4) (3.7,3.6)}; %% box around zoomed pt
+          \addplot [textColor] plot coordinates {(3.3,3.6) (3.7,3.6)}; %% box around zoomed pt
+          \addplot [textColor] plot coordinates {(3.3,2.4) (3.7,2.4)}; %% box around zoomed pt
+
+          \addplot [textColor] plot coordinates {(5.334,1) (5.334,5)}; %% zoomed box 2
+          \addplot [textColor] plot coordinates {(6.666,1) (6.666,5)}; %% zoomed box 2
+          \addplot [textColor] plot coordinates {(5.334,1) (6.666,1)}; %% zoomed box 2
+          \addplot [textColor] plot coordinates {(5.334,5) (6.666,5)}; %% zoomed box 2
+
+          \node at (axis cs:2.2,0) [anchor=east] {$x$};
+          \node at (axis cs:0,6.6) [anchor=north] {$y$};
+        \end{axis}
+\end{tikzpicture}
+%% \caption{Given a function $f$, if one can ``zoom in'' at $(a, f(a))$
+%% sufficiently so that the graph seems to be a straight line,
+%% then that line is the \textbf{tangent line} to $f$ at the point
+%% determined by $(a, f(a))$.}
+%% \label{figure:informal-tangent}
+\end{image}
+%% \todo{This image should be interactive.}
+
+Notice that however much we 'zoom in' on the function at $x=3$, there is always a kink.
+
+\begin{problem}
+Using the 'zoomed in' graph of the piecewise function $f(x)$ above, what is $f'(3)$?
+  \begin{multipleChoice}
+    \choice{$f'(3)=0$ because to the left of the 'kink,' the line is\\
+  horizontal, which has slope $0$.}
+    \choice{$f'(3)=0$ because to the right of the 'kink,' the line has slope $0.5$.}
+    \choice{$f'(3)=0.25$ because $0.25$ is the average of the slopes of the lines to the left and right of the kink.}
+    \choice[correct]{$f'(3)$ does not exist because there is no one \\
+    \emph{best} tangent line approximation of the function at $x=3$.}
+  \end{multipleChoice}
+  \begin{feedback}
+      \begin{freeResponse}
+        Using that limit vocabulary, explain why the piecewise function $f(x)$
+        is not differentiable at $x=3$. It may be helpful to note that the slope
+        of $f(x)$ when $x<3$ is $0$ and the slope of $f(x)$ when $x>3$ is $0.5$. 
+      \end{freeResponse}
+  \end{feedback}
+\end{problem}
+
+\begin{example}
+  Consider
+  \[
+  f(x) = \begin{cases}
+          x^2 &\text{if $x<3$,}\\
+          mx+b &\text{if $x\ge 3$.}
+         \end{cases}
+  \]
+  What values of $m$ and $b$ make $f$ differentiable at $x=3$?
+  \begin{explanation}
+    To start, we know that we must make $f$ both continuous and
+    differentiable. Hence, we must ensure that the value of both
+    pieces of $f$ agree at $x=3$. Write with me
+    \begin{align*}
+      \eval{x^2}_{x=3} &= \eval{mx+b}_{x=3}\\
+      9 &= m\cdot 3 + b.
+    \end{align*}
+    Now we must ensure that the derivatives of each piece of $f$ agree
+    at $x=3$. Write with me
+    \begin{align*}
+    \ddx x^2 &= \lim_{h\to 0}\frac{(x+h)^2-x^2}{h}\\
+    &= \lim_{h\to 0}\frac{x^2 + 2xh + h^2 - x^2}{h}\\
+    &= \lim_{h\to 0}\frac{2xh + h^2}{h}\\
+    &= \lim_{h\to 0}\left(2x + h\right)\\
+    &=\answer[given]{2x}.
+    \end{align*}
+    Moreover,
+    \[
+    \ddx(mx+ b) = \answer[given]{m}
+    \]
+    by the definition of a tangent line. Hence we must have
+    \begin{align*}
+      \eval{\ddx x^2}_{x=3} &= \eval{\ddx(mx+b)}_{x=3}\\
+      \eval{2x}_{x=3} &= \eval{m}_{x=3}\\
+      6 &= m.
+    \end{align*}
+    Ah! So now
+    \begin{align*}
+      9 &= m\cdot 3 + b\\
+      9 &= 6\cdot 3 + b\\
+      9 &= 18 + b,
+    \end{align*}
+    so $b=-9$. Thus setting $m=6$ and $b=-9$ will give us a continuous
+    and differentiable piecewise function.
+  \end{explanation}
+\end{example}
+
+
+
+\end{document}

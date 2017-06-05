@@ -1,0 +1,120 @@
+\documentclass{ximera}
+
+\input{../preamble}
+
+\outcome{To be able to use the method of substitution to solve more difficult types of integrals.}
+\outcome{To be able to both correctly identify what to substitute for and to be able to successfully carry out the process to correctly solve the problem.}
+
+\title[Dig-In:]{Working with substitution}
+
+\begin{document}
+\begin{abstract}
+We explore more difficult problems involving substitution.
+\end{abstract}
+\maketitle
+
+
+We begin by restating the substitution formula.
+
+
+\begin{theorem}[Integral Substitution Formula] 
+If $u$ is differentiable on the interval $[a,b]$ and $f$ is
+differentiable on the interval $[u(a),u(b)]$, then
+\[
+\int_a^b f'(u(x)) u'(x) \d x =\int_{u(a)}^{u(b)} f'(u) \d u.
+\]
+\end{theorem}
+
+We spend pretty much this entire section working out examples.
+
+
+\begin{example}
+Compute:
+\[
+\int_{5}^{8}\sqrt{x-4} \d x
+\]
+\begin{explanation}
+  Let
+  \[
+  u =\answer[given]{x-4},
+  \]
+  computing $\d u$, we find
+  \[
+  \d u =\answer[given]{1}\d x
+  \]
+  
+  Now
+\begin{align*}
+\int_{5}^{8}\sqrt{x-4} \d x &= \int_{u(5)}^{u(8)} \sqrt{u}\d u  \\
+&= \int_{\answer[given]{1}}^{\answer[given]{4}} \answer[given]{\sqrt{u}} \d u\\
+&= \eval{\answer[given]{\frac{2}{3}}u^{3/2}}_{\answer[given]{1}}^{\answer[given]{4}}\\
+&= \frac{2}{3}\left(\answer[given]{4}^{3/2}-\answer[given]{1}^{3/2}\right)\\
+&= \frac{2}{3}(\answer[given]{8}-\answer[given]{1})\\
+&= \answer[given]{14/3}.
+\end{align*}
+\end{explanation}
+\end{example}
+
+
+The next example requires a new technique.
+
+\begin{example}
+  Compute:
+\[
+\int x(3+x)^{14}\d x
+\]
+\begin{explanation}
+Here it is not apparent that the chain rule is involved. However, if
+it was involved, perhaps a good guess for $u$ would be
+\[
+u = \answer[given]{3+x}
+\]
+and then we can write
+
+\begin{align*}
+    \int x(3+x)^{14}\d x &= \int(u-3)(u)^{14}\d u\\
+    &= \int u^{\answer[given]{15}}-3u^{\answer[given]{14}}\d u
+\end{align*}
+
+Now we can use the power rule.
+
+\begin{align*}
+    \int x(3+x)^{14}\d x &= \answer[given]{1/(16)}u^{\answer[given]{16}}\\
+    &-\answer[given]{3/(15)}u^{\answer[given]{15}}\\
+    &= \frac{1}{16}(\answer[given]{3+x})^{\answer[given]{16}}\\
+    &-\frac{1}{5}(\answer[given]{3+x})^{\answer[given]{15}}+C.
+\end{align*}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Compute:
+\[
+\int \frac{\sin(\sqrt{x})}{\sqrt{x}}\d x
+\]
+\begin{explanation}
+What should we let $u$ be?
+\[
+u = \answer[given]{\sqrt{x}}
+\]
+
+So we get the derivative of $u$ is 
+\[
+\d u = \answer[given]{\frac{1}{2\sqrt{x}}} \Rightarrow \answer[given]{2}du \\
+\]
+\[
+\phantom{\d u = \frac{1}{2\sqrt{x}} \Rightarrow 2 du} =\answer[given]{\frac{1}{\sqrt{x}}} \d x
+\]
+
+The integral resulting after substitution is
+\begin{align*}
+\int \frac{\sin(\sqrt{x})}{\sqrt{x}}\d x &= \int\answer[given]{2}\sin(\answer[given]{u})\d u\\
+&= \answer[given]{-2}\cos(u)\\
+&=-2\cos(\answer[given]{\sqrt{x}})+C
+\end{align*}
+
+
+\end{explanation}
+\end{example}
+\end{document}

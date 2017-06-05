@@ -1,0 +1,199 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\outcome{Understand the derivative as a function related to the original
+  definition of a function.}
+\outcome{Find the derivative function using the limit definition.}
+\outcome{Relate the derivative function to the derivative at a point.}
+\outcome{Relate the graph of the function to the graph of its derivative.}
+
+
+
+
+\title[Dig-in:]{The derivative as a function}
+
+\begin{document}
+\begin{abstract}
+Here we study the derivative of a function, as a function, in its own
+right.
+\end{abstract}
+\maketitle
+
+\section{The derivative of a function, as a function}
+
+
+We know that to find the derivative of a function at a point $x=a$ we
+write
+\[
+f'(a) = \lim_{h\to 0}\frac{f(a+h)-f(a)}{h}.
+\]
+However, if we replace the given number $a$ with a variable $x$, we now
+have
+\[
+f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.
+\]
+This tells us the instantaneous rate of change at any given point $x$.
+\begin{warning}
+  The notation:
+  \begin{quote}
+  $f'(a)$ means take the derivative of $f$ first, then evaluate at
+    $x=a$.
+  \end{quote}
+  In other words, given $f$ a function of $x$
+  \[
+  f'(a) = \eval{\ddx f(x)}_{x=a}.
+  \]
+\end{warning}
+
+\begin{problem}
+Suppose you are given a polynomial $f(x)$ and you are asked to compute $f'(2)$. What is the most efficient way to answer the question?
+  \begin{multipleChoice}
+  \choice[correct]{Compute $f'(2)$ directly from the definition of \\
+  derivative of a function at a point}
+  \choice{Compute the derivative as a function $f'(x)$, and then evaluate $f'(x)$ at $x=2$}
+  \end{multipleChoice}
+ \end{problem}
+ 
+  \begin{problem}
+  Suppose you are given a polynomial $f(x)$ and you are asked to compute $f'(-2)$, $f'(0)$, and $f'(2)$. What is the most efficient way to answer the question?
+    \begin{multipleChoice}
+      \choice{Compute $f'(-2)$, $f'(0)$, and $f'(2)$ directly from the\\
+      definition of derivative of a function at a point}
+      \choice[correct]{Compute the derivative of $f$ as a function $f'(x)$, \\
+      and then evaluate $f'(x)$ at $x=-2$, $0$, and $-2$}
+    \end{multipleChoice}
+    \begin{feedback}
+    Typically, a limit computation takes longer than evaluation,
+    so when you need to find that derivative of a function at multiple points,
+    it is often quicker to compute the derivative as a function,
+    and then evaluate at the particular points.
+    \end{feedback}
+  \end{problem}
+
+
+Given a function $f$ from the real numbers to the real numbers, the
+derivative $f'$ is also a function from the real numbers to the real
+numbers. Understanding the relationship between the \textit{functions}
+$f$ and $f'$ helps us understand any situation (real or imagined)
+involving changing values. 
+
+\begin{problem}
+  Let $f(x) = 3x+2$. What is $f'(-1)$?
+  \begin{multipleChoice}
+    \choice{$f'(-1) = 0$ because $f'(3)$ is a number, and a number corresponds to a horizontal line,\\ which has a slope of zero.}
+    \choice[correct]{$f'(-1) = 3$ because $y=f(x)$ is a straight line with slope $3$.}
+    \choice{We cannot solve this problem yet.}
+  \end{multipleChoice}
+\end{problem}
+
+
+\begin{problem}
+  Here we see the graph of $f'$. 
+  \begin{image}
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin=-2,xmax=2,ymin=-8,ymax=8,
+          axis lines=center,
+          ticks=none,
+          width=6in,
+          height=3in,
+          every axis y label/.style={at=(current axis.above origin),anchor=south},
+          every axis x label/.style={at=(current axis.right of origin),anchor=west},
+        ]        
+        %\addplot [very thick,dashed, penColor,smooth, domain=(-2:2)] {x^3+.3*x^2-2*x)};
+        \addplot [very thick,penColor,smooth, domain=(-2:2)] {3*x^2+2*.3*x-2)};
+      \end{axis}
+    \end{tikzpicture}
+  \end{image}
+  Describe $y=f(x)$ when $f'$ is positive. Describe $y=f(x)$ when $f'$
+  is negative.
+  \begin{prompt}
+    When $f'$ is positive, $y=f(x)$ is \wordChoice{\choice{positive}\choice[correct]{increasing}\choice{negative}\choice{decreasing}}.
+    When $f'$ is negative, $y=f(x)$ is \wordChoice{\choice{positive}\choice{increasing}\choice{negative}\choice[correct]{decreasing}}
+  \end{prompt}
+\end{problem}
+
+\begin{problem}
+    Which of the following graphs could be $y = f(x)$?
+     \begin{multipleChoice}
+       \choice{\begin{tikzpicture}[framed,scale=1,baseline=3ex]
+           \begin{axis}[
+               xmin=-2,xmax=2,ymin=-8,ymax=8,
+               axis lines=center,
+               ticks=none,
+               width=2in,
+               height=1in,
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+             ]        
+             \addplot [very thick,penColor,smooth, domain=(-2:2)] {3*x^2+2*.3*x-2)};
+           \end{axis}
+       \end{tikzpicture}}
+       \choice[correct]{\begin{tikzpicture}[framed,scale=1,baseline=3ex]
+           \begin{axis}[
+               xmin=-2,xmax=2,ymin=-8,ymax=8,
+               axis lines=center,
+               ticks=none,
+               width=2in,
+               height=1in,
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+             ]        
+             \addplot [very thick,penColor,smooth, domain=(-2:2)] {x^3+.3*x^2-2*x)};
+           \end{axis}
+       \end{tikzpicture}}
+       \choice{\begin{tikzpicture}[framed,scale=1,baseline=3ex]
+           \begin{axis}[
+               xmin=-2,xmax=2,ymin=-8,ymax=8,
+               axis lines=center,
+               ticks=none,
+               width=2in,
+               height=1in,
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+             ]        
+             \addplot [very thick,penColor,smooth, domain=(-2:2)] {6*x+2*.3)};
+           \end{axis}
+       \end{tikzpicture}}
+     \end{multipleChoice}
+  \end{problem}
+
+
+
+
+\section{The derivative as a function on functions}
+
+While writing $f'$ is viewing the derivative of $f$ as a function in
+its own right, the derivative itself
+\[
+\ddx
+\]
+is in fact a function that maps functions to functions,
+\begin{align*}
+  \ddx x^2 &= 2x\\
+  \ddx f(x) &= f'(x).
+\end{align*}
+
+\begin{problem}
+  As a function, is
+  \[
+  \ddx
+  \]
+  one-to-one? 
+  \begin{hint}
+  Recall that a function is one-to-one if every input has a distinct output, i.e. two inputs have the same output only when they are the same input.
+  \end{hint}
+  \begin{multipleChoice}
+    \choice{yes}
+    \choice[correct]{no}
+  \end{multipleChoice}
+  \begin{feedback}
+    Many different functions share the same derivative since the
+    derivative records only the slope of the tangent line and not
+    the value, or height.
+  \end{feedback}
+\end{problem}
+
+\end{document}
+

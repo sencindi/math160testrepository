@@ -1,0 +1,262 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\outcome{Recognize a composition of functions.}
+\outcome{Take derivatives of compositions of functions using the chain rule.}
+\outcome{Take derivatives that require the use of multiple derivative rules.}
+\outcome{Use the chain rule to calculate derivatives from a table of values.}
+\outcome{Understand rate of change when quantities are dependent upon each other.}
+\outcome{Use order of operations in situations requiring multiple derivative rules.}
+\outcome{Apply chain rule to relate quantities expressed with different units.}
+
+\title[Dig-In:]{The chain rule}
+
+\begin{document}
+\begin{abstract}
+  Here we compute derivatives of compositions of functions
+\end{abstract}
+\maketitle
+
+
+So far we have seen how to compute the derivative of a function built
+up from other functions by addition, subtraction, multiplication and
+division. There is another very important way that we combine
+functions: composition. The \textit{chain rule} allows us to deal with
+this case. Consider
+\[
+h(x) = \sin(1+2x).
+\] 
+While there are several different ways to differentiate this function,
+if we let $f(x) = \sin(x)$ and $g(x) = 1+2x$, then we can express
+$h(x) = f(g(x))$. The question is, can we compute the derivative of a
+composition of functions using the derivatives of the constituents
+$f(x)$ and $g(x)$? To do so, we need the \textit{chain rule}.
+
+
+
+\begin{theorem}[Chain Rule]\index{chain rule}\index{derivative rules!chain}
+If $f$ and $g$ are differentiable, then
+\[
+\ddx f(g(x)) = f'(g(x))g'(x).
+\]
+\end{theorem}
+
+
+
+It will take a bit of practice to make the use of the chain rule come
+naturally, it is more complicated than the earlier differentiation
+rules we have seen. Let's return to our motivating example.
+
+\begin{example}
+Compute:
+\[
+\ddx \sin(1+2x)
+\]
+
+\begin{explanation}
+Set $f(x) = \sin(x)$ and $g(x) = 1+2x$, now
+\[
+f'(x) = \answer[given]{\cos(x)} \qquad\text{and}\qquad g'(x) = \answer[given]{2}.
+\]
+Hence
+\begin{align*}
+\ddx \sin(1+2x) &= \ddx f(g(x))\\ 
+&=f'(g(x))g'(x) \\
+&= \cos(\answer[given]{1+2x})\cdot \answer[given]{2}\\
+&= 2\cos(1+2x).
+\end{align*}
+\end{explanation}
+\end{example}
+
+Recall that $\ddx \cos(x) = -\sin(x)$. We showed this by using the definition of the derivative and the sum of angles formula. Now that we have the chain rule, we can verify this fact by using the chain rule.
+
+
+
+\begin{theorem}[The derivative of cosine: Take 2]\index{derivative!of cosine Take 2}
+\[
+\ddx \cos(x) = -\sin(x).
+\]
+\begin{explanation}
+Recall that
+\begin{itemize}
+\item $\cos(x) = \sin\left(\frac{\pi}{2}-x\right)$.
+\end{itemize}
+Now
+\begin{align*}
+\ddx \cos(x) &= \ddx \sin\left(\frac{\pi}{2}-x\right)\\ \\
+&=-\cos\left(\frac{\pi}{2}-x\right) \\
+&= -\sin(x).
+\end{align*}
+\end{explanation}
+\end{theorem}
+
+
+\begin{warning}
+When working with derivatives of trigonometric functions, we suggest
+you use \textbf{radians} for angle measure. For example, while
+\[
+\sin\left((90^\circ\right)^2) = \sin\left(\left(\frac{\pi}{2}\right)^2\right),
+\]
+one must be careful with derivatives as
+\[
+\eval{\ddx \sin\left(x^2\right)}_{x=90^\circ} \ne \underbrace{2\cdot 90\cdot \cos(90^2)}_{\text{incorrect}}
+\]
+Alternatively, one could think of $x^\circ$ as meaning
+$\frac{x\cdot\pi}{180}$, as then $90^\circ = \frac{90\cdot\pi}{180} =
+\frac{\pi}{2}$. In this case
+\[
+2\cdot 90^\circ\cdot \cos((90^\circ)^2) = 2\cdot \frac{\pi}{2}\cdot\cos\left(\left(\frac{\pi}{2}\right)^2\right).
+\]
+\end{warning}
+
+Let's see a more complicated chain of compositions.
+
+\begin{example}
+Compute:
+\[
+\ddx \sqrt{1+\sqrt{x}}
+\]
+
+\begin{explanation}
+Set 
+$f(x)=\sqrt{x}$ and $g(x)=1+x$. Hence,
+\[
+\sqrt{1+\sqrt{x}}=f(g(\answer[given]{f}(x)))
+\]
+and by the chain rule we know
+\[
+\ddx f(g(f(x))) = f'(g(f(x)))g'(f(x))f'(x).
+\]
+Since 
+\[
+f'(x) = \answer[given]{\frac{1}{2\sqrt{x}}} \qquad\text{and}\qquad g'(x) = \answer[given]{1}
+\]
+We have that
+\[
+\ddx \sqrt{1+\sqrt{x}} = \frac{1}{2\sqrt{1+\sqrt{x}}}\cdot 1\cdot  \answer[given]{\frac{1}{2\sqrt{x}}}.
+\]
+\end{explanation}
+\end{example}
+
+The chain rule allows to differentiate compositions of functions that
+would otherwise be difficult to get our hands on.
+
+\begin{example}
+Compute:
+\[
+\ddx \sqrt{\sin(x^2)}
+\]
+
+\begin{explanation}
+set $f(x) = \answer[given]{\sqrt{x}}$, $g(x) = \answer[given]{\sin(x)}$, and $h(x) = \answer[given]{x^2}$
+so that $f(g(x)) = \sqrt{\sin(x^2)}$. Now
+\begin{align*}
+  \ddx \sqrt{\sin(x^2)} &= \ddx f(g(h(x)))\\
+  &= f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x)\\
+  &= \frac{1}{2}(\answer[given]{\sin(x^2)})^{-1/2} \cdot \cos(\answer[given]{x^2}) \cdot \answer[given]{2x}.
+\end{align*}
+\end{explanation}
+\end{example}
+
+
+
+
+Using the chain rule, the power rule, and the product rule it is
+possible to avoid using the quotient rule entirely.
+
+\begin{example}
+Compute:
+\[
+\ddx \frac{x^3}{x^2+1}
+\]
+
+\begin{explanation}
+Rewriting this as 
+\[
+\ddx x^3(x^2+1)^{-1}, 
+\]
+set $f(x) = \answer[given]{x^{-1}}$ and $g(x) = \answer[given]{x^2+1}$ so that $f(g(x)) = (x^2 + 1)^{-1}$. Now
+\[
+x^3(x^2+1)^{-1} = x^3 f(g(x)),
+\]
+and by the product and chain rules
+\[
+\ddx x^3 f(g(x)) = \answer[given]{3x^2} \cdot f(g(x))+ \answer[given]{x^3} \cdot f'(g(x))g'(x).
+\]
+Since $f'(x) = \answer[given]{\frac{-1}{x^2}}$ and $g'(x) = \answer[given]{2x}$, write
+\[
+\ddx \frac{x^3}{x^2+1} = \frac{3x^2}{x^2+1}-\frac{2x^4}{(x^2+1)^2}.
+\]
+\end{explanation}
+\end{example}
+
+
+We can also compute derivatives with a tables of values.
+
+\begin{problem}
+%%% Table looks bad. Needs to be redone.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\phantom{..}\textbf{\emph{x}}\phantom{..} & \phantom{..}\textbf{\emph{f(x)}}\phantom{..} & \phantom{..}\textbf{\emph{f'(x)}}\phantom{..} & \phantom{..}\textbf{\emph{g(x)}}\phantom{..} & \phantom{..}\textbf{\emph{g'(x)}}\phantom{..}\\
+\hline
+$-2$ & $0$ & $2$ & $3$ & $0.75$\\
+\hline
+$0$ & $0.5$ & $0.25$ & $3$ & $1$\\
+\hline
+$3$ & $3$ & $-4$ & $-2$ & $-1$\\
+\hline
+\end{tabular}
+\end{center}
+
+
+Using the table of values above, compute $h'(3)$ when $h(x) = f(g(x))$.
+
+\begin{explanation}
+Notice that we need to find the derivative of $h(x)$ at $x=3$, but $h(x)$ is defined terms of $f(x)$ and $g(x)$. Since $h(x)$ is a composition of functions, we need to take the derivative of $h(x)$ using the chain rule.
+\[
+\ddx h(x) = f'(g(x))g'(x)
+\]
+Now that we know what $h'(x)$ looks like, we want to evaluate at $x=3$.
+\[
+\Big[\ddx h(x) \Big]_{x=3} = f'\Big(g(\answer[given]{3})\Big)g'(\answer[given]{3})
+\]
+Using the table of values, we can see that 
+\[
+\begin{aligned}
+f'\Big(g(3)\Big)g'(3) &= f'\Big( \answer[given]{-2}\Big) (\answer[given]{-1}) \\
+ &= \answer[given]{2} (-1)\\
+ &= \answer[given]{-2}.
+\end{aligned}
+\]
+\end{explanation}
+
+\end{problem}
+
+\begin{problem}
+%%% Table looks bad. Needs to be redone.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\phantom{..}\textbf{\emph{x}}\phantom{..} & \phantom{..}\textbf{\emph{f(x)}}\phantom{..} & \phantom{..}\textbf{\emph{f'(x)}}\phantom{..} & \phantom{..}\textbf{\emph{g(x)}}\phantom{..} & \phantom{..}\textbf{\emph{g'(x)}}\phantom{..}\\
+\hline
+$-2$ & $0$ & $2$ & $3$ & $0.75$\\
+\hline
+$0$ & $0.5$ & $0.25$ & $3$ & $1$\\
+\hline
+$3$ & $3$ & $-4$ & $-2$ & $-1$\\
+\hline
+\end{tabular}
+\end{center}
+
+Using the table above, what is $p'(x)$ at $x=-2$ when $p(x) = (g \circ f)(x)$?
+
+\begin{prompt}
+   The value of $p'(-2)$ is $\answer[given]{2}$
+\end{prompt}
+
+\end{problem}
+
+
+\end{document}
