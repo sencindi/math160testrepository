@@ -1,0 +1,421 @@
+\documentclass[handout,nooutcomes]{ximera}
+%handout
+%wordchoicegiven
+%space
+%nooutcomes
+\title{Math 160 Lab 2: Application}
+\author{Ben Sencindiver} %Used Bart Snapp and Jim Fowler's mooculus textbook as a guide
+%irrelevantchange
+\input{preamble.tex}
+
+\outcome{Define linear approximation as an application of the tangent to a curve.}
+\outcome{Find the linear approximation to a function at a point and use it to approximate the function value.}
+\outcome{Identify when a linear approximation can be used.}
+\outcome{Label a graph with the appropriate quantities used in linear approximation.}
+\outcome{Find the error of a linear approximation.}
+
+\begin{document}
+
+\section{Math 160 Lab 2 \\ Linear Approximation Application}
+
+\begin{abstract}
+This is Lab 2 for Math 160 - Due Wednesday, March 8, 2017 at 5:00PM MST.
+This section of the lab walk through an application using linear approximation.\\
+
+Throughout this lab unless stated otherwise, compute all values to \underline{$6$ decimal places}.
+\end{abstract}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Approximating periodicity of a pendulum!
+Let's apply this notion of linear approximations in a physics application to
+answer a real-life question!\\
+
+
+\begin{example}
+Consider a pendulum with ball $B$ with mass $m$ hanging from a string
+with length $L$ hanging from a block of woods at pivot point $P$.
+Below is a picture of the pendulum that is displaced with angle
+$\theta$ from equilibrium.\\
+
+%% Picture of pendulum 
+%Edited from http://tex.stackexchange.com/questions/219038
+%/tikz-draw-angle-with-label-between-lines
+\begin{center}
+\usetikzlibrary{calc,patterns,angles,quotes}
+\begin{tikzpicture}
+    \coordinate (origo) at (0,0);
+    \coordinate (pivot) at (1,5);
+
+    % draw axes
+    \fill[black] (origo) circle (0.05);
+    \node[below left=1pt of {(0,0)}] {Point $P$};
+    \draw[thick,gray,->] (origo) -- ++(4,0) node[black,right] {};
+    \draw[thick,dashed, gray,->] (origo) -- ++(0,-4) node (mary) [black,below] {};
+
+    % draw roof
+    \fill[pattern = north east lines] ($ (origo) + (-1,0) $) rectangle ($ (origo) + (1,0.5) $);
+    \draw[thick] ($ (origo) + (-1,0) $) -- ($ (origo) + (1,0) $);
+
+    \draw[thick] (origo) -- ++(300:3) coordinate (bob);
+    \fill (bob) circle (0.2);
+    \node[below left=5pt of {(1.5,-2.5)}] {$B$};
+
+    \pic [draw, ->, "$\theta$", angle eccentricity=1.5] {angle = mary--origo--bob};
+  \end{tikzpicture}
+\end{center}
+
+In this model when the mass is directly below the pivot point $P$
+(on the dashed line), the string is in equilibrium and doesn't move.\\
+
+Suppose we'd like to find out how long it takes this pendulum
+to swing back and forth (one period).\\
+
+\begin{explanation}
+First of all, to find the period of the pendulum, we need to understand
+how the pendulum moves. Note that the position of the pendulum is completely determined
+by the angle of displacement $\theta$, assuming that the string is always tight.
+If we move the ball of the pendulum to a certain $\theta\neq 0$ and let go,
+the pendulum will swing back and forth. Therefore the angle $\theta$
+is a function of time, call it $t$. So how does this pendulum move?\\
+
+Newton's second law of motion implies the following 
+relationship holds in this system:
+
+\[
+-m g L \phantom{.} \sin(\theta) = m L^2 \phantom{.}\dfrac{d^2 \theta}{d t^2}
+\]
+where $g$ is earth's gravitational constant.\\
+
+Our goal is to solve this differential equation to find what the function
+$\theta$ is. Once we find $\theta$, we can find the period of the pendulum's swing.\\
+
+Let's get to work. Manipulate the above equation so that `$0$'
+is on one side (the left side) and the $\dfrac{d^2 \theta}{d t^2}$ term
+is positive.\\
+
+\[
+0 = \answer[given]{m L^2} \dfrac{d^2 \theta}{d t^2}  + \answer[given]{m g L \sin(\theta)}\\
+\]
+
+\textbf{Hint}: Remember that in Ximera, you type `$\theta$' by typing `theta'.\\
+
+
+Note that $L,m,$ and $g$ are constants and are greater than $0$, so we can
+divide the above equality by any of these terms to get an equivalent statement.
+Manipulate the above equality so that the coefficient of $\dfrac{d^2 \theta}{d t^2}$
+is $1$. Be sure to simplify fractions.\\
+
+\[
+0 = \dfrac{d^2 \theta}{d t^2}  + \dfrac{\answer[given]{g}}{\answer[given]{L}} \phantom{.} \sin(\theta)
+\]
+\end{explanation}
+\end{example}
+
+\begin{problem}
+Does the above relationship depend on the length of the string?
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice}
+\begin{feedback}
+There's no way to eliminate $L$ from the equation, so the solution
+to the differential equation depends on the length of the string $L$.
+\end{feedback}
+\end{problem}
+
+\begin{problem}
+Does the above relationship depend on the gravitational constant?
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice}
+\begin{feedback}
+Same here. There's no way to eliminate $g$ from the equation, so the solution
+to the differential equation depends on earth's gravitational
+constant $g$.
+\end{feedback}
+\end{problem}
+
+\begin{problem}
+Does the above relationship depend on the mass of ball?
+\begin{multipleChoice}
+\choice{Yes}
+\choice[correct]{No}
+\end{multipleChoice}
+\begin{feedback}
+By dividing by $m$, we were able to eliminate the mass $m$ from
+the equation. Therefore the solution to the differential equation
+(the position/path of the ball) doesn't depend
+on the mass of the ball. Even though $m$ was in the initial equality,
+it isn't relevant to the solution. Holy smokes!
+\end{feedback}
+\end{problem}
+
+\begin{example}
+\begin{explanation}
+Now let's try to solve this differential equation!\\
+
+\[
+0 = \dfrac{d^2 \theta}{d t^2}  + \dfrac{g}{L} \sin(\theta)
+\]
+
+We will utilize the fact that $\theta$, the angle of displacement of the ball $B$),
+is a function of time, $t$. We are trying to solve the differential
+equation above so that we can find the period of the swing of the pendulum.\\
+
+Manipulate the above equation to so that $\dfrac{d^2 \theta}{d t^2}$ is in terms of $\theta$.\\
+
+\[
+\dfrac{d^2 \theta}{d t^2}  = \answer[given]{-g\sin(\theta)/L}
+\]
+
+The differential equation is too tough for us to solve at the moment,
+but we can solve something similar.\\
+
+
+Let's solve this differential equation for small displacements
+of $\theta$. We will replace `$\sin(\theta)$' with a linear approximation
+of $\sin(\theta)$.\\
+
+
+
+\textbf{Question. } If we want to solve this differential displacements from 
+equilibrium, at value of $\theta$ should we approximate $\sin(\theta)$?\\
+
+
+We find a linear approximation of $\sin(\theta)$ at $\theta = \answer[given]{0}$.\\
+
+
+
+\textbf{Question. } What is the linear approximation of $\sin(\theta)$ at the above $\theta$ value?\\
+
+\[
+\sin(\theta) \approx \answer[given]{\theta}
+\]
+
+
+Hint: Remember $\theta$ is the variable, not $t$ nor $x$. (Click the blue arrow to
+the right for another hint)\\
+
+\begin{expandable}
+You've already found this early this earlier in this lab, at the end of the last section.
+\begin{expandable}
+You found that sin(x) was approximately x near x=0.\\
+\end{expandable}
+\end{expandable}
+
+$\phantom{.}$\\
+\medskip
+
+\textbf{Remark. } The above approximation is actually a surprisingly good for
+$|\theta|\leq \frac{\pi}{12} = 15^\circ$, so in this context, "small" angles
+are angles that deviate no more that $15^\circ$ from equilibrium, by the way.\\
+
+$\phantom{.}$\\
+\medskip
+
+Back to the problem at hand, we are trying to find a solution to
+
+\[
+\dfrac{d^2 \theta}{d t^2}  = -\dfrac{g}{L} \theta
+\]
+
+or if we rename the constant $C=\frac{g}{L}$, we are trying to find a solution to
+
+\[
+\dfrac{d^2 \theta}{d t^2}  = -C \theta.\\
+\]
+
+Another way to phrase this is that $\theta$ is a functions whose
+second derivative is $-1$ times a scalar $C$ of the original function.\\
+
+
+\textbf{Question.}  Do you know any types of function whose \emph{second} derivative
+is $-1$ times itself (disregarding the $C$)? Which of the following have at least one function that has this property.\\
+
+\begin{selectAll}
+\choice[correct]{Polynomials of degree $0$ (Constant functions)}
+\choice{Polynomials of degree $1$ or bigger}
+\choice[correct]{Trigonometric functions}
+\end{selectAll}
+
+\textbf{Hint}: Click the blue arrow to the right to reveal a hint.
+\begin{expandable}
+If g(x)=0 (the horizontal line at height 0), what is its derivative?\\
+\end{expandable}
+\medskip
+
+\textbf{Problem. } Which polynomial $f(t)$ has the property that it's second
+derivative is $-1$ times itself i.e. if
+$\theta=f(t)$, then $\dfrac{d^2 \theta}{d t^2} = f''(t) = -f(t)$?\\
+
+
+The polynomial function $f(t) = \answer[given]{0}$ has the property that $f''(t) = -f(t)$.\\
+
+$\phantom{.}$\\
+\medskip
+
+\textbf{Hint}: Click the blue arrows on the right to reveal hints.\\
+
+\begin{expandable}
+It is a constant function.
+\begin{expandable}
+What is the derivative of a constant function?
+\begin{expandable}
+The function is its own derivative.
+\begin{expandable}
+What is the derivative of the zero function?
+\end{expandable}
+\end{expandable}
+\end{expandable}
+\end{expandable}
+
+$\phantom{.}$\\
+\medskip
+
+
+This is our equilibrium solution! This function has $\theta=0$ at $t=0$. In other
+words, this is our solution when we put the ball directly below the point
+that the string is hanging from. This is no surprise though since this
+is \textit{always} at equilibrium. What we \emph{really} want is to find out what happens
+when we place the ball somewhere where the ball actually swings.
+
+
+\textbf{Question.}  Which of the following trigonometric functions have the property that
+$\dfrac{d^2 \theta}{d t^2} = -\theta$? Select all such functions.
+\begin{selectAll}
+\choice[correct]{$\sin(t)$}
+\choice[correct]{$\cos(t)$}
+\choice{$\tan(t)$}
+\choice{$\csc(t)$}
+\choice{$\sec(t)$}
+\choice{$\cot(t)$}
+\end{selectAll}
+$\phantom{.}$
+\medskip
+
+
+\textbf{Question }. Since we are simulating the motion of the pendulum when letting go of the pendulum from
+a stand still, which of the functions you picked above would accurately simulate this situation?
+\begin{selectAll}
+\choice{$\sin(t)$}
+\choice[correct]{$\cos(t)$}
+\choice{$\tan(t)$}
+\choice{$\csc(t)$}
+\choice{$\sec(t)$}
+\choice{$\cot(t)$}
+\end{selectAll}
+
+\textbf{Hint}: Click the blue arrow to the right to reveal hints.
+\begin{expandable}
+We want that the pendulum is not moving at t=0.
+\begin{expandable}
+We want a function f(t) such that f'(t) = 0 at t=0.
+\end{expandable}
+\end{expandable}
+
+
+
+We're almost there! We know what the function generally looks like, but we
+need to check the fine details to make sure we answer the question we set out to answer.
+
+We want to solve the differential equation
+
+\[
+\dfrac{d^2 \theta}{d t^2}  = -\dfrac{g}{L} \theta
+\]
+
+or for the constant $C=\frac{g}{L}$,
+
+\[
+\dfrac{d^2 \theta}{d t^2}  = -C\theta.
+\]
+
+For $\theta = \cos(at+b)$
+
+\begin{align*}
+    \dfrac{d^2}{d t^2}(\theta) &= \dfrac{d^2}{d t^2}\Big(\cos(a t + b)\Big)\\
+    &= \dfrac{d}{d t} \Big( \dfrac{d}{dt}\Big(\cos(a t + b) \Big) \Big)\\
+    &= \dfrac{d}{d t} \Big( \answer[given]{- a \sin(a t+b)}\Big)\\
+    &= \answer[given]{-a^2 \cos(a t+b)}\\
+    &= -a^2 \theta 
+\end{align*}
+
+
+\textbf{Question. } So if we are looking for a solution to $\dfrac{d^2 \theta}{d t^2}  = -\dfrac{g}{L} \theta$,
+then solutions to this differential equation is $\theta = \cos(at+b)$ where
+
+\[
+b = \answer[given]{0}
+\]
+
+and 
+
+\[
+a^2 = \answer[given]{g/L}.
+\]
+
+Assuming $a>0$, then 
+
+\[
+a = \sqrt{\dfrac{\answer[given]{g}}{\answer[given]{L}}}.
+\]
+
+
+Therefore your solution to the differential equation is $\answer[given]{ \cos((\sqrt{g}t)/\sqrt{L})}$\\
+
+
+
+\textbf{Question. } Given your solution to the differential equation above, what is the period of a ball with mass $m$ on a string with length $L$ which is displaced at "small" angles?
+
+\[
+(\answer[given]{2\pi})\sqrt{\Big(\answer[given]{L/g}\Big)}
+\]
+\medskip
+
+\textbf{Hint}: For $A\sin(at+b)$ or $A\cos(at+b)$, the period of the 
+function is $\dfrac{2\pi}{a}$.
+
+
+If the ball starts at an initial angle of displacement $\theta_0$
+(where $|\theta_0|<\frac{\pi}{12}= 15^\circ$), we can describe
+the position of the ball at any given time by
+
+\[
+\theta(t) = \theta_0 \cos\Big(\sqrt{\frac{g}{L}} t\Big).
+\]
+Pretty neat, huh?
+
+
+\textbf{Question. } Given a ball with mass $0.6$ kilograms hanging from a string with length $7$ meters, what is the period of a pendulum swing when the swing doesn't deviate more than $\frac{\pi}{12}$ radians from a free hang (where gravitational constant $9.8$ meters per second)?
+
+
+<<<<<<< HEAD
+The period is approximately $\answer[tolerance=0.01]{5.31026}$.\\
+=======
+The period is approximately $\answer[tolerance=0.01]{5.3102}$.\\
+>>>>>>> 774c7568790b592ace090ec64c887db81043e1c4
+
+Use the calculator below to get your numeric answer. For example, if you type
+`2pi*4', you will see the numeric answer.
+
+\[
+\graph[panel]{}
+\]
+
+
+%http://www.acs.psu.edu/drussell/Demos/Pendulum/Pendula.html
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+
+\end{document}
