@@ -1,0 +1,78 @@
+\documentclass{ximera}
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+% used in maketitle
+\title{Testing if we can do a survey}
+\author{Ben I guess}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+% \usepackage{sagetex}
+
+\begin{document}
+\begin{abstract}
+  This is just a test.
+\end{abstract}\maketitle
+
+
+Here I am. Testing to see if we can get this survey stuff right
+
+
+
+\begin{problem}
+  I'm a multiple choice problem multiple-choice:
+  \begin{multipleChoice}
+    \choice[correct]{I'm Correct}
+    \choice[correct]{Me too}
+    \choice[correct]{As am I}
+    \choice[correct]{Yes}
+  \end{multipleChoice}
+  \begin{hint}
+    Click on the choice that says ``Pick me!''
+  \end{hint}
+\end{problem}
+
+Same test
+
+
+\begin{problem}
+  I'm a multiple choice problem multiple-choice:
+  \begin{multipleChoice}
+    \choice[correct]{I'm Correct}
+    \choice[correct]{Me too}
+    \choice[correct]{As am I}
+    \choice[correct]{Yes}
+  \end{multipleChoice}
+  \begin{hint}
+    Click on the choice that says ``Pick me!''
+  \end{hint}
+\end{problem}
+
+Something that works below
+
+\begin{problem}
+  Some problems are multiple-choice:
+  \begin{multipleChoice}
+    \choice{Don't pick me.}
+    \choice{Not me either.}
+    \choice[correct]{Pick me!}
+    \choice{Also an incorrect choice}
+  \end{multipleChoice}
+  \begin{hint}
+    Click on the choice that says ``Pick me!''
+  \end{hint}
+\end{problem}
+
+
+
+
+\end{document}
