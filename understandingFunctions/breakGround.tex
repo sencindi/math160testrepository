@@ -3,13 +3,13 @@
 \input{../preamble.tex}
 
 \outcome{Distinguish two functions by considering their domains.}
-\outcome{Recognize different represenations of the same function.}
+\outcome{Recognize different representions of the same function.}
 
 \title[Break-Ground:]{Same or different?}
 
 \begin{document}
 \begin{abstract}
-  Two young mathematicians examine one (or two!)  functions.
+  Two young mathematicians examine one (or two?)  functions.
 \end{abstract}
 \maketitle
 
@@ -21,25 +21,26 @@ story):
 \item[Riley] Tell me. Tell me everything.
 \item[Devyn] Think about the function
   \[
-  f(x) = \frac{x^2 - 3x + 2}{x-2}.
+  f(x) = \frac{2x}{x}.
   \]
 \item[Riley] OK.
-\item[Devyn] Is this function equal to $g(x) = x-1$?
+\item[Devyn] Is this function equal to $g(x) = 2$?
 \item[Riley] Well if I plot them with my calculator, they look the
   same.
 \item[Devyn] I know!
 \item[Riley] And I suppose if I write
   \begin{align*}
-    f(x) &= \frac{x^2 - 3x + 2}{x-2} \\
-    &= \frac{(x-1)(x-2)}{x-2} \\
-    &= x-1 \\
+    f(x) &= \frac{2x}{x} \\
+    &= \frac{2\cancel{x}}{\cancel{x}} \\
+    &= 2 \cdot 1 \\
+    &= 2 \\
     &= g(x).
   \end{align*}
-\item[Devyn] Sure! But what about when $x=2$? In this case
+\item[Devyn] Sure! But what about when $x=0$? In this case
   \[
-  g(2) = 1\qquad\text{but}\qquad f(2) \text{ is undefined!}
+  g(0) = 2\qquad\text{but}\qquad f(0) \text{ is undefined!}
   \]
-\item[Riley] Right, $f(2)$ is undefined because we cannot divide by
+\item[Riley] Right, $f(0)$ is undefined because we cannot divide by
   zero. Hmm. Now I see the problem. Yikes!
 \end{dialogue}
 
@@ -81,7 +82,7 @@ story):
   \end{multipleChoice}
 
   \begin{problem}
-    Are $f(x) = |x|$ and $g(x) = \sqrt{x^2}$ the same function?
+    Are $f(x) = 2x+1$ and $g(x) = 2(x-1)+3$ the same function?
 
     \begin{multipleChoice}
       \choice[correct]{These are the same function although they are represented by different formulas.}
@@ -91,13 +92,17 @@ story):
 \end{problem} 
 
 \begin{problem}
-	Let $f(x) = \sin^2(x)$ and $g(u) = \sin^2(u)$.  The domain of each of these functions is all real numbers.  Which of the following statements are true?
+	Let $f(x) =x^2$ and $g(u) = u^2$.  The domain of each of these functions is all real numbers.  Which of the following statements are true?
 	\begin{multipleChoice}
 	  \choice{There is not enough information to determine if $f = g$.}
 	  \choice[correct]{The functions are equal.}
 	  \choice{If $x \neq u$, then $f \neq g$.}
 	  \choice{We have $f \neq g$ since $f$ uses the variable $x$ and $g$ uses the variable $u$.}
 	\end{multipleChoice}
+    
+    \begin{feedback}[correct]
+    Although one function is stated in terms of $x$ and the other is stated in terms of $u$, they are both fundamentally the same function: $f(1) = g(1)$, $f(-4) = g(-4)$, and, in general $f(c) = g(c)$ for \textit{every} value of $c$ in the real numbers.  You could also graph both of these functions, and they would have the same shape.  The mathematical relation $f(x)$ conveys is the same one that $g(u)$ conveys, so we say that $f = g$.  
+    \end{feedback}
 \end{problem}
 
 
