@@ -4,18 +4,16 @@
 \title[Prerequisite Videos: ]{[Video] Piece-Wise Functions}
 \author{Ben Sencindiver}
 
-\outcome{Compute function values of piece-wise functions, find domain/range of piece-wise functions, and graph piece-wise functions.}
+\outcome{Find function values of piece-wise functions, find domain/range of piece-wise functions, and graph piece-wise functions.}
 
 \begin{document}
 \begin{abstract}
-   In this set of videos, we will work to understand how to find function values of piece-wise functions, find the domain and range of piece-wise functions, and how to graph piece-wise functions.
+   In this set of videos, we will work to understand how to find function values of piece-wise functions, how to find the domain and range of piece-wise functions, and how to graph piece-wise functions.
 \end{abstract}
 \maketitle
 
-The following videos will cover topics about piece-wise functions.
-
 %% Question 1
-\textbf{Question 1: What is the multiplicity of a polynomial at a root?}
+\textbf{Question 1: Finding function values of piece-wise functions.}
 \begin{question}
 %% Labeling this expandable option
 \begin{flushright}
@@ -23,20 +21,26 @@ The following videos will cover topics about piece-wise functions.
 \end{flushright}
 \begin{center}
 \begin{expandable}
-\youtube{0DhaITXMAdw}
+\youtube{Egm75HO7gzs}
 %% Multiple Choice Question 1
 \begin{flushright}
 {\color{blue}(\emph{Click the arrow to the right to see the question
 posed at the end of the video.})}
 \end{flushright}
 \begin{expandable}
-The function $f(x) = 17x^4(x+1)^3(x-1)^2(x-2)$ has multiplicity what at root $x=1$?
+Find $f(1)$ when $f(x)$ is defined by
+\[ f(x) = \begin{cases} 
+      \frac{1}{2}x + \frac{3}{2} & x<1 \\
+     x^2+3x - 6 & 1\leq x\leq 10 \\
+      (x-1)(x+1) & x>10\\	
+   \end{cases}. \]
 \begin{multipleChoice}
+\choice[correct]{$-2$}
+\choice{$-1$}
 \choice{$0$}
 \choice{$1$}
-\choice[correct]{$2$}
-\choice{$3$}
-\choice{$4$}
+\choice{$2$}
+\choice{$f(1)$ is undefined}
 \end{multipleChoice}
 %% Example 1
 \begin{flushright}
@@ -44,7 +48,7 @@ The function $f(x) = 17x^4(x+1)^3(x-1)^2(x-2)$ has multiplicity what at root $x=
 \end{flushright}
 \begin{expandable}
 Example 1
-\youtube{ts9lN_FhXAM}
+\youtube{bkArouEU3g0}
 \end{expandable}
 \end{expandable}
 \end{expandable}
@@ -53,7 +57,7 @@ Example 1
 
 
 %% Question 2
-\textbf{Question 2: Matching polynomial functions to their graphs.}
+\textbf{Question 2: Finding the domain of a piece-wise function.}
 \begin{question}
 %% Labeling this expandable option
 \begin{flushright}
@@ -61,50 +65,40 @@ Example 1
 \end{flushright}
 \begin{center}
 \begin{expandable}
-\youtube{4yfHu4pIxck}
+\youtube{J6I0Jcaqiaw}
 %% Multiple Choice Question 2
 \begin{flushright}
 {\color{blue}(\emph{Click the arrow to the right to see the  question
 posed at the end of the video.})}
 \end{flushright}
 \begin{expandable}
-Which of the following graphs is the graph of the function $f(x) = \frac{1}{6}x^2(x-2)^2(x-1)(x+1)^2(x+2)$?
+What is the domain of $f(x)$ if $f(x)$ is defined by the expression below?\\
 
-\begin{multicols}{3}
-\begin{center}
-A. \includegraphics[scale=0.25]{Graph1}
-\end{center}
+\[ f(x) = \begin{cases} 
+      2x+13 & x<-3 \\
+      \dfrac{x^2+1}{x+5} & -3< x\leq 1 \\
+      \frac{-1}{x^2-4} & x> 1\\	
+   \end{cases} \]
+   
+\begin{hint}
 
-\begin{center}
-B. \includegraphics[scale=0.25]{Graph2}
-\end{center}
- 
-\begin{center}
-C. \includegraphics[scale=0.25]{Graph3}
-\end{center}
-\end{multicols}
+Are there any values of $x>1$ for which $\frac{-1}{x^2-4}$ is undefined?
 
-\begin{multicols}{3}
-\begin{center}
-D. \includegraphics[scale=0.25]{Graph4}
-\end{center}
-
-\begin{center}
-E. \includegraphics[scale=0.25]{Graph5} %Correct One
-\end{center}
-
-\begin{center}
-F. \includegraphics[scale=0.25]{Graph6}
-\end{center}
-\end{multicols}
+\end{hint}
 
 \begin{multipleChoice}
-\choice{$A$}
-\choice{$B$}
-\choice{$C$}
-\choice{$D$}
-\choice[correct]{$E$}
-\choice{$F$}
+\choice{$(-\infty, -3)$}
+\choice{$(-\infty, -3]$}
+\choice{$(-3, 1)$}
+\choice{$(-3, 1]$}
+\choice{$[-3,-1]$}
+\choice{$(1, \infty)$}
+\choice{$[1, \infty)$}
+\choice{$(-\infty, -3) \cup (-3, 1]$}
+\choice{$(-3, 1] \cup (1, \infty)$}
+\choice{$(-\infty, -3) \cup (-3, 1] \cup [1, \infty)$}
+\choice{$(-\infty, -3) \cup (-3, -2) \cup (-2, 1] \cup (1, 2) \cup (2, \infty)$}
+\choice[correct]{$(-\infty, -3) \cup (-3, 1] \cup (1, 2) \cup (2, \infty)$}
 \end{multipleChoice}
 %% Example 2
 \begin{flushright}
@@ -112,7 +106,7 @@ F. \includegraphics[scale=0.25]{Graph6}
 \end{flushright}
 \begin{expandable}
 Example 2
-\youtube{a1TxdPwfhXY}
+\youtube{BeeaOn6zSO8}
 \end{expandable}
 \end{expandable}
 \end{expandable}
@@ -121,7 +115,7 @@ Example 2
 
 
 %% Question 3
-\textbf{Question 3: Matching polynomial graphs to their functions.}
+\textbf{Question 3: Find the range of a piece-wise function.}
 \begin{question}
 %% Labeling this expandable option
 \begin{flushright}
@@ -129,20 +123,28 @@ Example 2
 \end{flushright}
 \begin{center}
 \begin{expandable}
-\youtube{cXHoAiLJ990}
+\youtube{QLNZW-_cLeM}
 %% Multiple Choice Question 3
 \begin{flushright}
 {\color{blue}(\emph{Click the arrow to the right to see the question
 posed at the end of the video.})}
 \end{flushright}
 \begin{expandable}
-Which of the following functions is the graph below?
+
+What is the range of $f(x)$ when $f(x)$ is defined by the expression below?\\
+
+\[ f(x) = \begin{cases} 
+      2x+3 & x<-3 \\
+      x^2 & -3\leq x< 2 \\
+      -1 & x> 3\\	
+   \end{cases} \]
+   
 \begin{multipleChoice}
-\choice{$A$}
-\choice{$B$}
-\choice{$C$}
-\choice{$D$}
-\choice{$E$}
+\choice{$(\infty, -3) \cup [0,9]$}
+\choice{$(\infty, -3] \cup [4,9]$}
+\choice{$(\infty, -1] \cup [0,9]$}
+\choice[correct]{$(\infty, -3) \cup \{-1\} \cup [0,9]$}
+\choice{$(\infty, -3) \cup \{-1\} \cup [0,9)$}
 \end{multipleChoice}
 %% Example 3
 \begin{flushright}
@@ -150,7 +152,7 @@ Which of the following functions is the graph below?
 \end{flushright}
 \begin{expandable}
 Example 3
-\youtube{Lzkn37a21HU}
+\youtube{tjn-DyPJhQA}
 \end{expandable}
 \end{expandable}
 \end{expandable}
@@ -159,32 +161,60 @@ Example 3
 
 
 %% Question 4
-\textbf{Question 4: Factoring polynomials using their graphs.}
+\textbf{Question 4: Graphing piece-wise functions.}
 \begin{question}
 %% Labeling this expandable option
 \begin{flushright}
-{\color{blue}(\emph{You may want to review \href{https://ximera.osu.edu/math160fa17/m160prerequisites/PreRequisiteXards/U6MultiplyingAndFactoringPolynomials/6.2FactoringPolynomials/titlePage}{factoring polynomials} before working on question 4.  Once you are prepared to work on question 4, click the arrow to the right.})}
+{\color{blue}(\emph{Click the arrow to the right to see the fourth question.})}
 \end{flushright}
 \begin{center}
 \begin{expandable}
-\youtube{KQnvwEs4H8E}
+\youtube{_3zhjq1uyEc}
 %% Multiple Choice Question 4
 \begin{flushright}
 {\color{blue}(\emph{Click the arrow to the right to see the question
 posed at the end of the video.})}
 \end{flushright}
 \begin{expandable}
-Given the graph of the function $f(x) = \frac{1}{5}x^5 + \frac{1}{5}x^4 - 2x^3 - \frac{4}{5}x^2 + \frac{24}{5}x$ below, factor $f(x)$
+Which of the graphs is the graph of $f(x)$ where $f(x)$ is defined below?
+\[ f(x) = \begin{cases} 
+      x^2-1 & x \leq 0 \\
+     \frac{1}{3} x + 2 & 0< x \leq 3 \\
+    4 & x>3.5
+   \end{cases} \]
+   
+\begin{multicols}{2}
 \begin{center}
-\includegraphics[scale=0.4]{GraphFactor1.png}
+A.\includegraphics[scale=0.2]{PWGraph1}
 \end{center}
+
+\begin{center}
+B. \includegraphics[scale=0.18]{PWGraph6}
+\end{center}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{center}
+C. \includegraphics[scale=0.18]{PWGraph2}
+\end{center}
+
+\begin{center}
+D. \includegraphics[scale=0.2]{PWGraph5}
+\end{center}
+
+\end{multicols}
+
+\begin{center}
+E.\includegraphics[scale=0.18]{PWGraph4}
+\end{center}
+
 \begin{multipleChoice}
-\choice{$\frac{4}{5}x(x-2)(x+2)(x+3)$}
-\choice{$\frac{1}{5}x(x-2)(x+2)^2(x+3)$}
-\choice[correct]{$\frac{1}{5}x(x-2)^2(x+2)(x+3)$}
-\choice{$\frac{1}{5}x(x-2)(x+2)(x+3)$}
-\choice{$\frac{4}{5}x(x-2)^2(x+2)(x+3)$}
-\choice{$\frac{1}{5}x^3(x-2)^4(x+2)^3(x+3)$}
+\choice{A}
+\choice{B}
+\choice[correct]{C}
+\choice{D}
+\choice{E}
+\choice{None of the above.}
 \end{multipleChoice}
 %% Example 4
 \begin{flushright}
@@ -192,7 +222,7 @@ Given the graph of the function $f(x) = \frac{1}{5}x^5 + \frac{1}{5}x^4 - 2x^3 -
 \end{flushright}
 \begin{expandable}
 Example 4
-\youtube{2kX7nwT3zY0}
+\youtube{dq24Kyw7XTU}
 \end{expandable}
 \end{expandable}
 \end{expandable}
