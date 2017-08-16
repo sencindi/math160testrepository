@@ -85,7 +85,7 @@ Use the data you gathered in the previous exercise to help you answer this quest
 
 Consider the statement below, and then indicate whether it is sometimes, always, or never true.
 
-``If $\displaystyle\lim_{x\to 10^-} f(x) = 4$ and $\displaystyle\lim_{x\to 10} f(x)$ exists, then $\displaystyle\lim_{x\to 10^-} f(x) = 4.$"
+``If $\displaystyle\lim_{x\to 10^-} f(x) = 4$ and $\displaystyle\lim_{x\to 10} f(x)$ exists, then $\displaystyle\lim_{x\to 10^+} f(x) = 4.$"
 
 This statement is \wordChoice{\choice{sometimes}\choice[correct]{always}\choice{never}} true.
 
@@ -126,13 +126,13 @@ Consider $f(x) = x^2$. Fill in the
     1.000001 & \begin{prompt}\answer{1.0000200001}\end{prompt}
   \end{array}
   \]
-  Based on the data you have gathered, you might predict that 
+  Based on the data you have gathered, you would predict that 
   \[
   \lim_{x\to 1} x^2 = \answer{1}
   \]
   
     \begin{exercise}
-    As discussed previously, neither tables nor graphs can ever tell you for certain what a limit is. However, sometimes they can help to ``guess'' the limit. Let's look at the graph of $f(x) = x^2$ to double check your prediction. 
+    As discussed previously, neither tables nor graphs can ever tell you for certain what a limit is equal to. However, sometimes they can help to ``guess'' the limit. Let's look at the graph of $f(x) = x^2$ to double check your prediction. 
 \[
 \graph{x^2}
 \]
@@ -159,13 +159,14 @@ Consider $g(x) = \cos\left(\frac{\pi}{x-2\pi}\right)$. Fill in the
   \[
   \begin{array}{l|l}
     x      & f(x)      \\ \hline
+    2\pi + 0.1    & \begin{prompt}\answer{1}\end{prompt}\\
     2\pi + 0.01    & \begin{prompt}\answer{1}\end{prompt}\\
     2\pi + 0.001   & \begin{prompt}\answer{1}\end{prompt}\\
     2\pi + 0.0001  & \begin{prompt}\answer{1}\end{prompt}\\
     2\pi + 0.00001 & \begin{prompt}\answer{1}\end{prompt}
   \end{array}
   \]
-  Based on the data you have gathered, you might predict that 
+  Based on the data you have gathered, you would predict that 
   \[
   \lim_{x\to 2\pi}  \cos\left(\frac{\pi}{x-2\pi}\right)= \answer{1}
   \]

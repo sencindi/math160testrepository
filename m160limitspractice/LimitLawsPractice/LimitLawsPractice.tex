@@ -1,0 +1,157 @@
+\documentclass[handout]{ximera}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xercises}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xourse}
+
+%\author{Steven Gubkin}
+%\license{Creative Commons 3.0 By-NC}
+\input{../../preamble.tex}
+
+\outcome{Practice Limits.}
+   
+
+\title{Limit laws practice}
+
+\begin{document}
+\begin{abstract}
+Here is an opportunity for you to practice limit laws and the Squeeze Theorem.
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+  Can this limit be directly computed by limit laws?
+  \[
+  \displaystyle\lim_{x\to -3}\frac{x^2+5x+6}{x+2} 
+  \]
+  \begin{multipleChoice}
+    \choice[correct]{yes}
+    \choice{no}
+  \end{multipleChoice}
+  \begin{question}
+    Compute:
+    \[
+    \displaystyle\lim_{x\to -3}\frac{x^2+5x+6}{x+3}\begin{prompt} =\answer{0}\end{prompt}
+    \]
+    \begin{feedback}
+      Since $f(x)=\frac{x^2+5x+6}{x+2}$ is a rational function, and
+      $\displaystyle\lim_{x\to -3} x+2 =-1 \neq 0$, you can use the quotient law.  The limit of the numerator and denominator can then be calculated using the limit laws because the numerator and denominator are both polynomials. 
+    \end{feedback}
+  \end{question}
+\end{exercise}
+
+\begin{exercise}
+  Can this limit be directly computed by limit laws?
+  \[
+  \displaystyle\lim_{x\to -3}\frac{x^2+5x+6}{x+2} 
+  \]
+  \begin{multipleChoice}
+    \choice[correct]{yes}
+    \choice{no}
+  \end{multipleChoice}
+  \begin{question}
+    Compute:
+    \[
+    \displaystyle\lim_{x\to -3}\frac{x^2+5x+6}{x+3}\begin{prompt} =\answer{0}\end{prompt}
+    \]
+    \begin{feedback}
+      Since $f(x)=\frac{x^2+5x+6}{x+2}$ is a rational function, and
+      $\displaystyle\lim_{x\to -3} x+2 =-1 \neq 0$, you can use the quotient law.  The limit of the numerator and denominator can then be calculated using the limit laws because the numerator and denominator are both polynomials. 
+    \end{feedback}
+  \end{question}
+\end{exercise}
+
+\begin{exercise}
+  Can this limit be directly computed by limit laws?
+  \[
+  \displaystyle\lim_{x\to -1} \frac{1}{|x|}
+  \]
+  \begin{multipleChoice}
+    \choice[correct]{yes}
+    \choice{no}
+  \end{multipleChoice}
+  \begin{question}
+    Compute:
+    \[
+    \displaystyle\lim_{x\to -1} \frac{1}{|x|} \begin{prompt} =\answer{1}\end{prompt}
+    \]
+    \begin{feedback}
+      Since $f(x)=\frac{1}{|x|}$ is a rational function, we would like to use the quotient law.  Before doing so, we must check that the limit of the denominator is not equal to $0$.  When $x < 0, |x| = -x$, so $\displaystyle\lim_{x\to -1} |x| = \displaystyle\lim_{x\to -1} -x = -(-1) \neq 0$ and so the quotient law can be utilized. The limit of the the numerator can also be calculated because the numerator is a constant function. 
+    \end{feedback}
+  \end{question}
+\end{exercise}
+
+\begin{exercise}
+  Can this limit be directly computed by limit laws?
+  \[
+  \displaystyle\lim_{x\to 0} \frac{1}{|x|}
+  \]
+  \begin{multipleChoice}
+    \choice[correct]{yes}
+    \choice{no}
+  \end{multipleChoice}
+  \begin{question}
+    Compute:
+    \[
+    \displaystyle\lim_{x\to 0} \frac{1}{|x|} \begin{prompt} =\answer{1}\end{prompt}
+    \]
+    \begin{feedback}
+      Again, because $f(x)=\frac{1}{|x|}$ is a rational function, we would like to use the quotient law.  However, $\displaystyle\lim_{x\to 0} |x| = 0$, so the limit of the denominator is $0$, and the quotient law cannot be used.  We need techniques beyond the limit laws to evaluate this limit. 
+    \end{feedback}
+  \end{question}
+\end{exercise}
+
+\begin{exercise}
+
+Compute the following limit using limit laws:
+  \[
+  \displaystyle\lim_{x\to 4} \frac{(3x-7)(\sqrt{x})}{5x}  \]
+First, you could use the quotient law to conclude that 
+
+\[
+  \displaystyle\lim_{x\to 4} \frac{(3x-7)(\sqrt{x})}{5x} = \frac{\displaystyle\lim_{x\to 4} (3x-7)(\sqrt{x})}{\displaystyle\lim_{x\to 4} 5x} \]
+by the \wordChoice{\choice{Constant Multiple Law}\choice{Sum/Difference Law}\choice{Product Law}\choice[correct]{Quotient Law}}, which you can use because 
+
+\[
+  \displaystyle\lim_{x\to 4} 5x \neq \answer{0}. \]
+  
+The numerator can be now be re-written using the \wordChoice{\choice{Constant Multiple Law}\choice{Sum/Difference Law}\choice[correct]{Product Law}\choice{Quotient Law}}: 
+
+\[ \frac{\displaystyle\lim_{x\to 4} (3x-7)(\sqrt{x})}{\displaystyle\lim_{x\to 4} 5x} = \frac{\left(\displaystyle\lim_{x\to 4} 3x-7 \right) \left(\displaystyle\lim_{x\to 4}\sqrt{x}\right)}{\displaystyle\lim_{x\to 4} 5x} \]
+
+Now, you can evaluate all of the limits that appear individually: 
+
+\begin{itemize}
+
+\item $\displaystyle\lim_{x\to 4} 3x-7 = \answer{5}$ by the \wordChoice{\choice[correct]{Constant Multiple Law}\choice[correct]{Sum/Difference Law}\choice{Product Law}\choice{Quotient Law}} and the \wordChoice{\choice[correct]{Constant Multiple Law}\choice[correct]{Sum/Difference Law}\choice{Product Law}\choice{Quotient Law}}.
+
+\item $\displaystyle\lim_{x\to 4} \sqrt{x} = \answer{2}$
+
+and 
+
+\item $\displaystyle\lim_{x \to 4} 5x = \answer{20}$
+
+\end{itemize}
+
+Combining all this information together, you can conclude that 
+
+\[
+  \displaystyle\lim_{x\to 4} \frac{(3x-7)(\sqrt{x})}{5x} = \answer{\frac{1}{2}}  \]
+
+\end{exercise}
+
+\begin{exercise}
+
+Suppose that $\displaystyle\lim_{x \to -4} Q(x) = 3, \displaystyle\lim_{x\to -4} R(x) = 7,$ and $\displaystyle\lim_{x\to -4} S(x) = -2$.  Using this information, evaluate the following limits. 
+
+\begin{itemize}
+
+\item $\displaystyle\lim_{x \to -4} \left( Q(x) -5S(x) - R(x)\right) = \answer{6}$
+
+\item $\displaystyle\lim_{x \to -4} Q(x)\left((S(x))^2 + 5 \right) = \answer{\frac{-1}{7}}$
+
+\item $\displaystyle\lim_{x \to -4} \frac{2S(x) + Q(x)}{R(x)} = \answer{27}$
+
+\end{itemize}
+
+\end{exercise}
+
+\end{document}
