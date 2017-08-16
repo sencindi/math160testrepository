@@ -56,6 +56,73 @@ Here is an opportunity for you to practice limit laws and the Squeeze Theorem.
 \end{exercise}
 
 \begin{exercise}
+Can this limit be directly computed by limit laws?
+  \[
+  \displaystyle\lim_{x\to 0} \left(-x^6\cos\left(\frac{\pi}{x}\right)\right)
+  \]
+  
+  \begin{multipleChoice}
+      \choice{Yes}
+      \choice[correct]{No}
+  \end{multipleChoice}
+  
+\begin{exercise}
+  
+Right - the limit laws will not help you in this situation.  Here is a graph of this function to help you see what's going on.  Use the + button to zoom in.
+  \[
+   \graph{f(x)=-x^6*\cos\left(\left(\frac{\pi}{x}\right)\right)}
+  \]
+  
+Based on the graph, you would predict that 
+
+\[
+  \displaystyle\lim_{x\to 0} \left(-x^6\cos\left(\frac{\pi}{x}\right)\right) = \answer{0}.
+  \]
+\begin{exercise}
+
+Let's verify this prediction using the Squeeze Theorem.
+ 
+First, you could notice that 
+
+\[ \answer{-1} \leq \cos\left(\frac{\pi}{x}\right) \leq \answer{1} \]
+
+so that
+   
+\[ \answer{-x^6} \leq -x^6\cos\left(\frac{\pi}{x}\right) \leq \answer{x^6}. \]
+
+Before moving on, graph the two functions you entered in the last two answer boxes using the Desmos app above.  Do you see how these two graphs ``squeeze" $-x^6\cos\left(\frac{\pi}{x}\right)$ near $x=0$?
+
+Now, notice that 
+
+\[ \displaystyle\lim_{x \to \answer{0}} \answer{-x^6} = \answer{0} = \displaystyle\lim_{x \to \answer{0}} \answer{x^6},\]
+
+so the Squeeze Theorem allows us to conclude that 
+
+\[ \displaystyle\lim_{x \to 0}  -x^6\cos\left(\frac{\pi}{x}\right) = \answer{0} \]
+
+\end{exercise}
+\end{exercise}
+\end{exercise}
+
+\begin{exercise}
+  Can this limit be directly computed by limit laws?
+  \[
+  \displaystyle\lim_{x\to 53} 1337
+  \]
+  \begin{multipleChoice}
+    \choice[correct]{yes}
+    \choice{no}   
+  \end{multipleChoice}
+\begin{question}
+    Compute:
+    \[
+    \displaystyle\lim_{x\to 53} 1337 \begin{prompt} =\answer{1337}\end{prompt}
+    \]
+  \end{question}
+
+\end{exercise}
+
+\begin{exercise}
   Can this limit be directly computed by limit laws?
   \[
   \displaystyle\lim_{x\to -1} \frac{1}{|x|}
@@ -163,54 +230,7 @@ Use the fact that $\displaystyle\lim_{x \to 0} \frac{\sin x}{x} = 1$ to evaluate
 \end{itemize}
 \end{exercise}
 
-\begin{exercise}
-Can this limit be directly computed by limit laws?
-  \[
-  \displaystyle\lim_{x\to 0} \left(-x^6\cos\left(\frac{\pi}{x}\right)\right)
-  \]
-  
-  \begin{multipleChoice}
-      \choice{Yes}
-      \choice[correct]{No}
-  \end{multipleChoice}
-  
-\begin{exercise}
-  
-Right - the limit laws will not help you in this situation.  Here is a graph of this function to help you see what's going on.  Use the + button to zoom in.
-  \[
-   \graph{f(x)=-x^6*\cos\left(\left(\frac{\pi}{x}\right)\right)}
-  \]
-  
-Based on the graph, you would predict that 
 
-\[
-  \displaystyle\lim_{x\to 0} \left(-x^6\cos\left(\frac{\pi}{x}\right)\right) = \answer{0}.
-  \]
-\begin{exercise}
-
-Let's verify this prediction using the Squeeze Theorem.
- 
-First, you could notice that 
-
-\[ \answer{-1} \leq \cos\left(\frac{\pi}{x}\right) \leq \answer{1} \]
-
-so that
-   
-\[ \answer{-x^6} \leq -x^6\cos\left(\frac{\pi}{x}\right) \leq \answer{x^6}. \]
-
-Before moving on, graph the two functions you entered in the last two answer boxes using the Desmos graph above.  Do these two graphs ``squeeze" $-x^6\cos\left(\frac{\pi}{x}\right)$ near $x=0$?
-
-Now, notice that 
-
-\[ \displaystyle\lim_{x \to \answer{0}} \answer{-x^6} = \answer{0} = \displaystyle\lim_{x \to \answer{0}} \answer{x^6},\]
-
-so the Squeeze Theorem allows us to conclude that 
-
-\[ \displaystyle\lim_{x \to 0}  -x^6\cos\left(\frac{\pi}{x}\right) = \answer{0} \]
-
-\end{exercise}
-\end{exercise}
-\end{exercise}
 
 
 
