@@ -32,7 +32,7 @@ Here is an opportunity for you to practice limit laws and the Squeeze Theorem.
     \displaystyle\lim_{x\to -3}\frac{x^2+5x+6}{x+2} \begin{prompt} =\answer{0}\end{prompt}
     \]
     \begin{feedback}
-      Since $f(x)=\frac{x^2+5x+6}{x+2}$ is a rational function, and
+      Since $f(x)=\frac{x^2+5x+6}{x+2}$ is a rational function and
       $\displaystyle\lim_{x\to -3} x+2 =-1 \neq 0$, you can use the quotient law.  The limit of the numerator and denominator can then be calculated using the limit laws because the numerator and denominator are both polynomials. 
     \end{feedback}
   \end{question}
@@ -46,16 +46,13 @@ Here is an opportunity for you to practice limit laws and the Squeeze Theorem.
   \begin{multipleChoice}
     \choice{yes}
     \choice[correct]{no}
-  \end{multipleChoice}
-  \begin{question}
-    Compute:
-    \[
-    \displaystyle\lim_{x\to -3}\frac{x^2+5x+6}{x+3}\begin{prompt} =\answer{0}\end{prompt}
-    \]
-    \begin{feedback}
+    
+    \begin{feedback}[correct]
       Since $f(x)=\frac{x^2+5x+6}{x+3}$ is a rational function, you may want to use the quotient law; however, $\displaystyle\lim_{x\to -3} x+3 = 0$, so you cannot use this limit law!  Because the quotient law cannot be used, this limit cannot be evaluated with the limit laws. 
     \end{feedback}
-  \end{question}
+    
+  \end{multipleChoice}
+
 \end{exercise}
 
 \begin{exercise}
@@ -84,18 +81,14 @@ Here is an opportunity for you to practice limit laws and the Squeeze Theorem.
   \displaystyle\lim_{x\to 0} \frac{1}{|x|}
   \]
   \begin{multipleChoice}
-    \choice[correct]{yes}
-    \choice{no}
-  \end{multipleChoice}
-  \begin{question}
-    Compute:
-    \[
-    \displaystyle\lim_{x\to 0} \frac{1}{|x|} \begin{prompt} =\answer{1}\end{prompt}
-    \]
-    \begin{feedback}
+    \choice{yes}
+    \choice[correct]{no}
+    
+     \begin{feedback}
       Again, because $f(x)=\frac{1}{|x|}$ is a rational function, we would like to use the quotient law.  However, $\displaystyle\lim_{x\to 0} |x| = 0$, so the limit of the denominator is $0$, and the quotient law cannot be used.  We need techniques beyond the limit laws to evaluate this limit. 
     \end{feedback}
-  \end{question}
+    
+  \end{multipleChoice}
 \end{exercise}
 
 \begin{exercise}
@@ -124,8 +117,6 @@ Now, you can evaluate all of the limits that appear individually:
 
 \item $\displaystyle\lim_{x\to 4} \sqrt{x} = \answer{2}$
 
-and 
-
 \item $\displaystyle\lim_{x \to 4} 5x = \answer{20}$
 
 \end{itemize}
@@ -133,7 +124,7 @@ and
 Combining all this information together, you can conclude that 
 
 \[
-  \displaystyle\lim_{x\to 4} \frac{(3x-7)(\sqrt{x})}{5x} = \answer{\frac{1}{2}}  \]
+  \displaystyle\lim_{x\to 4} \frac{(3x-7)(\sqrt{x})}{5x} = \answer{\frac{1}{2}}.  \]
 
 \end{exercise}
 
@@ -145,9 +136,9 @@ Suppose that $\displaystyle\lim_{x \to -4} Q(x) = 3, \displaystyle\lim_{x\to -4}
 
 \item $\displaystyle\lim_{x \to -4} \left( Q(x) -5S(x) - R(x) \right) = \answer{6}$
 
-\item $\displaystyle\lim_{x \to -4} Q(x)\left(S^2(x) + 5 \right) = \answer{\frac{-1}{7}}$
+\item $\displaystyle\lim_{x \to -4} Q(x)\left(S^2(x) + 5 \right) = \answer{27}$
 
-\item $\displaystyle\lim_{x \to -4} \frac{2S(x) + Q(x)}{R(x)} = \answer{27}$
+\item $\displaystyle\lim_{x \to -4} \frac{2S(x) + Q(x)}{R(x)} = \answer{\frac{-1}{7}}$
 
 \end{itemize}
 
@@ -171,13 +162,9 @@ Use the fact that $\displaystyle\lim_{x \to 0} \frac{\sin x}{x} = 1$ to evaluate
 
 \end{itemize}
 
-\begin{hint}
-
-For the second limit, it may be helpful to re-write $\tan x$.
-
-\end{hint}
-
 \end{exercise}
+
+
 
 
 
