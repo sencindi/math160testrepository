@@ -1,0 +1,58 @@
+\documentclass[handout]{ximera}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xercises}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xourse}
+
+\input{../../preamble.tex}
+
+\outcome{Practice Limits.}
+   
+
+\title{Limits with infinity practice}
+
+\begin{document}
+\begin{abstract}
+Here is an opportunity for you to practice evaluating limits that involve infinity.  
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+Your goal in this exercise is to evaluate $\lim_{x \to -3} \frac{1}{(x+3)^3}$.  First, consider the corresponding one-sided limits. 
+
+$$\lim_{x \to -3^-} \frac{1}{(x+3)^3} \text{ and } \lim_{x \to -3^+} \frac{1}{(x+3)^3}$$
+
+As $x$ approaches $-3$ from the left:  
+
+\begin{itemize}
+
+\item The function $1$ approaches $\answer{1}$, which is a \wordChoice{\choice{positive}\choice[correct]{negative}} number. 
+
+\item $(x+3)^3$ approaches a \wordChoice{\choice{positive}\choice[correct]{negative}} number. 
+
+\end{itemize}
+
+Therefore, 
+
+ \[ \lim_{x \to -3^-} \frac{1}{(x+3)^3} = \answer{-\infty}.\]
+ 
+As $x$ approaches $-3$ from the right: 
+
+\begin{itemize}
+
+\item The function $1$ approaches $\answer{1}$, which is a \wordChoice{\choice{positive}\choice[correct]{negative}} number. 
+
+\item $(x+3)^3$ approaches a \wordChoice{\choice{positive}\choice[correct]{negative}} number. 
+
+\end{itemize}
+
+Therefore, 
+
+ \[ \lim_{x \to -3^+} \frac{1}{(x+3)^3} = \answer{-\infty}. \]
+ 
+Putting all of this information together, you can conclude that
+
+\[ \lim_{x \to -3} \frac{1}{(x+3)^3} = \answer{-\infty}. \]
+
+\end{exercise}
+
+
+\end{document}
