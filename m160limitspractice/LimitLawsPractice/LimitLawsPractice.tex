@@ -2,8 +2,6 @@
 %\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xercises}
 %\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xourse}
 
-%\author{Steven Gubkin}
-%\license{Creative Commons 3.0 By-NC}
 \input{../../preamble.tex}
 
 \outcome{Practice Limits.}
@@ -107,7 +105,7 @@ so the Squeeze Theorem allows us to conclude that
 \begin{exercise}
   Can this limit be directly computed by limit laws?
   \[
-  \displaystyle\lim_{x\to 53} 1337
+  \displaystyle\lim_{x\to 42} 1337
   \]
   \begin{multipleChoice}
     \choice[correct]{yes}
@@ -116,7 +114,7 @@ so the Squeeze Theorem allows us to conclude that
 \begin{question}
     Compute:
     \[
-    \displaystyle\lim_{x\to 53} 1337 \begin{prompt} =\answer{1337}\end{prompt}
+    \displaystyle\lim_{x\to 42} 1337 \begin{prompt} =\answer{1337}\end{prompt}
     \]
   \end{question}
 
@@ -137,7 +135,7 @@ so the Squeeze Theorem allows us to conclude that
     \displaystyle\lim_{x\to -1} \frac{1}{|x|} \begin{prompt} =\answer{1}\end{prompt}
     \]
     \begin{feedback}
-      Since $f(x)=\frac{1}{|x|}$ is a rational function, we would like to use the quotient law.  Before doing so, we must check that the limit of the denominator is not equal to $0$.  When $x < 0, |x| = -x$, so $\displaystyle\lim_{x\to -1} |x| = \displaystyle\lim_{x\to -1} -x = -(-1) \neq 0$ and so the quotient law can be utilized. The limit of the the numerator can also be calculated because the numerator is a constant function. 
+      Since $f(x)=\frac{1}{|x|}$ is a rational function, we would like to use the quotient law.  Before doing so, we must check that the limit of the denominator is not equal to $0$.  When $x < 0, |x| = -x$, so $\displaystyle\lim_{x\to -1} |x| = \displaystyle\lim_{x\to -1} -x = -(-1) \neq 0$ and so the quotient law can be utilized. The limit of the the numerator can also be calculated because the numerator is a constant function.  
     \end{feedback}
   \end{question}
 \end{exercise}
