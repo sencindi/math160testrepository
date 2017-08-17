@@ -6,16 +6,97 @@
 %\license{Creative Commons 3.0 By-NC}
 \input{../preamble.tex}
 
-\outcome{Practice limits with piecewise functions.}
+\outcome{Practice limits with piece-wise functions.}
    
 
 \title[Exercises:]{Limits of piece-wise functions practice}
 
 \begin{document}
 \begin{abstract}
-  Here we'll practice finding limits with piecewise functions.
+Here is an opportunity for you to practice finding one- and two-sided limits of piece-wise functions.
 \end{abstract}
 \maketitle
+
+%%Problem 1
+\begin{exercise}
+Let
+\[
+f(x) = \begin{cases}
+  \frac{x^3 - 8}{x-2}  &\text{if $x<1$,} \\
+  x^3+1 &\text{if  $x>1$.}
+\end{cases}
+\]
+Does $\displaystyle\lim_{x \to 2} f(x)$ exist?  If it does, give its value.
+Otherwise write DNE.
+
+\[
+\lim_{x \to 2} f(x) = \answer{9}
+\]
+
+\begin{hint}
+When $x$ is close to 2, what is the rule for $f(x)$?
+\end{hint}
+
+\end{exercise}
+
+%%Problem 2 - Thought up by Brady
+\begin{exercise}
+Let
+\[
+g(x) = \begin{cases}
+  \frac{x^2+5x}{x}  & x<0 \\
+  1 & \leq x \leq 1 \\
+  \frac{x}{\sqrt{x-1} +1} & x>1
+\end{cases}
+\]
+Use $g(x)$ to evaluate the following limits if they exist.  Otherwise, write DNE.
+
+\begin{itemize}
+
+\begin{multicols}{2}
+
+\item [] $\lim_{x \to -2} g(x) = \answer{3}$
+
+\item [] $\lim_{x \to 0^-} g(x) = \answer{5}$
+
+\item [] $\lim_{x \to 0^+} g(x) = \answer{1}$
+
+\item [] $\lim_{x \to 0} g(x) = \answer{DNE}$
+
+\item [] $\lim_{x \to 1^-} g(x) = \answer{1}$
+
+\item [] $\lim_{x \to 1^+} g(x) = \answer{1}$
+
+\item [] $\lim_{x \to 1} g(x) = \answer{1}$
+
+\item [] $\lim_{x \to 5} g(x) = \answer{\frac{5}{3}}$
+
+\end{multicols}
+
+\end{itemize}
+
+\begin{hint}
+%%%
+\end{hint}
+
+\end{exercise}
+
+
+%%Problem 4
+\begin{exercise}
+Let $S(x) = \frac{|x|}{x}$.  Does $\displaystyle\lim_{x \to -4} S(x)$ exist?  If it
+does, give its value.  Otherwise write DNE.
+
+\[
+\lim_{x \to -4} S(x) = \answer{-1}
+\] 
+
+\begin{hint}
+  Close to $x=-4$, $S$ has the rule $\frac{-x}{x}$.
+\end{hint}
+
+
+\end{exercise}
 
 %%Problem 1
 \begin{exercise}
@@ -39,29 +120,6 @@ b = \answer{4}
 \end{hint}
 \end{exercise}
 
-%%Problem 2
-\begin{exercise}
-Let
-\[
-g(x) = \begin{cases}
-  \frac{x^3 - 8}{x-2}  &\text{if $x<1$,} \\
-  x^3+1 &\text{if  $x>1$.}
-\end{cases}
-\]
-Does $\displaystyle\lim_{x \to 2} g(x)$ exist?  If it does, give its value.
-Otherwise write DNE.
-
-\[
-\lim_{x \to 2} g(x) = \answer{9}
-\]
-
-\begin{hint}
-	Note that, close to $x=2$, the rule for $g(x)$ is $x^3+1$.
-\end{hint}
-
-\end{exercise}
-
-
 %%Problem 3
 \begin{exercise}
 Let
@@ -80,22 +138,6 @@ a = \answer{0}
 \begin{hint}
   Equate the two one sided limits of $f$ at $x=1$ to obtain an equation involving $a$.
 \end{hint}
-
-\end{exercise}
-
-%%Problem 4
-\begin{exercise}
-Let $S(x) = \frac{|x|}{x}$.  Does $\displaystyle\lim_{x \to -4} S(x)$ exist?  If it
-does, give its value.  Otherwise write DNE.
-
-\[
-\lim_{x \to -4} S(x) = \answer{-1}
-\] 
-
-\begin{hint}
-  Close to $x=-4$, $S$ has the rule $\frac{-x}{x}$.
-\end{hint}
-
 
 \end{exercise}
 
