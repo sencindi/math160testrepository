@@ -60,7 +60,7 @@ Hopefully you noticed that the Quotient Law has the additional requirement that 
   \[
   = 5(1)^2 + 3(1) - 2 =\answer[given]{6}.
   \]
-Ultimately, the Limit Laws allowed us to make short work of evaluating this limit.  Once we used all the Limit Laws we possibly could, we were left to evaluate $\displaystyle\lim_{x\to 1} x$.  Luckily, this is an example of a very `nice' kind of function that we can evaluate simply by plugging in $1$ for $x$.  In other words, if we say $h(x) = x$, then $$\displaystyle\lim_{x\to 1} h(x) = h(1) = 1$$ so the value of the limit at $x=1$ is the same as the function value at $x=1$.  This is precisely the condition that makes this function so 'nice'!  
+Ultimately, the Limit Laws allowed us to make short work of evaluating this limit.  Notice that once we used all the Limit Laws we possibly could, we were left to evaluate $\displaystyle\lim_{x\to 1} x$.  Luckily, this is an example of a very `nice' kind of function that we can evaluate simply by plugging in $1$ for $x$.  In other words, if we say $h(x) = x$, then $$\displaystyle\lim_{x\to 1} h(x) = h(1) = 1$$ so the value of the limit at $x=1$ is the same as the function value at $x=1$.  This is precisely the condition that makes this function so 'nice'!  
 
   \begin{prompt}
     We can check our answer by looking at the graph of $y=f(x)$.  Pause for a second to make sure you are able to confirm that our answer seems correct using the graph below. 
@@ -95,7 +95,7 @@ interesting cases in the next section.  For now, let's practice applying the lim
     \]
     \begin{feedback}
       Since $f(x)=\frac{x^2+3x+2}{x+2}$ is a rational function, \textbf{and}
-      the limit of the denominator does not equal $0$, we see that we can apply the Quotient Law to start evaluating this limit.  After that, you can use some of the other limit laws in order to finish evaluating the limit.  Notice that ultimately, this limit could be evaluated by 'plugging in' $x=2$ into the function.  In other words, if $f(x) = \frac{x^2+3x+2}{x+2}$, then $$\displaystyle\lim_{x\to 2} f(x) = f(2) = 3,$$ and it turns out that $f(x)$ is a 'nice' function at $x=2$!  
+      the limit of the denominator does not equal $0$, you are able to apply the Quotient Law to start evaluating this limit.  After that, you can use some of the other limit laws in order to finish evaluating the limit.  Notice that ultimately, this limit could have been evaluated by 'plugging in' $x=2$ into the function.  In other words, if $f(x) = \frac{x^2+3x+2}{x+2}$, then $$\displaystyle\lim_{x\to 2} f(x) = f(2) = 3,$$ and it turns out that $f(x)$ is a 'nice' function at $x=2$!  
     \end{feedback}
   \end{question}
 \end{question}
@@ -110,8 +110,7 @@ interesting cases in the next section.  For now, let's practice applying the lim
     \choice[correct]{no}
   \end{multipleChoice}
   \begin{feedback}
-    $f(x) = \frac{x^2-3x+2}{x-2}$ is a rational function, but the
-    denominator $x-2$ equals $0$ when $x=2$. None of our current
+    $f(x) = \frac{x^2-3x+2}{x-2}$ is a rational function, but the limit of the denominator as $x$ approaches 2 $0$ when $x=2$. None of our current
     theorems address the situation when the denominator of a fraction
     approaches $0$.  
   \end{feedback}
@@ -172,8 +171,8 @@ interesting cases in the next section.  For now, let's practice applying the lim
     denominator is not $0$. We suspect that the limit on on the
     denominator might equal $0$, so we check this limit.
     \begin{align*}
-      \displaystyle\lim_{x\to 0} \sin(x^3) &= \displaystyle\sin(\lim_{x\to 0}x^3)\\
-      &=\sin(0) \\
+      \displaystyle\lim_{x\to 0} \sin(x^3) &= 
+\sin(0) \\
       &=0.
   \end{align*}
   This means that the denominator is zero and hence we cannot use the
@@ -211,8 +210,8 @@ interesting cases in the next section.  For now, let's practice applying the lim
       denominator is not $0$.  Let's check the denominator and numerator
       separately. First we'll compute the limit of the denominator:
       \begin{align*}
-        \displaystyle\lim_{x\to 1}\cos^2(\sqrt{x}-1) &= \cos^2(\lim_{x\to 1}(\sqrt{x}-1))\\
-        &=\cos^2(\lim_{x\to 1}(\sqrt{x})-\lim_{x\to 1}(1))\\
+        \displaystyle\lim_{x\to 1}\cos^2(\sqrt{x}-1) &= 
+        \cos^2(\sqrt{1}-1)\\
         &=\cos^2(1-1)\\
         &= \cos^2(0)\\
         &=1
@@ -242,7 +241,7 @@ interesting cases in the next section.  For now, let's practice applying the lim
     \choice[correct]{no}
   \end{multipleChoice}
   \begin{feedback}
-    If we are trying to use limit laws to compute this limit, we would have to use the Product Law to say that
+    If we are trying to use limit laws to compute this limit, we would have to use the Difference Law to say that
     \[
     \displaystyle\lim_{x\to 4}\left(\frac{2x}{x-4} - \frac{8}{x-4}\right)= \displaystyle\lim_{x\to 4}\frac{2x}{x-4} - \lim_{x\to 4}\frac{8}{x-4}.
     \]
@@ -261,14 +260,13 @@ and
    We are only allowed to use this law if both limits exist. The limits in the numerators definitely
    exist. However, the denominator is equal to $0$ for both limits. Therefore, we cannot use the limit laws. 
    
-   We can use algebra and simplify.
+Even though the Quotient Law can't be used, we can use algebra to subtract the two fractions before taking the limit to see if that helps.  Indeed, this does the trick:
    
    \begin{align*}
    \displaystyle\lim_{x\to 4}\frac{2x-8}{x-4}&=\lim_{x\to 4}\frac{2(x-4)}{x-4}\\
    &=\lim_{x\to 4}2\\
    &=2
   \end{align*}
-  Since the denominator is $0$, we cannot apply the Quotient Law.
   \end{feedback}
 \end{question}
 
@@ -281,7 +279,7 @@ and
     \choice{yes}
     \choice[correct]{no}
   \end{multipleChoice}
-  \begin{feedback}
+\begin{question}
   If we are trying to use limit laws to compute this limit, we would
   have to use the Product Law to say that
   \[
@@ -291,9 +289,13 @@ and
   $\displaystyle\lim_{x\to 0} \sin(x) = 0$, but what about $\displaystyle\lim_{x\to 0}\cot(x)$?  We do
   not know how to find $\lim_{x\to 0}\cot(x)$ using limit laws because $0$
   is not in the domain of $\cot(x)$.
-  \end{feedback}
   
-  However, see what you can do with trigonometric identities. Try rewriting $\cot(x)$ as $\frac{\cos(x)}{\sin(x)}$
+  However, see what you can do with trigonometric identities. Try rewriting $\cot(x)$ as $\frac{\cos(x)}{\sin(x)}$ in order to evaluate this limit. 
+  
+\[
+  \displaystyle\lim_{x\to 0} \cot(x)\sin(x) = \answer{1}
+  \]
+\end{question}
 \end{question}
 
 
@@ -343,7 +345,7 @@ and
     \choice[correct]{no}
   \end{multipleChoice}
   \begin{feedback}
-  We do not have any limit laws for functions of the form $f(x)^{g(x)}$, so we cannot compute this limit.
+  We do not have any limit laws for power functions with exponents that aren't constant, so we cannot compute this limit using the limit laws.
   \end{feedback}
 \end{question}
 
