@@ -13,13 +13,8 @@ Continuity is defined by limits.
 \end{abstract}
 \maketitle
 
-
-Limits are simple to compute when they can be found by plugging the
-value into the function.  That is, when
-\[
-\lim_{x\to c}f(x) = f(c).
-\]
-We call this property \textit{continuity}.
+A few sections ago, we discussed what we called 'nice' functions.  These were functions that, at a particular $x$-value $a$ had easy-to-compute limits.  In fact, computing the limit was as simple as plugging in $a$ into the function itself so that $ \lim_{x\to a} f(x) = f(a).$
+In other words, if a function is what we called 'nice' at $x=a$, the limit of that function at $x=a$ was equal to the function value at $x=a$.  As you might imagine, this property is pretty useful, so we give it a name: \textit{continuity}. 
 
 \begin{definition}
   A function $f$ is \dfn{continuous at a point} $a$ if
@@ -68,12 +63,12 @@ We call this property \textit{continuity}.
 	\end{axis}
     \end{tikzpicture}
   \end{image}
-  Which of the following are true?
-  \begin{multipleChoice}
+  Which of the following are true?  (Select all that are true)
+  \begin{selectAll}
     \choice{$f$ is continuous at $x=0.5$}
     \choice{$f$ is continuous at $x=1$}
     \choice[correct]{$f$ is continuous at $x=1.5$}
-  \end{multipleChoice}
+  \end{selectAll}
   
 \end{question}
 
@@ -157,7 +152,7 @@ can draw the function on that interval without any breaks in the
 graph.  This is often referred to as being able to draw the graph
 ``without picking up your pencil.''
 
-\begin{theorem}[Continuity of Famous Functions]\index{continuity of famous functions}\label{theorem:continuity}
+\begin{theorem}[Continuity of Common Functions]\index{continuity of common functions}\label{theorem:continuity}
 The following functions are continuous on the given intervals for $k$ a real number and $b$ a positive real number:
 \begin{description}
 \item[Constant function]\index{constant function} $f(x) =k$ is continuous on $-\infty < x < \infty$.
@@ -216,7 +211,7 @@ domains.
   \[
   f(x) = a_nx^n + a_{n-1}x^{n-1} + \dots + a_1 x + a_0
   \]
-  where $n$ is a whole number and each $a_i$ is a real number, are
+  where $n$ is a positive whole number and each $a_i$ is a real number, are
   continuous for all real numbers.
 \end{theorem}
 
