@@ -1,0 +1,194 @@
+\documentclass[handout]{ximera}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xercises}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xourse}
+
+%\author{Steven Gubkin}
+%\license{Creative Commons 3.0 By-NC}
+\input{../../preamble.tex}
+
+\outcome{Practice Limits.}
+   
+
+\title{Limits exercises}
+
+\begin{document}
+\begin{abstract}
+Here is an opportunity for you to practice limits.
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+  Evaluate the expressions by referencing the graph of $f(x)$ below. Write DNE if the limit or function value does not exist.
+  
+\begin{center} \includegraphics[scale=0.5]{limgraph.png} \end{center}
+
+\begin{enumerate}
+
+\begin{multicols}{3}
+\item [] $\displaystyle\lim_{x\to -3^-} f(x) =\answer{2}$  
+
+\item [] $\displaystyle\lim_{x\to -3^+} f(x) = \answer{2}$ 
+
+\item [] $\displaystyle\lim_{x\to -3} f(x) = \answer{2}$ 
+
+\item [] $f(-3) = \answer{2}$
+
+\item [] $\displaystyle\lim_{x\to -1^-} f(x) =\answer{0}$ 
+
+\item [] $\displaystyle\lim_{x\to -1^+} f(x) = \answer{0}$ 
+
+\item [] $\displaystyle\lim_{x\to -1} f(x) = \answer{0}$ 
+
+\item [] $f(-1) = \answer{DNE}$
+
+\item [] $\displaystyle\lim_{x\to 0^-} f(x) =\answer{1}$ 
+
+\item [] $\displaystyle\lim_{x\to 0^+} f(x) = \answer{3}$ 
+
+\item [] $\displaystyle\lim_{x\to 0} f(x) = \answer{DNE}$ 
+
+\item [] $f(0) = \answer{3}$
+
+\item [] $\displaystyle\lim_{x\to 2^-} f(x) =\answer{3}$ 
+
+\item [] $\displaystyle\lim_{x\to 2^+} f(x) = \answer{-2}$ 
+
+\item [] $\displaystyle\lim_{x\to 2} f(x) = \answer{DNE}$ 
+
+\item [] $f(2) = \answer{DNE}$
+
+\end{multicols}
+
+\item [] $\displaystyle\lim_{x\to 4} f(x) = \answer{0}$ 
+
+\end{enumerate}
+
+\end{exercise}
+
+\begin{exercise}
+
+Consider the statement below, and then indicate whether it is sometimes, always, or never true.
+
+\begin{center} ``If $f(10)$ exists, then $\displaystyle\lim_{x\to 10} f(x) = f(10).$" \end{center}
+
+This statement is \wordChoice{\choice[correct]{sometimes}\choice{always}\choice{never}} true.
+
+\begin{hint}
+
+Use the data you gathered in the previous exercise to help you answer this question.  
+
+\end{hint}
+
+\end{exercise}
+
+\begin{exercise}
+
+Consider the statement below, and then indicate whether it is sometimes, always, or never true.
+
+\begin{center} ``If $\displaystyle\lim_{x\to 10^-} f(x) = 4$ and $\displaystyle\lim_{x\to 10} f(x)$ exists, then $\displaystyle\lim_{x\to 10^+} f(x) = 4.$" \end{center}
+
+This statement is \wordChoice{\choice{sometimes}\choice[correct]{always}\choice{never}} true.
+
+\begin{hint}
+
+Use the data you gathered in the first exercise to help you answer this question.  You may also want to review how one-sided and two-sided limits relate to one another using the  \href{https://ximera.osu.edu/math160fa17/m160exam1content/whatIsALimit/digInWhatIsALimit}{previous card}.
+\end{hint}
+
+\end{exercise}
+
+\begin{exercise}
+
+Consider the statement below, and then indicate whether it is sometimes, always, or never true.
+
+\begin{center} ``If $\displaystyle\lim_{x\to 10^-} f(x) = \displaystyle\lim_{x\to 10^+} f(x)$, then $\displaystyle\lim_{x\to 10} f(x)$ may not exist." \end{center}
+
+This statement is \wordChoice{\choice{sometimes}\choice{always}\choice[correct]{never}} true.
+
+\begin{hint}
+
+Use the data you gathered in the first exercise to help you answer this question.  You may also want to review how one-sided and two-sided limits relate to one another using the \href{https://ximera.osu.edu/math160fa17/m160exam1content/whatIsALimit/digInWhatIsALimit}{previous card}.
+
+\end{hint} 
+
+\end{exercise}
+
+\begin{exercise}
+Use $f(x) = x^2$ to fill in the table below.
+  \[
+  \begin{array}{l|l}
+    x      & f(x)      \\ \hline
+    1.1    & \begin{prompt}\answer{1.21}\end{prompt}\\
+    1.01   & \begin{prompt}\answer{1.0201}\end{prompt}\\
+    1.001  & \begin{prompt}\answer{1.002001}\end{prompt}\\
+    1.0001 & \begin{prompt}\answer{1.00020001}\end{prompt}\\
+    1.00001 & \begin{prompt}\answer{1.00020001}\end{prompt}\\
+    1.000001 & \begin{prompt}\answer{1.0000200001}\end{prompt}
+  \end{array}
+  \]
+  Based on the data you have gathered, you would predict that 
+  \[
+  \lim_{x\to 1} x^2 = \answer{1}
+  \]
+  
+    \begin{exercise}
+    As discussed previously, neither tables nor graphs can ever tell you for certain what a limit is equal to. However, sometimes they can help to ``guess'' the limit. Let's look at the graph of $f(x) = x^2$ to double check your prediction. 
+\[
+\graph{x^2}
+\]
+
+Does the graph of $f(x) = x^2$ support your previous prediction that $\lim_{x\to 1} x^2 = 1$? 
+
+\begin{multipleChoice}
+    \choice[correct]{Yes}
+    \choice{No}
+    
+\begin{feedback}[correct]
+
+In this case, the fact that $\lim_{x\to 1} x^2 = 1$ is evident from the above table and from the graph of $f(x) = x^2$.  In the next section, you will learn how to calculate that $\lim_{x\to 1} x^2 = 1$ without having to rely on tables and graphs.  In the meantime, your main tool to evaluate limits will be to use graphs or tables, but make sure to be extra careful when doing so: tables and graphs can be misleading! 
+
+\end{feedback}
+\end{multipleChoice}
+    \end{exercise}
+
+\end{exercise}
+
+\begin{exercise}
+Use $g(x) = \cos\left(\frac{\pi}{x-2\pi}\right)$ to fill in the table below.
+  \[
+  \begin{array}{l|l}
+    x      & f(x)      \\ \hline
+    2\pi + 0.1    & \begin{prompt}\answer{1}\end{prompt}\\
+    2\pi + 0.01    & \begin{prompt}\answer{1}\end{prompt}\\
+    2\pi + 0.001   & \begin{prompt}\answer{1}\end{prompt}\\
+    2\pi + 0.0001  & \begin{prompt}\answer{1}\end{prompt}\\
+    2\pi + 0.00001 & \begin{prompt}\answer{1}\end{prompt}
+  \end{array}
+  \]
+  Based on the data you have gathered, you would predict that 
+  \[
+  \lim_{x\to 2\pi}  \cos\left(\frac{\pi}{x-2\pi}\right)= \answer{1}
+  \]
+  
+    \begin{exercise}
+Let's look at the graph of $g(x) = \cos\left(\frac{\pi}{x-2\pi}\right)$ to double check your prediction. 
+\[
+\graph{\cos\left(\frac{\pi}{x-2\pi}\right)}
+\]
+
+Does the graph of $g(x) = \cos\left(\frac{\pi}{x-2\pi}\right)$ support your previous prediction that $\lim_{x\to 1} \cos\left(\frac{\pi}{x-2\pi}\right) = 1$? 
+
+\begin{multipleChoice}
+    \choice{Yes}
+    \choice[correct]{No}
+    
+\begin{feedback}[correct]
+
+Even though the table you filled out seems to indicate that $\lim_{x\to 2\pi}  \cos\left(\frac{\pi}{x-2\pi}\right)= 1$, it turns out that this limit actually does not exist, as the graph of $g(x)$ shows.  This is yet another example of why tables are not a fool-proof method for evaluating limits.  Case in point: be very careful when using tables to make conclusions about limits! 
+
+\end{feedback}
+\end{multipleChoice}
+    \end{exercise}
+
+\end{exercise}
+
+\end{document}

@@ -1,0 +1,116 @@
+\documentclass[handout]{ximera}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xercises}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xourse}
+
+%\author{Steven Gubkin}
+%\license{Creative Commons 3.0 By-NC}
+\input{../preamble.tex}
+
+\outcome{Exercises: Mixed Limit Practice 1}
+   
+
+\title{Mixed limit exercises 1}
+
+\begin{document}
+\begin{abstract}
+Here is an opportunity for you to practice evaluating many different types of limits. 
+\end{abstract}
+\maketitle
+
+%%Factoring 1 - MADE UP BY MARY - Mixed Practice 1%%
+\begin{exercise}
+\[\lim_{x \to 5} \frac{x^2-25}{x-5} = \answer{10}\]
+\end{exercise}
+
+%%Inf Lim 2 - Mixed Practice 1
+\begin{exercise}
+Let 
+\[
+F(z) = \frac{-5 z^3-3}{z^3-5 z^2-2 z}.
+\]
+Compute
+\begin{enumerate}
+\item $\displaystyle\lim_{z\to \infty} F(z) \begin{prompt} = \answer{-5}\end{prompt}$
+\item $\displaystyle\lim_{z\to -\infty}F(z) \begin{prompt} = \answer{-5}\end{prompt}$
+\end{enumerate}
+\begin{hint}
+Multiply by
+\[
+\frac{\frac{1}{z^3}}{\frac{1}{z^3}}
+\]
+\end{hint}
+\end{exercise}
+
+%%Fractions 1 - MADE UP BY MARY - Mixed Practice 1%%
+\begin{exercise}
+\[\lim_{x \to 2} \frac{\frac{1}{2}-\frac{1}{x}}{2-x} = \answer{-1/4}\]
+\end{exercise}
+
+%% sinx/x 1 - Question 1/2 from exercises - Mixed Practice 1
+\begin{exercise}
+\[\lim_{x \to 0} \frac{\sin(2x)}{3x} = \answer{2/3}\]
+\begin{hint}
+Recall that $\displaystyle\lim_{x \to 0} \frac{\sin x}{x} = 1$.
+\end{hint}
+\end{exercise}
+
+%%piece-wise limits 1 - Mixed Practice 1%%
+\begin{exercise}
+\[
+g(x) = \begin{cases}
+  \frac{x^2 - 4}{x-2}  &\text{if $x<1$,} \\
+  -x+1 &\text{if  $x>1$.}
+\end{cases}
+\]
+Does $\lim_{x \to 2} g(x)$ exist?  If it does, give its value.
+Otherwise, write DNE.
+
+\[
+\lim_{x \to 2} g(x) = \answer{-1}
+\]
+
+Does $\lim_{x \to 1} g(x)$ exist?  If it does, give its value.
+Otherwise, write DNE.
+
+\[
+\lim_{x \to 1} g(x) = \answer{DNE}
+\]
+\end{exercise}
+
+%%VA 1 - Mixed Practice 1%%
+\begin{exercise}
+Consider 
+\[
+f(\psi) = \frac{-5}{\psi -4}.
+\]
+Compute
+\begin{enumerate}
+\item $\displaystyle\lim_{\psi\to 4^- } f(\psi) \begin{prompt} = \answer{\infty}\end{prompt}$
+\item $\displaystyle\lim_{\psi\to 4^+ } f(\psi) \begin{prompt} = \answer{-\infty}\end{prompt}$
+\item $\displaystyle\lim_{\psi\to 4 } f(\psi) \begin{prompt} = \answer{DNE}\end{prompt}$
+\end{enumerate}
+\end{exercise}
+
+%% Absolute Value 1 - Mixed Practice 1
+\begin{exercise}
+Find
+\[
+\lim_{x\to6}\left(\frac{\left|6-x\right|}{6-x}\right)
+= \answer{DNE}
+\]
+
+\begin{hint}
+Absolute value = piece-wise in disguise!
+\end{hint}
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+\end{document}

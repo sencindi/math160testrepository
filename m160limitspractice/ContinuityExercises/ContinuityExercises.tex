@@ -1,0 +1,250 @@
+\documentclass[handout]{ximera}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xercises}
+%\documentclass[10pt,handout,twocolumn,twoside,wordchoicegiven]{xourse}
+
+%\author{Steven Gubkin}
+%\license{Creative Commons 3.0 By-NC}
+\input{../../preamble.tex}
+
+\outcome{Practice Limits.}
+    
+
+\title{Continuity exercises}
+
+\begin{document}
+\begin{abstract}
+Here is an opportunity for you to practice using the definition of continuity. 
+\end{abstract}
+\maketitle
+
+\begin{exercise}
+
+Consider the function $f(x) = \frac{x+4}{x^2-16}.$  Is this function continuous on $\RR = (\infty, \infty)?$  
+
+\begin{multipleChoice}
+    \choice{Yes}
+    \choice[correct]{No}
+\end{multipleChoice}
+
+\begin{exercise}
+Now that you know this function is not continuous everywhere, select all of the $x$ values at which this function is not continuous. 
+
+\begin{selectAll}
+    \choice[correct]{$x = 4$}
+    \choice{$x=-16$}
+    \choice{$x=16$}
+    \choice[correct]{$x=-4$}
+    \choice{$x=0$}
+\end{selectAll}
+
+\begin{exercise}
+
+You got it - $f$ is discontinuous at $x=-4$ and $x=-4$.  Let's use limits and function values to determine what type of discontinuity $f$ has at $x=-4$.
+
+First, make a prediction.  Any prediction you make is correct because it's what you think currently, so take a guess!  At $x=-4$, I predict that $f$ has a(n) \wordChoice{\choice[correct]{removable discontinuity/hole}\choice[correct]{jump discontinuity}\choice[correct]{infinite discontinuity}\choice[correct]{oscillating discontinuity}}.  
+
+Now, evaluate the following in order to make a conclusion about the type of discontinuity $f$ has at $x=-4$.  If a limit or function value does not exist, write DNE.
+
+\begin{itemize}
+
+\item $\displaystyle\lim_{x \to -4} f(x) = \answer{\frac{-1}{8}}$
+
+\item $f(-4) = \answer{DNE}$
+
+\end{itemize}
+
+Based on this, you can conclude that at $x=-4$ $f$ has a(n) \wordChoice{\choice[correct]{removable discontinuity/hole}\choice{jump discontinuity}\choice{infinite discontinuity}\choice{oscillating discontinuity}}.  
+
+\end{exercise}
+\end{exercise}
+\end{exercise}
+
+\begin{exercise}
+
+Consider the function $g(x) = 5x^4 - \pi x^2 - 5.$  Is this function continuous on $\RR = (\infty, \infty)?$  
+
+\begin{multipleChoice}
+    \choice[correct]{Yes}
+    \choice{No}
+\end{multipleChoice}
+
+\begin{feedback}[correct]
+
+Absolutely.  $g(x)$ is a polynomial, and polynomials are continuous on $(-\infty, \infty)$.
+
+\end{feedback}
+
+\end{exercise}
+
+\begin{exercise}
+Consider the piece-wise function 
+
+\[
+h(x) = \begin{cases}
+  3x+5  & x<0 \\
+  x^2 & x \geq 0
+\end{cases}
+\]
+
+Is this function continuous on $\RR = (\infty, \infty)?$  
+
+\begin{multipleChoice}
+    \choice{Yes}
+    \choice[correct]{No}
+\end{multipleChoice}
+
+\begin{exercise}
+
+You got it: if you look closely, this function is discontinuous at $x=0$.  Select the reason why this function is discontinuous at $x=0$ below.  
+
+\begin{multipleChoice}
+    \choice{$h(0)$ does not exist}
+    \choice[correct]{$\displaystyle\lim_{x \to 0} h(x)$ does not exist}
+    \choice[correct]{$h(0) \neq \displaystyle\lim_{x \to 0} h(x)$}
+    
+\begin{feedback}[correct]
+The main reason why $h(x)$ is discontinuous at $x=0$ is because $\displaystyle\lim_{x \to 0} h(x)$ does not exist.  You could also say that $h(0) \neq \displaystyle\lim_{x \to 0} h(x)$ because $h(0)$ exists and $\displaystyle\lim_{x \to 0} h(x)$ doesn't.
+\end{feedback}
+
+\end{multipleChoice}
+\end{exercise}
+\end{exercise}
+
+\begin{exercise}
+Consider the piece-wise function 
+
+\[
+j(x) = \begin{cases}
+  x^3  & x < 1 \\
+  5 & x=1 \\
+  2x-1 & x > 1
+\end{cases}
+\]
+
+Is this function continuous on $\RR = (\infty, \infty)?$  
+
+\begin{multipleChoice}
+    \choice{Yes}
+    \choice[correct]{No}
+\end{multipleChoice}
+
+\begin{exercise}
+
+Good thinking: this function is discontinuous at $x=1$.  Select the reason why this function is discontinuous at $x=1$ below.
+
+\begin{multipleChoice}
+    \choice{$j(1)$ does not exist}
+    \choice{$\displaystyle\lim_{x \to 1} j(x)$ does not exist}
+    \choice[correct]{$j(1) \neq \displaystyle\lim_{x \to 1} j(x)$}
+\end{multipleChoice}
+
+\begin{exercise}
+
+Let's change $j(x)$ just slightly: 
+
+\[
+j(x) = \begin{cases}
+  x^3  & x < 1 \\
+  1 & x=1 \\ 
+  2x-1 & x > 1
+\end{cases}
+\]
+
+With this change, is this $j(x)$ continuous on $\RR = (\infty, \infty)?$  
+
+\begin{multipleChoice}
+    \choice[correct]{Yes}
+    \choice{No}
+    
+\begin{feedback}[correct]
+You'll notice that changing a single number resulted in $j(x)$ being continuous on $\RR$ because now $j(1) = \displaystyle\lim_{x \to 1} j(x)$.  The small details really do matter!   
+\end{feedback}
+\end{multipleChoice}
+
+\end{exercise}
+\end{exercise}
+\end{exercise}
+
+\begin{exercise}
+Let 
+
+\[
+f(x) = \begin{cases}
+  \sqrt{A+2x}  & x < 1 \\
+   3x+5 & x > 1
+\end{cases}
+\]
+
+where $A$ is a constant.  
+
+When $A =\answer{-1}$, $f(x)$ is continuous everywhere.
+
+\end{exercise}
+
+\begin{exercise}
+Let 
+
+\[
+z(x) = \begin{cases}
+  Bx-2  & x < 4 \\
+  Cx & x = 4 \\
+   -\frac{1}{2} Bx +10 & x > 4
+\end{cases}
+\]
+
+where $B$ and $C$ are constants. 
+
+When $B =\answer{2}$ and $C = \answer{\frac{3}{2}}$, $z(x)$ is continuous everywhere.
+
+\end{exercise}
+
+\begin{exercise}
+
+Consider the statement below, and then indicate whether it is sometimes, always, or never true.
+
+\begin{center} ``If $f$ is continuous at $x=-2$, then $\displaystyle\lim_{x\to -2} f(x)$ exists." \end{center}
+
+This statement is \wordChoice{\choice{sometimes}\choice[correct]{always}\choice{never}} true.
+
+\begin{hint}
+
+You may want to review the definition of continuity on \href{https://ximera.osu.edu/math160fa17/m160exam1content/limitLaws/digInContinuity}{this card} if you are struggling with this question. 
+
+\end{hint}
+
+\end{exercise}
+
+\begin{exercise}
+
+Consider the statement below, and then indicate whether it is sometimes, always, or never true.
+
+\begin{center} ``If $\displaystyle\lim_{x\to -2} f(x)$ exists, then $f$ is continuous at $x=-2$." \end{center}
+
+This statement is \wordChoice{\choice[correct]{sometimes}\choice{always}\choice{never}} true.
+
+\begin{feedback}[correct]
+
+Now that you know this statement is sometimes true, try to draw an example of a graph for which it is true and an example of a graph for which it is false.  
+
+\end{feedback}
+
+\end{exercise}
+
+\begin{exercise}
+
+Consider the statement below, and then indicate whether it is sometimes, always, or never true.
+
+\begin{center} ``If $f$ is a continuous function on $(-5, 5)$, $f(-5) = -3$, and $f(5) = 3$, then there is an $x$-value $c$ in $(-5,5)$ such that $f(c) = 0$." \end{center}
+
+This statement is \wordChoice{\choice[correct]{sometimes}\choice{always}\choice{never}} true.
+
+\begin{feedback}[correct]
+
+At first glance, this seems like an example of the Intermediate Value Theorem which would \textit{always} be true; however, there's a small (but important) difference between this statement and the IVT.  Can you spot it?
+
+\end{feedback}
+
+\end{exercise}
+
+
+\end{document}
