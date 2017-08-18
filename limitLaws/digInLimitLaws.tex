@@ -60,7 +60,7 @@ Hopefully you noticed that the Quotient Law has the additional requirement that 
   \[
   = 5(1)^2 + 3(1) - 2 =\answer[given]{6}.
   \]
-Ultimately, the Limit Laws allowed us to make short work of evaluating this limit.  Once we used all the Limit Laws we possibly could, we were left to evaluate $\displaystyle\lim_{x\to 1} x$.  Luckily, this is an example of a very `nice' kind of function that we can evaluate simply by plugging in $1$ for $x$.  In other words, if we say $h(x) = x$, then $\displaystyle\lim_{x\to 1} h(x) = h(1) = 1$ so the value of the limit at $x=1$ is the same as the function value at $x=1$.  This is precisely the condition that makes this function 'nice.'  \\
+Ultimately, the Limit Laws allowed us to make short work of evaluating this limit.  Once we used all the Limit Laws we possibly could, we were left to evaluate $\displaystyle\lim_{x\to 1} x$.  Luckily, this is an example of a very `nice' kind of function that we can evaluate simply by plugging in $1$ for $x$.  In other words, if we say $h(x) = x$, then $$\displaystyle\lim_{x\to 1} h(x) = h(1) = 1$$ so the value of the limit at $x=1$ is the same as the function value at $x=1$.  This is precisely the condition that makes this function so 'nice'!  
 
   \begin{prompt}
     We can check our answer by looking at the graph of $y=f(x)$.  Pause for a second to make sure you are able to confirm that our answer seems correct using the graph below. 
@@ -73,7 +73,7 @@ Ultimately, the Limit Laws allowed us to make short work of evaluating this limi
 
 
 The most important thing to learn from this section is whether the
-limit laws can be applied for a certain problem, and when we need to
+limit laws can be applied for a certain problem, or if we need to
 do something more interesting.  We will begin discussing those more
 interesting cases in the next section.  For now, let's practice applying the limits laws to evaluate limits.
 
@@ -94,14 +94,11 @@ interesting cases in the next section.  For now, let's practice applying the lim
     \displaystyle\lim_{x\to 2}\frac{x^2+3x+2}{x+2}\begin{prompt} =\answer{3}\end{prompt}
     \]
     \begin{feedback}
-      Since $f(x)=\frac{x^2+3x+2}{x+2}$ is a rational function, and
-      the denominator does not equal $0$, we see that $f(x)$ is
-      continuous at $x=2$.  Thus, to find this limit, it suffices to
-      plug $2$ into $f(x)$.
+      Since $f(x)=\frac{x^2+3x+2}{x+2}$ is a rational function, \textbf{and}
+      the limit of the denominator does not equal $0$, we see that we can apply the Quotient Law to start evaluating this limit.  After that, you can use some of the other limit laws in order to finish evaluating the limit.  Notice that ultimately, this limit could be evaluated by 'plugging in' $x=2$ into the function.  In other words, if $f(x) = \frac{x^2+3x+2}{x+2}$, then $$\displaystyle\lim_{x\to 2} f(x) = f(2) = 3,$$ and it turns out that $f(x)$ is a 'nice' function at $x=2$!  
     \end{feedback}
   \end{question}
 \end{question}
-
 
 \begin{question}
   Can this limit be directly computed by limit laws?
@@ -116,7 +113,7 @@ interesting cases in the next section.  For now, let's practice applying the lim
     $f(x) = \frac{x^2-3x+2}{x-2}$ is a rational function, but the
     denominator $x-2$ equals $0$ when $x=2$. None of our current
     theorems address the situation when the denominator of a fraction
-    approaches $0$.
+    approaches $0$.  
   \end{feedback}
 \end{question}
 
@@ -137,7 +134,7 @@ interesting cases in the next section.  For now, let's practice applying the lim
     \displaystyle\lim_{x\to 0}x\sin(1/x)= \lim_{x\to 0} x \cdot \lim_{x\to 0} \sin(1/x).
     \]
     We are only allowed to use this law if both limits exist, so we
-    must check this first.  We know from continuity that
+    must check this first.  Using the fact that the function $x$ is a 'nice' function, we can reason that
     \[
     \displaystyle\lim_{x\to  0}x=0.
     \]
@@ -146,7 +143,7 @@ interesting cases in the next section.  For now, let's practice applying the lim
     \[
     \lim_{x\to 0} \sin(1/x)
     \]does not exist.  Therefore, we cannot use the
-    Product Law.
+    Product Law, and the original limit cannot be directly computed by limit laws.
   \end{feedback}
 \end{question}
 
