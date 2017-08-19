@@ -46,18 +46,23 @@ Consider the graph of the function
   \]
   
 \begin{image}
-    \begin{tikzpicture}
-      \begin{axis}[
-          samples=1000,
-          axis lines =middle, xlabel=$x$, ylabel=$y$,
-          every axis y label/.style={at=(current axis.above origin),anchor=south},
-          every axis x label/.style={at=(current axis.right of origin),anchor=west},
-        ]
-	\addplot [very thick, penColor, smooth,domain=-3:1] {1/(x+1)^2};
-        \addplot [very thick, penColor, smooth,domain=-3:1] {1/(x+1)^2};
-      \end{axis}
-    \end{tikzpicture}
-  \end{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-2:1,
+            ymax=100,
+            samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+	  \addplot [very thick, penColor, smooth, domain=(-2:-1.1)] {1/(x+1)^2};
+          \addplot [very thick, penColor, smooth, domain=(-.9:1)] {1/(x+1)^2};
+          \addplot [textColor, dashed] plot coordinates {(-1,0) (-1,100)};
+        \end{axis}
+\end{tikzpicture}
+%% \caption{A plot of $f(x)=\protect\frac{1}{(x+1)^2}$.}
+%% \label{plot:1/(x+1)^2}
+\end{image}
 
 While the $\lim_{x\to -1} f(x)$ does not exist, something can still be
 said. First note that
@@ -161,7 +166,7 @@ Let's consider a few more examples.
    \end{explanation}
 \end{example}
 
-Here is our final example.
+Let's try an example that involves a 2-sided limit.  
 
 \begin{example}
   Compute:
@@ -202,5 +207,5 @@ when we talk about infinity and negative infinity. However, when we write
 \]
 all we mean is that as $x$ approaches $a$, $f(x)$ becomes arbitrarily
 large and $|g(x)|$ becomes arbitrarily large, with $g(x)$ taking
-negative values.
+negative values.  Again, this notation simply states precisely how $\lim_{x\to a} f(x)$ fails to exist.  
 \end{document}
