@@ -15,7 +15,7 @@
 
 \maketitle
 
-Let's cut to the chase:
+\href{https://ximera.osu.edu/math160fa17/m160exam1content/indeterminateForms/digInLimitsOfTheFormZeroOverZero}{Previously, we have investigated} limits of the form \zeroOverZero.  Now we will investigate limits of the indeterminate form \numOverZero.  This will also turn out to be an indeterminate form. 
 
 \begin{definition}
   A limit
@@ -41,10 +41,25 @@ Let's cut to the chase:
 
 
 Let's see what is going on with limits of the form \numOverZero.
-Consider the function
+Consider the graph of the function
   \[
   f(x) = \frac{1}{(x+1)^2}.
   \]
+  
+\begin{image}
+    \begin{tikzpicture}
+      \begin{axis}[
+          samples=100,
+          axis lines =middle, xlabel=$x$, ylabel=$y$,
+          every axis y label/.style={at=(current axis.above origin),anchor=south},
+          every axis x label/.style={at=(current axis.right of origin),anchor=west},
+        ]
+	\addplot [very thick, penColor, smooth,domain=-3:2] {1/(x+1)^2};
+        \addplot [very thick, penColor, smooth,domain=-3:2] {1/(x+1)^2};
+      \end{axis}
+    \end{tikzpicture}
+  \end{image}
+
 While the $\lim_{x\to -1} f(x)$ does not exist, something can still be
 said. First note that
 \[
