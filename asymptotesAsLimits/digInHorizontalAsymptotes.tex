@@ -101,7 +101,6 @@ f(x) = \frac{1}{x}
 \lim_{x\to\infty} \frac{6x-9}{x-1}.
 \]
 \begin{explanation}
-Write
 \begin{align*}
 \lim_{x\to\infty}\frac{6x-9}{x-1} &= \lim_{x\to\infty}\frac{6x-9}{x-1}\cdot \frac{1/x}{1/x}\\
 &=\lim_{x\to\infty}\frac{\frac{6x}{x} - \frac{9}{x}}{\frac{x}{x} - \frac{1}{x}}\\
@@ -109,7 +108,7 @@ Write
 &=\frac{\displaystyle\lim_{x\to\infty} \left( 6 - 9 \cdot \frac{1}{x}\right)}{\displaystyle\lim_{x\to\infty} \left( 1 - \frac{1}{x} \right)} \\
 &=\frac{\displaystyle\lim_{x\to\infty} 6 - 9 \displaystyle\lim_{x\to\infty} \cdot \frac{1}{x}}{\displaystyle\lim_{x\to\infty} 1 - \displaystyle\lim_{x\to\infty} \frac{1}{x}} \\
 &=\frac{6 - 9 \cdot 0}{1 - 0} \\
-&= 6.
+&= 6
 \end{align*}
 \end{explanation}
 \end{example}
@@ -120,12 +119,13 @@ Write
 \lim_{x\to\infty} \frac{6x-9}{x^2-1}.
 \]
 \begin{explanation}
-Write
 \begin{align*}
 \lim_{x\to\infty}\frac{6x-9}{x^2-1} &= \lim_{x\to\infty}\frac{6x-9}{x^2-1}\cdot \frac{1/x^2}{1/x^2}\\
 &=\lim_{x\to\infty}\frac{\frac{6x}{x^2} - \frac{9}{x^2}}{\frac{x}{x^2} - \frac{1}{x^2}}\\
 &= \lim_{x\to\infty} \frac{\frac{6}{x}-\frac{9}{x^2}}{1-\frac{1}{x^2}}\\
-&= \frac{0}{1}=0.
+&=\frac{6 \displaystyle\lim_{x\to\infty} \frac{1}{x} - 9 \displaystyle\lim_{x\to\infty} \frac{1}{x^2}}{\displaystyle\lim_{x\to\infty} 1 - \displaystyle\lim_{x\to\infty} \frac{1}{x^2}} \\
+&= \frac{0}{1} \\
+&= 0
 \end{align*}
 \end{explanation}
 \end{example}
@@ -141,6 +141,7 @@ Write
 \lim_{x\to\infty}\frac{3x^4-5x^2+1}{x^2-x+2x^4} &= \lim_{x\to\infty}\frac{3x^4-5x^2+1}{x^2-x+2x^4}\cdot \frac{1/x^4}{1/x^4}\\
 &=\lim_{x\to\infty}\frac{\frac{3x^4}{x^4} - \frac{5x^2}{x^4}+\frac{1}{x^4}}{\frac{x^2}{x^4}-\frac{x}{x^4} + \frac{2x^4}{x^4}}\\
 &= \lim_{x\to\infty} \frac{3-\frac{5}{x^2}+\frac{1}{x^4}}{\frac{1}{x^2}-\frac{1}{x^3}+2}\\
+&= \frac{\displaystyle\lim_{x\to\infty} 3 - 5 \displaystyle\lim_{x\to\infty} \frac{1}{x^2} + \displaystyle\lim_{x\to\infty} \frac{1}{x^4}}{\displaystyle\lim_{x\to\infty} \frac{1}{x^2} - \displaystyle\lim_{x\to\infty} \frac{1}{x^3} + \displaystyle\lim_{x\to\infty} 2} \\
 &= \frac{3}{2}.
 \end{align*}
 \end{explanation}
@@ -160,8 +161,33 @@ number.
 \begin{align*}
 \lim_{x\to -\infty} \frac{x^3+1}{\sqrt{x^6+5}} &= \lim_{x\to -\infty} \frac{x^3+1}{\sqrt{x^6+5}} \cdot \frac{-1/x^3}{-1/x^3}\\
 &= \lim_{x\to -\infty} \frac{-1-1/x^3}{\sqrt{x^6/x^6+5/x^6}}\\
+&= \frac{-\displaystyle\lim_{x\to -\infty} 1 - \displaystyle\lim_{x\to -\infty} \frac{1}{x^3}}{\sqrt{\displaystyle\lim_{x\to -\infty} 1 + 5\displaystyle\lim_{x\to -\infty} \frac{1}{x^6}}} \\
+&= \frac{-1}{\sqrt{1}} \\
 &= -1.
 \end{align*}
+\end{explanation}
+\end{example}
+
+Limits at infinity are used to define what is meant by a horizontal asymptote.
+
+\begin{definition}
+\label{def:horizasymptote}\index{asymptote!horizontal}\index{horizontal asymptote}
+If  
+\[
+\lim_{x\to \infty} f(x) = L \qquad\text{or}\qquad \lim_{x\to -\infty} f(x) = L,
+\]
+then the line $y=L$ is a \dfn{horizontal asymptote} of $f(x)$.
+\end{definition}
+
+\begin{example} 
+Give the horizontal asymptotes of
+\[
+f(x) = \frac{6x-9}{x-1}
+\]
+\begin{explanation}
+From our previous work, we see that $\displaystyle\lim_{x\to \infty} f(x) = 6$, and
+upon further inspection, we see that $\displaystyle\lim_{x\to -\infty} f(x) =
+6$. Hence the horizontal asymptote of $f(x)$ is the line $y=6$.
 \end{explanation}
 \end{example}
 
@@ -173,10 +199,15 @@ and
 \[
 \lim_{x\to -\infty} f(x) = \lim_{x\to 0^-} f\left(\frac{1}{x}\right)
 \]
-we can also apply the Squeeze Theorem when taking limits at infinity.
+
+we can also apply the Squeeze Theorem when taking limits at infinity.  This is also the reason why the limit laws apply to limits at infinity.
 Here is an example of a limit at infinity that uses the Squeeze
 Theorem, and shows that functions can, in fact, cross their horizontal
 asymptotes.
+
+It is a common misconception that a function cannot cross an
+asymptote. As the next example shows, a function can cross a horizontal
+asymptote, and in the example this occurs an infinite number of times!
 
 
 \begin{example}
@@ -225,36 +256,6 @@ we conclude by the Squeeze Theorem,
 $\displaystyle\lim_{x\to\infty}\frac{\sin(7x)}{x}+4 = 4$.
 \end{explanation}
 \end{example}
-
-
-
-
-
-
-\begin{definition}\label{def:horiz asymptote}\index{asymptote!horizontal}\index{horizontal asymptote}
-If  
-\[
-\lim_{x\to \infty} f(x) = L \qquad\text{or}\qquad \lim_{x\to -\infty} f(x) = L,
-\]
-then the line $y=L$ is a \dfn{horizontal asymptote} of $f(x)$.
-\end{definition}
-
-\begin{example} 
-Give the horizontal asymptotes of
-\[
-f(x) = \frac{6x-9}{x-1}
-\]
-\begin{explanation}
-From our previous work, we see that $\displaystyle\lim_{x\to \infty} f(x) = 6$, and
-upon further inspection, we see that $\displaystyle\lim_{x\to -\infty} f(x) =
-6$. Hence the horizontal asymptote of $f(x)$ is the line $y=6$.
-\end{explanation}
-\end{example}
-
-
-It is a common misconception that a function cannot cross an
-asymptote. As the next example shows, a function can cross a horizontal
-asymptote, and in the example this occurs an infinite number of times!
 
 \begin{example}
 Give a horizontal asymptote of
