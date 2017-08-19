@@ -21,7 +21,7 @@ their domain.
 \end{abstract}
 \maketitle
 
-Consider the function
+Let's return to the function 
 \[
 f(x) = \frac{1}{(x+1)^2}.
 \]
@@ -43,25 +43,7 @@ f(x) = \frac{1}{(x+1)^2}.
 %% \caption{A plot of $f(x)=\protect\frac{1}{(x+1)^2}$.}
 %% \label{plot:1/(x+1)^2}
 \end{image}
-While the $\lim_{x\to -1} f(x)$ does not exist, something can still be
-said.
-
-\begin{definition}\label{def:inflimit}\index{limit!infinite}\index{infinite limit}
-If $f(x)$ grows arbitrarily large as $x$ approaches $a$, we write
-\[
-\lim_{x\to a} f(x) = \infty
-\]
-and say that the limit of $f(x)$ \dfn{approaches infinity} as $x$
-goes to $a$.
-
-If $|f(x)|$ grows arbitrarily large as $x$ approaches $a$ and $f(x)$ is
-negative, we write
-\[
-\lim_{x\to a} f(x) = -\infty
-\]
-and say that the limit of $f(x)$ \dfn{approaches negative infinity}
-as $x$ goes to $a$.
-\end{definition}
+As we stated learned on the previous card, $\lim_{x\to -1} f(x)$ does not exist, but something can still be said. 
 
 \begin{problem}
   Which of the following are correct?
@@ -103,11 +85,10 @@ limits.  We see $\lim_{x\to 1^+} f(x) = \infty$ and $\lim_{x\to 1^-} f(x) =
 
 
 \begin{definition}\label{def:vert asymptote}\index{asymptote!vertical}\index{vertical asymptote}
-If at least one of the following hold:
+If \textit{at least} one of the following hold:
 \begin{itemize}
-\item $\displaystyle\lim_{x\to a} f(x) = \pm\infty$,
-\item $\displaystyle\lim_{x\to a^+} f(x) = \pm\infty$,
-\item $\displaystyle\lim_{x\to a^-} f(x) = \pm\infty$,
+\item $\displaystyle\lim_{x\to a^+} f(x) = \pm\infty$
+\item $\displaystyle\lim_{x\to a^-} f(x) = \pm\infty$
 \end{itemize}
 then the line $x=a$ is a \dfn{vertical asymptote} of $f$.
 \end{definition}
@@ -137,7 +118,7 @@ Now write
 \end{align*}
 Consider the one-sided limits separately.  Since $\displaystyle\lim_{x\to 3^+}
 (x-3)$ approaches $0$ from the right and the numerator is negative,
-$\displaystyle\lim_{x\to 3^+} f(x) = -\infty$. Since $\displaystyle\lim_{x\to 3^-} (x-3)$
+$\displaystyle\lim_{x\to 3^+} f(x) = -\infty$.  Already, this is enough to conclude that we have a vertical asymptote at $x=3$.  Since $\displaystyle\lim_{x\to 3^-} (x-3)$
 approaches $0$ from the left and the numerator is negative,
 $\displaystyle\lim_{x\to 3^-} f(x) = \infty$.
 \begin{image}
@@ -160,7 +141,8 @@ $\displaystyle\lim_{x\to 3^-} f(x) = \infty$.
 %% \caption{A plot of $f(x)=\protect\frac{x^2-9x+14}{x^2-5+6}$.}
 %% \label{plot:(x^2-9x+14)/(x^2-5x+6)}
 \end{image}
-Hence we have a vertical asymptote at $x=3$.
+
+From the one-sided limit information, we can conclude that $\displaystyle\lim_{x\to 3} f(x)$ does not exist.  Notice that $f(x)$ still has a vertical asymptote at $x=3$ despite the fact that this limit does not exist.
 \end{explanation}
 \end{example}
 
