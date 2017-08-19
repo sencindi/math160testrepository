@@ -66,7 +66,7 @@ and we say, the \dfn{limit at negative infinity} of $f(x)$ is $L$.
 \end{definition}
 
 %%CONSIDER 1/X
-In order to calculate limits of rational functions at $\pm$ infinity, we will often multiply the numerator and denominator by $\displaystyle\frac{1}{\phantom{xx}x^{\text{highest power in denominator}}\phantom{xx}}$.
+In order to calculate limits of rational functions at positive and negative infinity, we will often multiply the numerator and denominator by $\displaystyle\frac{1}{\phantom{xx}x^{\text{highest power in denominator}}\phantom{xx}}$.
 
 Why is this the case? Let's consider the basic rational function
 
@@ -77,7 +77,7 @@ f(x) = \frac{1}{x}
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-4:4,
-            ymax=20,
+            ymax=10,
             ymin=-10,
             samples=100,
             axis lines =middle, xlabel=$x$, ylabel=$y$,
@@ -93,7 +93,7 @@ f(x) = \frac{1}{x}
 \end{tikzpicture}
 \end{image}
 
-\href{https://ximera.osu.edu/math160fa17/m160exam1content/asymptotesAsLimits/breakGround}{A few cards ago}, you discovered that as $x$ approaches $\pm$ infinity, $f(x)$ approaches $0$. Therefore, if we can get individual terms in our rational function to ``look like'' the known basic rational function $f(x)=\frac{1}{x}$, then we can more easily evaluate the limit as $x$ approaches infinity. Therefore, the common technique applied to $\displaystyle\lim_{x\to \infty}\frac{numerator}{denominator}$ is to multiply the numerator and denominator by $\displaystyle\frac{1}{\phantom{xx}x^{\text{highest power in denominator}}\phantom{xx}}$.  Let's try an example. 
+\href{https://ximera.osu.edu/math160fa17/m160exam1content/asymptotesAsLimits/breakGround}{A few cards ago}, you discovered that as $x$ approaches positive and negative infinity, $f(x)$ approaches $0$. Therefore, if we can get individual terms in our rational function to ``look like'' the known basic rational function $f(x)=\frac{1}{x}$, then we can more easily evaluate the limit as $x$ approaches infinity. Therefore, the common technique applied to $\displaystyle\lim_{x\to \pm \infty}\frac{numerator}{denominator}$ is to multiply the numerator and denominator by $\displaystyle\frac{1}{\phantom{xx}x^{\text{highest power in denominator}}\phantom{xx}}$.  Let's try an example. 
 
 %%Example 1
 \begin{example} Compute
@@ -106,8 +106,8 @@ Write
 \lim_{x\to\infty}\frac{6x-9}{x-1} &= \lim_{x\to\infty}\frac{6x-9}{x-1}\cdot \frac{1/x}{1/x}\\
 &=\lim_{x\to\infty}\frac{\frac{6x}{x} - \frac{9}{x}}{\frac{x}{x} - \frac{1}{x}}\\
 &=\lim_{x\to\infty}\frac{6 - 9 \cdot \frac{1}{x}}{1 - \frac{1}{x}}\\
-&=\frac{\lim_{x\to\infty} 6 - 9 \cdot \frac{1}{x}}{\lim_{x\to\infty} 1 - \frac{1}{x}} \\
-&=\frac{\lim_{x\to\infty} 6 - 9 \lim_{x\to\infty} \cdot \frac{1}{x}}{\lim_{x\to\infty} 1 - \lim_{x\to\infty} \frac{1}{x}} \\
+&=\frac{\displaystyle\lim_{x\to\infty} \left( 6 - 9 \cdot \frac{1}{x}\right)}{\displaystyle\lim_{x\to\infty} \left( 1 - \frac{1}{x} \right)} \\
+&=\frac{\displaystyle\lim_{x\to\infty} 6 - 9 \displaystyle\lim_{x\to\infty} \cdot \frac{1}{x}}{\displaystyle\lim_{x\to\infty} 1 - \displaystyle\lim_{x\to\infty} \frac{1}{x}} \\
 &=\frac{6 - 9 \cdot 0}{1 - 0} \\
 &= 6.
 \end{align*}
