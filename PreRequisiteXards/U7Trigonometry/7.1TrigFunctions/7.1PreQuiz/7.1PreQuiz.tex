@@ -86,25 +86,6 @@ Answer the following questions honestly to assess your own abilities. This pre-q
 \tkzLabelAngle[pos = 0.45](O,B,A){$\varphi$}
 \end{tikzpicture}
 \end{image}
-
-\begin{image}[2in]
-  \begin{tikzpicture}
-    \coordinate (C) at (0,2);
-    \coordinate (D) at (4,2);
-    \coordinate (E) at (4,4);
-    \tkzMarkRightAngle(C,D,E)
-    \tkzMarkAngle(D,C,E)
-    \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (0,2)--(4,2);
-    \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (4,2)--(4,4);
-    \draw[decoration={brace,raise=.2cm},decorate,thin] (0,2)--(4,4);
-    \draw[very thick] (D)--(E)--(C)--cycle;
-    \node at (2,2-.5) {adjacent};
-    \node[rotate=-90] at (4+.5,3) {opposite};
-    \node[rotate=26.5] at (2-.2,3+.4) {hypotenuse};
-    \node at (1.2,2.3) {$\theta$};
-  \end{tikzpicture}
-\end{image}
-
      
     \begin{multipleChoice}
         \choice[correct]{Yes, I could find $\tan(\theta)$.}
@@ -117,7 +98,7 @@ Answer the following questions honestly to assess your own abilities. This pre-q
 
 \end{question}
 
-\begin{question}
+\begin{explanation}
 
     If $a, b,$ and $c$ represent the side lengths of the triangle below, could you find $a$ when $b = 3$ and $c = 8$?
     
@@ -153,7 +134,7 @@ Answer the following questions honestly to assess your own abilities. This pre-q
     
     \end{multipleChoice}
 
-\end{question}
+\end{explanation}
 
 
 %Content Questions
