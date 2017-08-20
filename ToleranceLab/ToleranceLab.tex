@@ -139,7 +139,7 @@ Use the Desmos calculator widget below to compute your answers. Report any non-t
   \end{array}
   \qquad
   \begin{array}{l|l}
-     x      & f(x) = \frac{1}{x}     \\ \hline
+     x      & f(x) = \cos\left(\frac{\pi}{x}\right)     \\ \hline
     0.15    & \begin{prompt}\answer{-0.5}\end{prompt}\\
     0.015   & \begin{prompt}\answer{-0.5}\end{prompt}\\
     0.0015  & \begin{prompt}\answer{-0.5}\end{prompt}\\
@@ -149,7 +149,7 @@ Use the Desmos calculator widget below to compute your answers. Report any non-t
     \end{array}
     \qquad
   \begin{array}{l|l}
-     x      & f(x) = \frac{1}{x}     \\ \hline
+     x      & f(x) = \cos\left(\frac{\pi}{x}\right)     \\ \hline
     -0.2    & \begin{prompt}\answer{-1}\end{prompt}\\
     -0.03   & \begin{prompt}\answer{-0.5}\end{prompt}\\
     -0.004  & \begin{prompt}\answer{1}\end{prompt}\\
@@ -158,68 +158,6 @@ Use the Desmos calculator widget below to compute your answers. Report any non-t
     -0.000007 & \begin{prompt}\answer[tolerance=0.0000001]{-0.9009688673}\end{prompt} \\
     \end{array}
   \]
-  
-\begin{comment}
-
-\begin{tabular}{|c|c|}
-
-\hline
-		$$ & $\cos\left(\frac{\pi}{x}\right)$\\
-		
-        $0.1$ & $\answer{1}$\\
-		
-		$0.01$ & $\answer{1}$\\
-		
-		$0.001$ & $\answer{1}$\\
-		
-		$0.0001$ & $\answer{1}$\\
-		
-		$0.00001$ & $\answer{1}$ \\
-		
-		$0.000001$ & $\answer{1}$ \\
-
-		
-\end{tabular} \qquad \begin{tabular}{|c|c|}
-
-\hline
-		$x$ & $\cos\left(\frac{\pi}{x}\right)$\\
-		
-        $0.15$ & $\answer{-0.5}$\\
-		
-		$0.015$ & $\answer{-0.5}$\\
-		
-		$0.0015$ & $\answer{-0.5}$\\
-		
-		$0.00015$ & $\answer{-0.5}$\\
-		
-		$0.000015$ & $\answer{-0.5}$ \\
-		
-		$0.0000015$ & $\answer{-0.5}$ \\
-
-		
-\end{tabular} \qquad \begin{tabular}{|c|c|}
-
-\hline
-		$x$ & $\cos\left(\frac{\pi}{x}\right)$\\
-		
-        $-0.2$ & $\answer{-1}$\\
-		
-		$-0.03$ & $\answer{-0.5}$\\
-		
-		$-0.004$ & $\answer{1}$\\
-		
-		$-0.0005$ & $\answer{1}$\\
-		
-		$-0.00006$ & $\answer{-0.5}$ \\
-		
-		$-0.000007$ & $\answer[tolerance=0.0000001]{-0.9009688673}$ \\
-
-		
-\end{tabular}
-
-\end{comment}
-
-
 
     %%Part 4a
   %  \begin{problem}{\textbf{\#4a}}
@@ -240,6 +178,30 @@ Let's make a table of values. Use the Desmos calculator widget below to compute 
 
 %%Part 5a
 \begin{problem}{\textbf{\#5a:}}
+
+$\begin{array}{l|l}
+     x     & f(x) = \cos\left(\frac{\pi}{x}\right)     \\ \hline
+    -0.1    & \begin{prompt}\answer[tolerance=0.000000001]{0.54402111}\end{prompt} \\
+    -0.01    & \begin{prompt}\answer[tolerance=0.000000001]{0.50636564}\end{prompt} \\
+    -0.001    & \begin{prompt}\answer[tolerance=0.000000001]{-0.82687954}\end{prompt} \\
+    -1\times10^{-4}    & \begin{prompt}\answer[tolerance=0.000000001]{0.30561439}\end{prompt} \\
+    -1\times10^{-5}    & \begin{prompt}\answer[tolerance=0.000000001]{-0.03574880}\end{prompt} \\
+    -1\times10^{-6}    & \begin{prompt}\answer[tolerance=0.000000001]{0.34999350}\end{prompt} \\
+    -1\times10^{-7}    & \begin{prompt}\answer[tolerance=0.000000001]{-0.42054779}\end{prompt} \\
+        0 & \text{\wordChoice{\choice{0}\choice{infinity}\choice[correct]{undefined}}} \\
+    -1\times10^{-8}   & \begin{prompt}\answer[tolerance=0.000000001]{-0.93163903}\end{prompt} \\
+    2\times10^{-8}   & \begin{prompt}\answer[tolerance=0.000000001]{0.82564674}\end{prompt} \\
+    2\times10^{-7}   & \begin{prompt}\answer[tolerance=0.000000001]{-0.97654247}\end{prompt} \\
+    2\times10^{-6}   & \begin{prompt}\answer[tolerance=0.000000001]{0.17783120}\end{prompt} \\
+    2\times10^{-5}   & \begin{prompt}\answer[tolerance=0.000000001]{-0.99984019}\end{prompt} \\
+    2\times10^{-4}   & \begin{prompt}\answer[tolerance=0.000000001]{-0.98796644}\end{prompt} \\
+    0.002  & \begin{prompt}\answer[tolerance=0.000000001]{-0.46777181}\end{prompt} \\
+    0.02   & \begin{prompt}\answer[tolerance=0.000000001]{-0.26237485}\end{prompt} \\
+    0.2  & \begin{prompt}\answer[tolerance=0.000000001]{-0.95892427}\end{prompt} \\
+            
+            
+\end{array}$
+
 
 \begin{tabular}{|c|c|}
 
@@ -281,6 +243,7 @@ Let's make a table of values. Use the Desmos calculator widget below to compute 
 		$0.2$ & $\answer[tolerance=0.000000001]{-0.95892427}$ \\
 		
 \end{tabular}
+
 \end{problem}
 
 
