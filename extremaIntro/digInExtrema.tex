@@ -23,6 +23,7 @@ On this card, we investigate what is meant by the maxima and minima of a functio
 
 To motivate why you should care about maxima and minima, let's start with a realistic example. 
 
+%% Motivating Example - Maximizing Profit and Minimizing Cost
 \begin{example}
 The company you work for sells fancy speaker systems.  As the resident mathematician, you've determined that your company's profit (in dollars) is given by 
 \[ P(x) = -0.02x^2 + 150x-200000 \]
@@ -39,12 +40,9 @@ Aha!  Now it's plain to see that the maximum amount of profit is achieved when 3
 \end{explanation}
 \end{example}
 
-\phantom{text}%%% Making vertical spaces
-
 The above example illustrates one reason why you may want to identify the maximum of a function like $P(x)$.  You may also want to find the minimum of a function.  For example, you may want to determine how many speakers your company should produce to minimize production cost.  In this case, you would want to locate the minimum of your company's cost function.  Examples such as these motivate the next definition. 
 
-\phantom{text}%%% Making vertical spaces
-
+%%Definition - Absolute/Global Maximum/Minimum.
 \begin{definition}\hfil\index{maximum/minimum!absolute}
 \begin{enumerate}
 \item A function $f$ has an \dfn{absolute maximum} at $x=a$, if $f(a)\ge
@@ -56,10 +54,25 @@ An \dfn{absolute extremum}\index{extremum!absolute} is either a
 absolute maximum or absolute global minimum.  
 \end{definition}
 
+\begin{explanation}
+Although this definition is worded formally, it is simply defining the absolute maximum of a function, $f(x)$, to be the largest output or $f(x)$ value that the function achieves.  If there is, indeed, a maximum at $x=a$, then the function value at $x=a$, $f(a)$ will e greater than all of the other function values for the function, so $f(a) \geq f(x)$ for all $x$ in the domain of $f$.  \\
+
+Similarly, if there is, indeed, an absolute minimum of $f(x)$ at $x=a$ that means that $f(a)$ is the smallest output or $f(x)$ value that the function achieves.  In other words, $f(a) \leq f(x)$ for all $x$ in the domain of $f$. \\
+\end{explanation}
+
 \begin{warning}
-It is also common to say \textit{global} maximum, \textit{global} minimum, and \textit{global} extrema.  Be aware that these words convey the same meaning as the words above! 
+It is also common to say \textit{global} maximum, \textit{global} minimum, and \textit{global} extremum.  Be aware that these words convey the same meaning as the words above! 
 \end{warning}
 
+\begin{example}
+Find the absolute extrema of $P(x) = -0.02x^2 + 150x-200000$, if they exist. 
+\begin{explanation}
+Finding the absolute extrema of $P(x)$ is the same as finding the absolute maximum and absolute minimum of $P(x)$.  Let's start with the absolute maximum.  \\
+
+From before, we know that the largest profit is $\$81250$, so the absolute maximum of $P(x)$ is $\answer{81250}$ and is achieved when $x \ = \answer{3750}$.  In other words, 
+\end{explanation}
+
+\end{example}
 
 
 
