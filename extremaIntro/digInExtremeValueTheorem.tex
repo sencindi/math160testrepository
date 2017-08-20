@@ -12,25 +12,51 @@ On this card, we will determine the conditions that guarantee a continuous funct
 \end{abstract}
 \maketitle
 
-\begin{definition}\hfil\index{maximum/minimum!absolute}
-\begin{enumerate}
-\item A function $f$ has an \dfn{global maximum} at $x=a$, if $f(a)\ge
-  f(x)$ for every $x$ in the domain of the function.
-\item A function $f$ has an \dfn{global minimum} at $x=a$, if $f(a)\le
-  f(x)$ for every $x$ in the domain of the function.
-\end{enumerate} 
-A \dfn{global extremum}\index{extremum!global} is either a
-global maximum or a global minimum.
-\end{definition}
+On the previous card, you filled in conclusions after each problem ithat involved identifying absolute extrema.  Use these conclusions to indicate whether the following statements are true or false.  We will then use your findings to state a theorem that states when a function is \textit{guaranteed} to have BOTH an absolute maximum and minimum.  
 
-If we are working on an finite closed interval, then we have the
-following theorem.
+\begin{exercise}
+\begin{center} ``A discontinuous function is guaranteed to have both an absolute maximum and minimum." \end{center}
+
+This statement is \wordChoice{\choice{true}[correct]\choice{false}}.
+
+\begin{feedback}[correct]
+This statement is false.  For example, look back at $f(x)$ on the previous xard.
+\end{feedback}
+\end{exercise}
+
+\begin{exercise}
+\begin{center} A function on an open interval is guaranteed to have both an absolute maximum and minimum. \end{center}
+
+This statement is \wordChoice{\choice{true}[correct]\choice{false}}.
+
+\begin{feedback}[correct]
+Right!  This statement is also false. Could you come up with an example of a function on an open interval, $(a,b)$, that does not have both an absolute maximum and minimum?
+\end{feedback}
+\end{exercise}
+
+\begin{exercise}
+\begin{center} ``If $f(x)$ is a function on a closed interval $[a,b]$, then $f$ is guaranteed to have both an absolute maximum and minimum." \end{center}
+
+This statement is \wordChoice{\choice{true}[correct]\choice{false}}.
+
+\begin{feedback}[correct]
+This is false.  Although we have seen examples, like $g(x)$ on the last card, that do satisfy this statement, this statement is not \textit{always} true.  Can you come up with a counter-example that indicates why this statement is not true?
+\end{feedback}
+\end{exercise}
+
+\begin{exercise}
+\begin{center} ``If $f$ is a continuous function on a closed interval $[a,b]$, $f$ is guaranteed to have both an absolute maximum and minimum." \end{center}
+
+This statement is \wordChoice{\choice[correct]{true}\choice{false}}.
+
+\begin{feedback}[correct]
+This statement is true!  In fact, this statement has the conditions we were looking for guarantee a function has both an absolute maximum and minimum.  Let's give this statement a name. 
+\end{feedback}
+\end{exercise}
 
 \begin{theorem}[Extreme Value Theorem]\label{theorem:evt}\index{Extreme Value Theorem}
-If $f$ is a continuous function for all $x$ in the closed interval
-$[a,b]$, then there are points $c$ and $d$ in $[a,b]$, such that
-$(c,f(c))$ is a global maximum and $(d,f(d))$ is a global
-minimum on $[a, b]$.
+If $f$ is a continuous function on the closed interval
+$[a,b]$, then $f$ attains both an absolute maximum value $M$ and an absolute minimum value $m$ on $[a,b]$.  That is, there are numbers $x_1$ and $x_2$ in $[a,b]$ with $f(x_1)=M$ and $f(x_2) = m$, and $m \leq f(x) \leq M$ for every other $x$ in $[a,b]$.
 
 Below, we see a geometric interpretation of this theorem.
 \begin{image}
