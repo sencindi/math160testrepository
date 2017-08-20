@@ -64,6 +64,7 @@ Similarly, if there is, indeed, an absolute minimum of $f(x)$ at $x=a$ that mean
 It is also common to say \textit{global} maximum, \textit{global} minimum, and \textit{global} extremum.  Be aware that these words convey the same meaning as the words above! 
 \end{warning}
 
+%%Example 1 - Abs Max, no abs min
 \begin{example}
 Find the absolute extrema of $P(x) = -0.02x^2 + 150x-200000$.
 \begin{explanation}
@@ -93,6 +94,7 @@ On the \wordChoice{\choice[correct]{open}\choice{closed}} interval $\left( \answ
 
 \end{example}
 
+%% Example 2 - No abs max (hole), 1 absolute min achieved twice.
 \begin{exercise}
 Use the graph of $y = f(x)$ below to identify the absolute extrema of $f$.
 
@@ -116,6 +118,7 @@ On its domain, the function $y=f(x)$ \wordChoice{\choice{is}\choice[correct]{is 
 \end{exercise}
 \end{exercise}
 
+%% Graph with absolute and relative extrema.
 \begin{exercise}
 Use the graph of $y = g(x)$ below to identify the absolute extrema of $g$ by filling in the blanks below. 
 
@@ -130,5 +133,58 @@ On the \wordChoice{\choice{open}\choice[correct]{closed}} interval $\left[ \answ
 \end{exercise}
 \end{exercise}
 
+You may have noticed in the previous example that there were $y$ values that were not the biggest $y$-values the function achieved on its entire domain but that were the biggest $y$-values $g(x)$ achieves on a particular sub-interval.  For example, $y=1$ is the largest $y$-value that $g$ achieves on the interval $(-2, 1)$.  You could even say that relative to the interval $(-2,1)$, $y=1$ is the maximum of $g(x)$.  This is precisely what mathematicians do. 
+
+%% Definition - Relative Extrema
+\begin{definition}\hfil\index{maximumminimum!relative}
+\begin{enumerate}
+\item A function $f$ has a \dfn{relative maximum} at $x=a$, if $f(a) \ge
+  f(x)$ for every $x$ lying in some open interval containing $a$.
+\item A function $f$ has a \dfn{relative minimum} at $x=a$, if $f(a) \le
+  f(x)$ for every $x$ lying in some open interval containing $a$.
+\end{enumerate}
+A \dfn{relative extremum}\index{extremum!relative} is either a relative
+maximum or a relative minimum.
+\end{definition}
+
+\begin{explanation}
+Although this definition is worded formally, it is simply defining the relative maximum (minimum) of a function, $f(x)$, to be the largest (smallest) output or $f$-value that the function achieves relative to some open interval.  This is precisely what we were talking about informally before the definition. 
+\end{explanation}
+
+\begin{warning}
+It is also common to say \textit{local} maximum, \textit{local} minimum, and \textit{local} extremum.  Be aware that these words convey the same meaning as the words above!  
+\end{warning}
+
+\begin{exercise}
+Use the graph of $y = g(x)$ below to identify all the relative extrema of $g$ by filling in the blanks below. 
+
+\begin{center} \includegraphics[scale=0.5]{extrema3.png} \end{center}
+
+We already know that $g$ has an absolute maximum of $y = 2$ at $x=4$ and an absolute minimum of $y=-2$ at $x=2$.  These \wordChoice{\choice[correct]{are}\choice{are not}} also relative extrema.  
+
+\begin{feedback}[correct]
+You got it!  Absolute extrema are also relative extrema.  Could you use the definitions above the justify why this is the case to a fellow classmate?
+\end{feedback}
+
+\begin{exercise}
+Whenever the domain of a function is closed (or half-closed) so that an endpoint (or endpoints) is included in the domain of the function, you will want to investigate the endpoints when identifying relative extrema.  \\
+
+In this case, at $x = 2$, $g$ has a relative \wordChoice{\choice{maximum}\choice[correct]{minimum}} of $y \ = \answer{0}$.  \\
+
+Also, at $x \ =\answer{7}$, $g$ has a relative \wordChoice{\choice[correct]{maximum}\choice{minimum}} of $y \ = \answer{1}$.  \\
+
+\begin{exercise}
+Finally, let's identify the remaining two relative extrema. \\
+
+At $x = -1$, $g$ has a relative \wordChoice{\choice[correct]{maximum}\choice{minimum}} of $y \ = \answer{1}$.  \\
+
+At $x \ = \answer{6}$, $g$ has a relative \wordChoice{\choice{maximum}\choice[correct]{minimum}} of $y \ = \answer{-1}$.  \\
+
+\end{exercise}
+
+\end{exercise}
+
+
+\end{exercise}
 
 \end{document}
