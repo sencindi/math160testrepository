@@ -12,12 +12,12 @@ On this card, we will determine the conditions that guarantee a continuous funct
 \end{abstract}
 \maketitle
 
-On the previous card, you filled in conclusions after each problem ithat involved identifying absolute extrema.  Use these conclusions to indicate whether the following statements are true or false.  We will then use your findings to state a theorem that states when a function is \textit{guaranteed} to have BOTH an absolute maximum and minimum.  
+On the previous card, you filled in conclusions after each problem ithat involved identifying absolute extrema.  Use these conclusions to indicate whether the following statements are true or false.  We will then use your findings to state a theorem that identifies when a function is \textit{guaranteed} to have BOTH an absolute maximum and minimum.  
 
 \begin{exercise}
 \begin{center} ``A discontinuous function is guaranteed to have both an absolute maximum and minimum." \end{center}
 
-This statement is \wordChoice{\choice{true}[correct]\choice{false}}.
+This statement is \wordChoice{\choice{true}\choice[correct]{false}}.
 
 \begin{feedback}[correct]
 This statement is false.  For example, look back at $f(x)$ on the previous xard.
@@ -27,7 +27,7 @@ This statement is false.  For example, look back at $f(x)$ on the previous xard.
 \begin{exercise}
 \begin{center} A function on an open interval is guaranteed to have both an absolute maximum and minimum. \end{center}
 
-This statement is \wordChoice{\choice{true}[correct]\choice{false}}.
+This statement is \wordChoice{\choice{true}[correct]\choice[correct]{false}}.
 
 \begin{feedback}[correct]
 Right!  This statement is also false. Could you come up with an example of a function on an open interval, $(a,b)$, that does not have both an absolute maximum and minimum?
@@ -37,7 +37,7 @@ Right!  This statement is also false. Could you come up with an example of a fun
 \begin{exercise}
 \begin{center} ``If $f(x)$ is a function on a closed interval $[a,b]$, then $f$ is guaranteed to have both an absolute maximum and minimum." \end{center}
 
-This statement is \wordChoice{\choice{true}[correct]\choice{false}}.
+This statement is \wordChoice{\choice{true}\choice[correct]{false}}.
 
 \begin{feedback}[correct]
 This is false.  Although we have seen examples, like $g(x)$ on the last card, that do satisfy this statement, this statement is not \textit{always} true.  Can you come up with a counter-example that indicates why this statement is not true?
@@ -50,7 +50,7 @@ This is false.  Although we have seen examples, like $g(x)$ on the last card, th
 This statement is \wordChoice{\choice[correct]{true}\choice{false}}.
 
 \begin{feedback}[correct]
-This statement is true!  In fact, this statement has the conditions we were looking for guarantee a function has both an absolute maximum and minimum.  Let's give this statement a name. 
+This statement is true!  In fact, this statement identifies the conditions we were looking for to guarantee a function has both an absolute maximum and minimum.  Let's give this statement a special name. 
 \end{feedback}
 \end{exercise}
 
@@ -67,7 +67,7 @@ Below, we see a geometric interpretation of this theorem.
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             xtick={1,2,4,5}, ytick={.2,2.2},
-            xticklabels={$a$,$c$,$d$,$b$}, yticklabels={$f(d)$,$f(c)$},
+            xticklabels={$a$,$x_1$,$x_2$,$b$}, yticklabels={$f(x_2) = m$,$f(x_1) = M$},
             axis on top,
           ]
           \addplot [draw=none, fill=fill1, domain=(1:5)] {2.5} \closedcycle;
@@ -98,15 +98,6 @@ Below, we see a geometric interpretation of this theorem.
 %% \end{marginfigure}
 \end{image}
 \end{theorem}
-\begin{question}
-  Would this theorem hold if we were working on an open interval?
-  \begin{multipleChoice}
-    \choice{yes}
-    \choice[correct]{no}
-  \end{multipleChoice}
-  \begin{hint}
-    Consider $\tan(\theta)$ for $-\pi/2 < \theta < \pi/2$. Does this function achieve its maximum and minimum? 
-  \end{hint}
-\end{question}
+
 
 \end{document}
