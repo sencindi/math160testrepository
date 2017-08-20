@@ -55,9 +55,9 @@ absolute maximum or absolute global minimum.
 \end{definition}
 
 \begin{explanation}
-Although this definition is worded formally, it is simply defining the absolute maximum of a function, $f(x)$, to be the largest output or $f(x)$ value that the function achieves.  If there is, indeed, a maximum at $x=a$, then the function value at $x=a$, $f(a)$ will e greater than all of the other function values for the function, so $f(a) \geq f(x)$ for all $x$ in the domain of $f$.  \\
+Although this definition is worded formally, it is simply defining the absolute maximum of a function, $f(x)$, to be the largest output or $f$-value that the function achieves.  If there is, indeed, a maximum at $x=a$, then the function value at $x=a$, $f(a)$, will be greater than (or equal to) all of the other function values for the function, so $f(a) \geq f(x)$ for all $x$ in the domain of $f$.  \\
 
-Similarly, if there is, indeed, an absolute minimum of $f(x)$ at $x=a$ that means that $f(a)$ is the smallest output or $f(x)$ value that the function achieves.  In other words, $f(a) \leq f(x)$ for all $x$ in the domain of $f$. \\
+Similarly, if there is, indeed, an absolute minimum of $f(x)$ at $x=a$ that means that $f(a)$ is the smallest output or $f$-value that the function achieves.  In other words, $f(a) \leq f(x)$ for all $x$ in the domain of $f$. \\
 \end{explanation}
 
 \begin{warning}
@@ -69,7 +69,18 @@ Find the absolute extrema of $P(x) = -0.02x^2 + 150x-200000$, if they exist.
 \begin{explanation}
 Finding the absolute extrema of $P(x)$ is the same as finding the absolute maximum and absolute minimum of $P(x)$.  Let's start with the absolute maximum.  \\
 
-From before, we know that the largest profit is $\$81250$, so the absolute maximum of $P(x)$ is $\answer{81250}$ and is achieved when $x \ = \answer{3750}$.  In other words, 
+From before, we know that the largest profit is $\$81250$, so the absolute maximum of $P(x)$ is $\answer{81250}$ and is achieved when $x \ = \answer{3750}$.  The domain of $P$ is $(-\infty, \infty) = \RR$, so $P(3750) = 81250 \geq P(x)$ for every $x$ in the $(\infty, \infty)$. \\
+
+\begin{explanation}
+
+Now, let's move on to identifying the absolute minimum of $P$.  The absolute minimum occurs at $x=a$ if $P(a) \leq P(x)$ for all $x$ in the domain of $P$, which is $(\infty, \infty)$.  Referring to the graph of $P(x)$ above, you can see that $P(x)$ \wordChoice{\choice{does}\choice[correct]{does not}} have an absolute minimum. 
+
+\begin{feedback}
+Exactly.  We can determine that $P(x)$ has no absolute minimum because $P$ has no smallest output value: the values of $P$-values continue to decrease both as $x$ becomes very positive and as $x$ becomes very negative. 
+\end{feedback}
+
+\end{explanation}
+
 \end{explanation}
 
 \end{example}
