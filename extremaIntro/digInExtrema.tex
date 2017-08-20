@@ -3,6 +3,7 @@
 \input{../preamble.tex}
 
 \title[Dig-In]{Maximums and minimums}
+\author{MooMaster}
 
 \outcome{Define absolute maximum and absolute minimum.}
 \outcome{Find the absolute maximum and minimum using a graph.}
@@ -23,15 +24,39 @@ On this card, we investigate what is meant by the maxima and minima of a functio
 To motivate why you should care about maxima and minima, let's start with a realistic example. 
 
 \begin{example}
-Let's say that the company you work for sells fancy speaker systems.  As the resident mathematician, you've determined that your company's profit (in dollars) is given by 
-\[ P(x) = -0.02x^2+150x-200000 \]
-where $x$ represents the number of speakers your company produces.  How many speakers should your company produce in order to maximize profits? 
+The company you work for sells fancy speaker systems.  As the resident mathematician, you've determined that your company's profit (in dollars) is given by 
+\[ P(x) = -0.02x^2 + 150x-200000 \]
+where $x$ represents the number of speaker systems your company produces.  How many speaker systems should your company produce in order to maximize profits? 
 \begin{explanation}
-From just the formula for the profit function, this question is seemingly pretty difficult, so let's plot the profit function. 
+From just the formula for the profit function, this question is seemingly pretty difficult, so let's plot the profit function to understand what this function looks like.  
 
-\[ \graph{-0.02x^2+150x-200000} \]
+\begin{center} \includegraphics[scale=0.5]{extrema1.png} \end{center}
+
+\underline{\hspace{5in}}
+
+Aha!  Now it's plain to see that the maximum amount of profit is achieved when 3,750 speaker systems are produced.  According to the graph, the maximum profit that would be earned in this situation is $\$81250$.  We say that the profit function $P(x)$ has a maximum of $81250$ that is achieved at $x=3750$.  
+
 \end{explanation}
 \end{example}
+
+%\underline{\hspace{5in}}
+
+The above example illustrates one reason why you may want to identify the maximum of a function like $P(x)$.  You may also want to find the minimum of a function.  For example, you may want to determine how many speakers your company should produce to minimize production cost.  In this case, you would want to locate the minimum of the product cost function.  Examples such as these motivate the next definition. 
+
+\begin{definition}\hfil\index{maximum/minimum!absolute}
+\begin{enumerate}
+\item A function $f$ has an \dfn{absolute maximum} at $x=a$, if $f(a)\ge
+  f(x)$ for every $x$ in the domain of the function.
+\item A function $f$ has an \dfn{absolute minimum} at $x=a$, if $f(a)\le
+  f(x)$ for every $x$ in the domain of the function.
+\end{enumerate} 
+A \dfn{global extremum}\index{extremum!global} is either a
+global maximum or a global minimum.
+\end{definition}
+
+\begin{warning}
+It is also common to say \textit{absolute} maximum and \textit{absolute} minimum.  Be aware that these words convey the same meaning as the words above! 
+\end{warning}
 
 
 
