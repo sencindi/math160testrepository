@@ -1,0 +1,90 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+\outcome{Distinguish two functions by considering their domains.}
+\outcome{Recognize different representations of the same function.}
+
+\title[Break-Ground:]{Same or different? Take 2}
+
+\begin{document}
+\begin{abstract}
+  Two young mathematicians examine one (or two?)  functions once again.
+\end{abstract}
+\maketitle
+
+Check out this dialogue between two calculus students (based on a true
+story):
+
+\begin{dialogue}
+\item[Devyn] Riley, I have another pressing question.
+\item[Riley] Sure, what is it?
+\item[Devyn] Think about the function
+\[ f(x) = \frac{x^2-3x+2}{x-2}. \]
+\item[Riley] Okay.  What about it?
+\item[Devyn] Is this function equal to $g(x) = x-1$?
+\item[Riley] Well if I plot them with my calculator, they look the
+  same.
+\item[Devyn] I know!  But \href{https://ximera.osu.edu/math160fa17/m160prerequisites/understandingFunctions/breakGround}{remember when we realized before that $\frac{2x}{x}$ and $2$ are not the same function?}  I think this could be a similar situation.
+\item[Riley] Okay, let's check.  I suppose if I write
+  \begin{align*}
+    f(x) &= \frac{x^2-3x+2}{x-2} \\
+    &= \frac{(x-1)(x-2)}{x-2} \\
+    &= x-1 \\
+    &= g(x).
+  \end{align*}
+\item[Devyn] Right! But what about when $x=1$? In this case,
+  \[
+  g(1) = 0\qquad\text{but}\qquad f(0) \text{ is undefined!}
+  \]
+\item[Riley] Right, $f(0)$ is undefined because we cannot divide by
+  zero. Hmm... 
+\end{dialogue}
+
+\begin{problem}
+  In the context above, are $f$ and $g$ the same function?
+  \begin{multipleChoice}
+    \choice{yes}
+    \choice[correct]{no}
+  \end{multipleChoice}
+\end{problem}
+
+
+
+\begin{problem}
+  Suppose $f$ and $g$ are functions but the domain of $f$ is different
+  from the domain of $g$.  Could it be that $f$ and $g$ are actually
+  the same function?
+
+  \begin{multipleChoice}
+    \choice{yes}
+    \choice[correct]{no}
+  \end{multipleChoice}
+
+  \begin{feedback}
+    The domain of a function is part of the ``data'' of the function.
+    A function is not a rule for transforming the input to the output,
+    but rather the relationship between a specified collection of
+    inputs (the domain) and possible outputs (the range).
+  \end{feedback}
+\end{problem}
+
+\begin{problem}
+  If you simplify a function $f$ and realize the simplified form is $g$, is it possible that $f$ and $g$ have different domains and are therefore different functions?
+
+  \begin{multipleChoice}
+    \choice[correct]{yes}
+    \choice{no}
+  \end{multipleChoice}
+
+  \begin{feedback}[correct]
+  When simplifying functions, you have to be careful because sometimes the simplified form of a function does not have the same domain as the original function.  In this case, the two functions are not actually equal!  We will investigate this further in the next card.
+  \end{feedback}
+\end{problem}
+
+
+ 
+%\input{../leveledQuestions.tex}
+
+
+\end{document}
